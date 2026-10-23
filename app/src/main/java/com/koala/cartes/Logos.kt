@@ -96,6 +96,7 @@ object Logos {
         for (c in cards) {
             if (c.id in tried || !needs(ctx, c.id)) continue
             val domain = c.logoDomain() ?: continue
+            val play = Stores.byId(c.storeId)?.play
             val done = withContext(Dispatchers.IO) {
                 val current = width(file(ctx, c.id))
                 // Même magasin déjà bien téléchargé pour une autre carte : on recopie
@@ -105,7 +106,7 @@ object Logos {
                 if (twin != null) {
                     runCatching { file(ctx, twin.id).copyTo(file(ctx, c.id), overwrite = true) }.isSuccess
                 } else {
-                    val bmp = runCatching { download(domain) }.getOrNull()
+                    val bmp = runCatching { download(domain, play) }.getOrNull()
                     bmp != null && minOf(bmp.width, bmp.height) > current && runCatching { save(ctx, c.id, bmp) }.isSuccess
                 }
             }
@@ -184,9 +185,18 @@ object Logos {
         }
     }
 
-    private fun download(domain: String): Bitmap? {
+    /** Icône de l'appli officielle de l'enseigne sur le Play Store (256 px). */
+    private fun playIcon(pkg: String): String? {
+        val page = get("https://play.google.com/store/apps/details?id=$pkg&hl=fr", 3_000_000) ?: return null
+        val html = String(page.first)
+        val m = Regex("""<meta[^>]+property="og:image"[^>]+content="([^"]+)"""").find(html) ?: return null
+        return m.groupValues[1].replace("&amp;", "&").replace(Regex("=[a-z0-9-]+$"), "") + "=s256"
+    }
+
+    private fun download(domain: String, play: String?): Bitmap? {
         val hosts = if (domain.startsWith("www.")) listOf(domain) else listOf(domain, "www.$domain")
         val cands = linkedSetOf<String>()
+        play?.let { p -> runCatching { playIcon(p) }.getOrNull()?.let { cands += it } }
         for (h in hosts) {
             val page = get("https://$h/", 600_000) ?: continue
             val html = String(page.first)

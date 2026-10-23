@@ -3,11 +3,20 @@ package com.koala.cartes
 import java.text.Normalizer
 import kotlin.math.abs
 
-data class Store(val id: String, val name: String, val color: Long, val domain: String, val keys: List<String>)
+data class Store(val id: String, val name: String, val color: Long, val domain: String, val keys: List<String>, val play: String? = null)
 
 object Stores {
     private fun s(id: String, name: String, color: Long, domain: String, vararg keys: String) =
         Store(id, name, color, domain, if (keys.isEmpty()) listOf(name) else keys.toList())
+
+    // Appli officielle sur le Play Store : icône nette quand le site n'en publie qu'une petite
+    private val PLAY = mapOf(
+        "leclerc" to "com.infomil.bill",
+        "sephora" to "com.sephora",
+        "hm" to "com.hm.goe",
+        "naturalia" to "com.naturalia.mob",
+        "leroymerlin" to "com.adeo.android.app",
+    )
 
     val all: List<Store> = listOf(
         // Alimentaire
@@ -88,7 +97,7 @@ object Stores {
         s("starbucks", "Starbucks", 0xFF00704A, "starbucks.fr", "starbucks"),
         s("pathe", "Pathé", 0xFFFFC20E, "pathe.fr", "pathe"),
         s("cgr", "CGR Cinémas", 0xFFE30613, "cgrcinemas.fr", "cgr"),
-    )
+    ).map { it.copy(play = PLAY[it.id]) }
 
     val palette = listOf(
         0xFFE3000F, 0xFF0058A3, 0xFF00973A, 0xFFF39200, 0xFF6D2077,
