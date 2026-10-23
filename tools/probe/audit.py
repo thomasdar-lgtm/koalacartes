@@ -8,7 +8,8 @@ UA = "Mozilla/5.0 (Linux; Android 15; SM-S931B) AppleWebKit/537.36 (KHTML, like 
 SRC = open("app/src/main/java/com/koala/cartes/Stores.kt", encoding="utf-8").read()
 STORES = [(m[0], m[1].replace('\\"', '"'), int(m[2], 16), m[3]) for m in
           re.findall(r's\("(\w+)", "((?:[^"\\]|\\.)*)", (0x[0-9A-F]+), "([^"]+)"', SRC)]
-PLAY = dict(re.findall(r'"(\w+)" to "([\w.]+)"', SRC[SRC.index("PLAY = mapOf("):SRC.index("val all")]))
+PLAY = dict(re.findall(r'"(\w+)" to "([\w.]+)"', SRC[SRC.index("PLAY = mapOf("):SRC.index("IOS = mapOf(")]))
+IOS = dict(re.findall(r'"(\w+)" to (\d+)L', SRC[SRC.index("IOS = mapOf("):SRC.index("val all")]))
 
 def get(u, mx=3_000_000):
     try:
@@ -37,7 +38,13 @@ def play_icon(pkg):
     u = re.sub(r"=[a-z0-9-]+$", "", html.unescape(m.group(1))) + "=s256" if m else None
     return u, title, urllib.parse.unquote_plus(dev.group(1)) if dev else "?"
 
+def ios_icon(i):
+    b, _ = get(f"https://itunes.apple.com/lookup?id={i}&country=fr")
+    try: return json.loads(b)["results"][0]["artworkUrl512"]
+    except Exception: return None
+
 def site_cands(domain):
+    if not domain: return []
     hosts = [domain] if domain.startswith("www.") else [domain, "www." + domain]
     c = []
     for h in hosts:
@@ -97,14 +104,11 @@ def discover(name):
 
 def audit(st):
     sid, name, color, domain = st
-    if sid in PLAY:
-        u, _, _ = play_icon(PLAY[sid])
-        b = get(u)[0] if u else None
-        im = img(b) if b else None
-        res = (im, min(im.size) if im else 0, "play:" + PLAY[sid]) if im else choose(site_cands(domain))
-    else:
-        res = choose(site_cands(domain))
-    disc = discover(name) if res[1] < 180 and sid not in PLAY else []
+    first = []
+    if sid in PLAY: first.append(play_icon(PLAY[sid])[0])
+    if sid in IOS: first.append(ios_icon(IOS[sid]))
+    res = choose([u for u in first if u] + site_cands(domain))
+    disc = []
     return st, res, disc
 
 def tile(im, color, TW, TH, R):
@@ -121,7 +125,8 @@ def tile(im, color, TW, TH, R):
         tr = clear * 2 > tot or not cols
         bg = (255, 255, 255) if tr else tuple(int(statistics.median_low(c[j] for c in cols)) for j in range(3))
         t = Image.new("RGBA", (TW, TH), bg + (255,))
-        lh = int(TH * (0.72 if tr else 1)); lw = max(1, int(lh * w / h))
+        f = min(1, max(0.45, min(w, h) / 160))
+        lh = int(TH * f * (0.72 if tr else 1)); lw = max(1, int(lh * w / h))
         t.alpha_composite(im.resize((lw, lh), Image.LANCZOS), ((TW - lw) // 2, (TH - lh) // 2))
     m = Image.new("L", (TW, TH), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, TW - 1, TH - 1), radius=R, fill=255)
     return t, m
@@ -141,6 +146,7 @@ for i, ((sid, name, color, domain), (im, size, src), disc) in enumerate(results)
     d.text((x + TW // 2, y + TH + 9 * S), name[:20], fill=(255, 255, 255), anchor="mm", font_size=10 * S)
     d.text((x + TW // 2, y + TH + 21 * S), f"{size}px" if im else "AUCUN", fill=(120, 220, 120) if ok else (255, 90, 90), anchor="mm", font_size=9 * S)
 sheet.save("tiles.png")
+print("enseignes:", len(results), " nettes:", sum(1 for r in results if r[1][1] >= 96), " sans logo:", sum(1 for r in results if r[1][0] is None))
 
 for (sid, name, color, domain), (im, size, src), disc in sorted(results, key=lambda r: r[1][1]):
     flag = "OK " if size >= 96 else "BAD"

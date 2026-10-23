@@ -139,6 +139,8 @@ object Logos {
     suspend fun fetchStores(ctx: Context, cards: List<Card>) = withContext(Dispatchers.IO) {
         // Anciennes versions : logo copié par carte, remplacé par le logo commun de l'enseigne
         cards.filter { it.storeId != null && !customMark(ctx, it.id).exists() }.forEach { cardFile(ctx, it.id).delete() }
+        // Enseignes sans source fiable (site revendu…) : on retire un éventuel mauvais logo
+        Stores.all.filter { it.domain.isBlank() && it.play == null && it.ios == null }.forEach { storeFile(ctx, it.id).delete() }
         val used = cards.mapNotNull { it.storeId }.toSet()
         val order = Stores.all.sortedBy { if (it.id in used) 0 else 1 }
         val gate = Semaphore(4)
@@ -147,10 +149,11 @@ object Logos {
                 val key = "store:${st.id}"
                 val f = storeFile(ctx, st.id)
                 if (key in tried || width(f) >= GOOD) continue
+                if (st.domain.isBlank() && st.play == null && st.ios == null) continue
                 tried.add(key)
                 launch {
                     gate.withPermit {
-                        val bmp = runCatching { download(st.domain, st.play) }.getOrNull()
+                        val bmp = runCatching { download(st.domain, st.play, st.ios) }.getOrNull()
                         if (bmp != null && minOf(bmp.width, bmp.height) > width(f) && runCatching { save(f, bmp) }.isSuccess) bump()
                     }
                 }
@@ -167,7 +170,7 @@ object Logos {
             if (width(f) >= GOOD) continue
             tried.add(c.id)
             val ok = withContext(Dispatchers.IO) {
-                val bmp = runCatching { download(c.domain, null) }.getOrNull()
+                val bmp = runCatching { download(c.domain, null, null) }.getOrNull()
                 bmp != null && minOf(bmp.width, bmp.height) > width(f) && runCatching { save(f, bmp) }.isSuccess
             }
             if (ok) version++
@@ -252,10 +255,18 @@ object Logos {
         return m.groupValues[1].replace("&amp;", "&").replace(Regex("=[a-z0-9-]+$"), "") + "=s256"
     }
 
-    private fun download(domain: String, play: String?): Bitmap? {
-        val hosts = if (domain.startsWith("www.")) listOf(domain) else listOf(domain, "www.$domain")
+    /** Icône de l'appli officielle sur l'App Store français (512 px). */
+    private fun iosIcon(id: Long): String? {
+        val body = get("https://itunes.apple.com/lookup?id=$id&country=fr", 200_000) ?: return null
+        val r = org.json.JSONObject(String(body.first)).optJSONArray("results")?.optJSONObject(0) ?: return null
+        return r.optString("artworkUrl512").ifBlank { null }
+    }
+
+    private fun download(domain: String, play: String?, ios: Long?): Bitmap? {
+        val hosts = if (domain.isBlank()) emptyList() else if (domain.startsWith("www.")) listOf(domain) else listOf(domain, "www.$domain")
         val cands = linkedSetOf<String>()
         play?.let { p -> runCatching { playIcon(p) }.getOrNull()?.let { cands += it } }
+        ios?.let { i -> runCatching { iosIcon(i) }.getOrNull()?.let { cands += it } }
         for (h in hosts) {
             val page = get("https://$h/", 600_000) ?: continue
             val html = String(page.first)
@@ -271,8 +282,10 @@ object Logos {
         for (h in hosts) {
             cands += "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://$h&size=256"
         }
-        cands += "https://www.google.com/s2/favicons?domain=$domain&sz=256"
-        cands += "https://icons.duckduckgo.com/ip3/$domain.ico"
+        if (domain.isNotBlank()) {
+            cands += "https://www.google.com/s2/favicons?domain=$domain&sz=256"
+            cands += "https://icons.duckduckgo.com/ip3/$domain.ico"
+        }
 
         var best: Bitmap? = null
         for (u in cands) {

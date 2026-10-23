@@ -157,13 +157,20 @@ fun TileFace(name: String, color: Long, logo: Logo?, corner: Int = 10) {
         if (logo != null) {
             Image(
                 logo.image, name,
-                Modifier.fillMaxHeight(if (logo.transparent) 0.72f else 1f).aspectRatio(logo.ratio),
+                Modifier.fillMaxHeight(logoFraction(logo)).aspectRatio(logo.ratio),
                 contentScale = ContentScale.Fit,
             )
         } else {
             Monogram(name, onColor(color), size = 34)
         }
     }
+}
+
+/** Part de la hauteur occupée par le logo : réduite pour les petites images, qui seraient floues en grand. */
+fun logoFraction(logo: Logo): Float {
+    val px = minOf(logo.image.width, logo.image.height)
+    val f = (px / 160f).coerceIn(0.45f, 1f)
+    return if (logo.transparent) 0.72f * f else f
 }
 
 @Composable

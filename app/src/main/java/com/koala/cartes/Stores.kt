@@ -3,7 +3,10 @@ package com.koala.cartes
 import java.text.Normalizer
 import kotlin.math.abs
 
-data class Store(val id: String, val name: String, val color: Long, val domain: String, val keys: List<String>, val play: String? = null)
+data class Store(
+    val id: String, val name: String, val color: Long, val domain: String, val keys: List<String>,
+    val play: String? = null, val ios: Long? = null,
+)
 
 object Stores {
     private fun s(id: String, name: String, color: Long, domain: String, vararg keys: String) =
@@ -33,6 +36,25 @@ object Stores {
         "sephora" to "fr.sephora.sephorafrance",
         "nocibe" to "com.pictime.nocibe",
         "marionnaud" to "com.marionnaud.marionnaudfrance",
+        "kfc" to "fr.kfc.mobileapp",
+        "quick" to "be.lvlp.Quick",
+        "burgerking" to "air.com.unit9.bkFrApp",
+        "dominos" to "com.dominos.dominossite",
+        "pizzahut" to "com.pizzahut.france",
+        "subway" to "com.rexsubs.mysub",
+        "briochedoree" to "fr.intact.briochedoree.staging",
+        "delarte" to "fr.delarte.mobileapp",
+        "cea" to "com.canda.mobileapp",
+        "bm" to "fr.bmstores.bmfrance",
+        "lush" to "com.lush.app",
+        "mrbricolage" to "komandco.mrbricolage",
+        "cultura" to "com.cultura.jerevends",
+    )
+
+    // Appli officielle sur l'App Store, quand elle n'existe pas sur le Play Store
+    private val IOS = mapOf(
+        "pimkie" to 897026650L,
+        "match" to 1148591369L,
     )
 
     val all: List<Store> = listOf(
@@ -74,7 +96,6 @@ object Stores {
         s("action", "Action", 0xFF0047AB, "action.com", "action com", "magasins action"),
         s("centrakor", "Centrakor", 0xFFE5005B, "centrakor.com", "centrakor"),
         s("foirfouille", "La Foir'Fouille", 0xFFF5B400, "lafoirfouille.fr", "foir fouille", "foirfouille"),
-        s("babou", "Babou", 0xFFE6007E, "babou.fr", "babou"),
         s("stokomani", "Stokomani", 0xFFE30613, "stokomani.fr", "stokomani"),
         // High-tech, culture, jouets
         s("darty", "Darty", 0xFFE2001A, "darty.com", "darty"),
@@ -115,7 +136,7 @@ object Stores {
         s("pathe", "Pathé", 0xFFFFC20E, "pathe.fr", "pathe"),
         s("cgr", "CGR Cinémas", 0xFFE30613, "cgrcinemas.fr", "cgr"),
         // Alimentaire (suite)
-        s("leaderprice", "Leader Price", 0xFFE2001A, "leaderprice.fr", "leader price"),
+        s("leaderprice", "Leader Price", 0xFFE2001A, "", "leader price"),
         s("coccimarket", "Coccimarket", 0xFFE30613, "coccimarket.fr", "coccimarket", "cocci market"),
         s("match", "Supermarchés Match", 0xFFE30613, "supermarchesmatch.fr", "supermarches match"),
         s("colruyt", "Colruyt", 0xFFE30613, "colruyt.fr", "colruyt"),
@@ -148,7 +169,7 @@ object Stores {
         s("speedy", "Speedy", 0xFFE30613, "speedy.fr", "speedy"),
         s("points", "Point S", 0xFFE30613, "point-s.fr", "point s"),
         s("roady", "Roady", 0xFFE30613, "roady.fr", "roady"),
-        s("esso", "Esso", 0xFF0033A0, "esso.fr", "esso"),
+        s("esso", "Esso", 0xFF0033A0, "", "esso"),
         s("shell", "Shell", 0xFFFFD500, "shell.fr", "shell"),
         s("avia", "Avia", 0xFFE30613, "avia-france.fr", "avia"),
         // Optique
@@ -193,20 +214,19 @@ object Stores {
         s("alinea", "Alinéa", 0xFF111111, "alinea.com", "alinea"),
         s("zodio", "Zôdio", 0xFFE6007E, "zodio.fr", "zodio"),
         s("casa", "Casa", 0xFF111111, "casashops.com", "casa shops"),
-        s("bm", "B&M", 0xFF5B2C82, "bmstores.fr", "b&m"),
+        s("bm", "B&M (ex-Babou)", 0xFF5B2C82, "bmstores.fr", "b&m", "babou"),
         s("noz", "Noz", 0xFFFFD100, "noz.fr", "noz"),
         s("maxibazar", "Maxi Bazar", 0xFFE30613, "maxibazar.fr", "maxi bazar"),
         s("bricoman", "Bricoman", 0xFFF39200, "bricoman.fr", "bricoman"),
         s("pointp", "Point.P", 0xFFE30613, "pointp.fr", "point p"),
         s("ldlc", "LDLC", 0xFF1E5AA8, "ldlc.com", "ldlc"),
         s("toysrus", "Toys\"R\"Us", 0xFF0055A4, "toysrus.fr", "toys r us"),
-        s("picwic", "Picwic Toys", 0xFFE30613, "picwictoys.com", "picwic"),
         s("tomandco", "Tom&Co", 0xFF009FE3, "tomandco.com", "tom&co", "tom & co"),
         s("auvieuxcampeur", "Au Vieux Campeur", 0xFF2E5E3E, "auvieuxcampeur.fr", "vieux campeur"),
         // Cinéma
         s("ugc", "UGC", 0xFF111111, "ugc.fr", "ugc"),
         s("kinepolis", "Kinepolis", 0xFFE30613, "kinepolis.fr", "kinepolis"),
-    ).map { it.copy(play = PLAY[it.id]) }
+    ).map { it.copy(play = PLAY[it.id], ios = IOS[it.id]) }
 
     val palette = listOf(
         0xFFE3000F, 0xFF0058A3, 0xFF00973A, 0xFFF39200, 0xFF6D2077,
