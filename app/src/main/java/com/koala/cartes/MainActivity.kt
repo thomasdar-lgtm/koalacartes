@@ -12,6 +12,10 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.platform.LocalContext
+import android.net.Uri
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.setValue
 
 sealed interface Screen {
@@ -40,6 +44,9 @@ fun App(repo: CardRepo) {
     val cards by repo.cards.collectAsState()
     val upd = remember { UpdateState() }
     LaunchedEffect(Unit) { upd.info = runCatching { Updater.check() }.getOrNull() }
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    LaunchedEffect(cards) { Logos.fetchMissing(ctx, cards) }
 
     fun back() {
         screen = when (val s = screen) {
@@ -64,7 +71,7 @@ fun App(repo: CardRepo) {
             else CardScreen(
                 c, onBack = { back() },
                 onEdit = { screen = Screen.Edit(c.toDraft()) },
-                onDelete = { repo.delete(c.id); screen = Screen.Home },
+                onDelete = { repo.delete(c.id); Logos.delete(ctx, c.id); screen = Screen.Home },
             )
         }
 
@@ -85,7 +92,19 @@ fun App(repo: CardRepo) {
             s.draft,
             onPickStore = { screen = Screen.Pick(it) },
             onRescan = { screen = Screen.Scan(it) },
-            onSave = { screen = Screen.Show(repo.save(it)) },
+            onSave = { d ->
+                val old = cards.firstOrNull { it.id == d.id }
+                if (d.logoUri != null && d.id != null) Logos.reserve(d.id)
+                val id = repo.save(d)
+                if (d.logoUri != null) {
+                    Logos.reserve(id)
+                    scope.launch { Logos.importImage(ctx, id, Uri.parse(d.logoUri)) }
+                } else if (old != null && (old.storeId != d.storeId || old.storeName != d.storeName.trim() ||
+                        old.domain != (if (d.storeId == null) Stores.cleanDomain(d.domain) else ""))) {
+                    Logos.delete(ctx, id)
+                }
+                screen = Screen.Show(id)
+            },
             onBack = { back() },
         )
 

@@ -16,6 +16,7 @@ data class Card(
     val number: String,
     val format: String,
     val note: String,
+    val domain: String,
     val created: Long,
     val uses: Int,
     val lastUsed: Long,
@@ -23,10 +24,13 @@ data class Card(
     fun toJson() = JSONObject().apply {
         put("id", id); put("storeId", storeId ?: ""); put("storeName", storeName)
         put("color", color); put("number", number); put("format", format); put("note", note)
-        put("created", created); put("uses", uses); put("lastUsed", lastUsed)
+        put("domain", domain); put("created", created); put("uses", uses); put("lastUsed", lastUsed)
     }
 
-    fun toDraft() = Draft(id, storeId, storeName, color, number, format, note, formatLocked = true)
+    fun toDraft() = Draft(id, storeId, storeName, color, number, format, note, domain = domain, formatLocked = true)
+
+    /** Site d'où télécharger le logo. */
+    fun logoDomain(): String? = Stores.byId(storeId)?.domain ?: domain.ifBlank { null }
 
     companion object {
         fun fromJson(o: JSONObject) = Card(
@@ -37,6 +41,7 @@ data class Card(
             number = o.optString("number"),
             format = o.optString("format", "CODE_128"),
             note = o.optString("note"),
+            domain = o.optString("domain"),
             created = o.optLong("created", System.currentTimeMillis()),
             uses = o.optInt("uses"),
             lastUsed = o.optLong("lastUsed"),
@@ -52,10 +57,12 @@ data class Draft(
     val number: String = "",
     val format: String = "CODE_128",
     val note: String = "",
+    val domain: String = "",
+    val logoUri: String? = null,
     val formatLocked: Boolean = false,
     val autoStore: Boolean = false,
 ) {
-    fun withStore(st: Store, auto: Boolean = false) = copy(storeId = st.id, storeName = st.name, color = st.color, autoStore = auto)
+    fun withStore(st: Store, auto: Boolean = false) = copy(storeId = st.id, storeName = st.name, color = st.color, domain = "", autoStore = auto)
     fun withCustom(name: String, color: Long, auto: Boolean = false) = copy(storeId = null, storeName = name, color = color, autoStore = auto)
 }
 
@@ -97,6 +104,7 @@ class CardRepo private constructor(ctx: Context) {
             id = old?.id ?: UUID.randomUUID().toString(),
             storeId = d.storeId, storeName = d.storeName.trim(), color = d.color,
             number = d.number.trim(), format = d.format, note = d.note.trim(),
+            domain = if (d.storeId == null) Stores.cleanDomain(d.domain) else "",
             created = old?.created ?: System.currentTimeMillis(),
             uses = old?.uses ?: 0, lastUsed = old?.lastUsed ?: 0,
         )

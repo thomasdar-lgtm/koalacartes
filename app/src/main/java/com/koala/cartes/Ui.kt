@@ -6,7 +6,10 @@ import android.content.ContextWrapper
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import android.net.Uri
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -131,17 +134,36 @@ fun Monogram(name: String, fg: Color, size: Int = 38) {
 }
 
 @Composable
+fun LogoBox(logo: ImageBitmap, size: Int) {
+    Box(
+        Modifier.size(size.dp).clip(RoundedCornerShape((size * 0.24f).dp)).background(Color.White).padding((size * 0.08f).dp),
+        contentAlignment = Alignment.Center,
+    ) { Image(logo, null, Modifier.fillMaxSize(), contentScale = ContentScale.Fit) }
+}
+
+@Composable
+fun rememberLogo(id: String?): ImageBitmap? {
+    val ctx = LocalContext.current
+    val v = Logos.version
+    return remember(id, v) { id?.let { Logos.load(ctx, it) } }
+}
+
+@Composable
 fun CardTile(c: Card, onClick: () -> Unit) {
     val bg = Color(c.color); val fg = onColor(c.color)
-    Box(
-        Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(10.dp))
-            .background(Brush.linearGradient(listOf(bg, lerp(bg, Color.Black, 0.28f))))
-            .clickable(onClick = onClick).padding(8.dp)
-    ) {
-        Monogram(c.storeName, fg, size = 24)
+    val logo = rememberLogo(c.id)
+    Column(Modifier.clickable(onClick = onClick), horizontalAlignment = Alignment.CenterHorizontally) {
+        Box(
+            Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(10.dp))
+                .background(Brush.linearGradient(listOf(bg, lerp(bg, Color.Black, 0.28f)))),
+            contentAlignment = Alignment.Center,
+        ) {
+            if (logo != null) LogoBox(logo, 44) else Monogram(c.storeName, fg, size = 34)
+        }
+        Spacer(Modifier.height(4.dp))
         Text(
-            c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 2,
-            overflow = TextOverflow.Ellipsis, lineHeight = 13.sp, modifier = Modifier.align(Alignment.BottomStart),
+            c.storeName, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 11.sp, maxLines = 1,
+            overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(),
         )
     }
 }
@@ -310,6 +332,7 @@ fun CardScreen(c: Card, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> 
     ) {
         Row(Modifier.fillMaxWidth().padding(4.dp), verticalAlignment = Alignment.CenterVertically) {
             IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Retour", tint = fg) }
+            rememberLogo(c.id)?.let { LogoBox(it, 34); Spacer(Modifier.size(10.dp)) }
             Text(
                 c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 22.sp, maxLines = 1,
                 overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
@@ -356,6 +379,10 @@ fun EditScreen(
 ) {
     var d by remember(initial) { mutableStateOf(initial) }
     var error by remember { mutableStateOf<String?>(null) }
+    val ctx = LocalContext.current
+    val imagePicker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+        if (uri != null) d = d.copy(logoUri = uri.toString())
+    }
     var fmtMenu by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -374,6 +401,10 @@ fun EditScreen(
         ) {
             Text("Magasin", color = Muted, fontSize = 13.sp)
             val has = d.storeName.isNotBlank()
+            val sameStore = d.storeId == initial.storeId && d.storeName == initial.storeName && d.domain == initial.domain
+            val saved = rememberLogo(d.id)
+            val picked = remember(d.logoUri) { d.logoUri?.let { Logos.decodeUri(ctx, Uri.parse(it))?.asImageBitmap() } }
+            val preview = picked ?: if (sameStore) saved else null
             val fg = if (has) onColor(d.color) else Color.White
             Row(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp))
@@ -381,7 +412,10 @@ fun EditScreen(
                     .clickable { onPickStore(d) }.padding(14.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                if (has) { Monogram(d.storeName, fg); Spacer(Modifier.size(12.dp)) }
+                if (has) {
+                    if (preview != null) LogoBox(preview, 40) else Monogram(d.storeName, fg)
+                    Spacer(Modifier.size(12.dp))
+                }
                 Text(
                     if (has) d.storeName else "Choisir le magasin", color = fg, fontWeight = FontWeight.Bold,
                     fontSize = 17.sp, modifier = Modifier.weight(1f),
@@ -389,6 +423,20 @@ fun EditScreen(
                 Text("Changer", color = fg.copy(alpha = 0.8f), fontSize = 13.sp)
             }
             if (d.autoStore && has) Text("Reconnu automatiquement — touche pour changer", color = Muted, fontSize = 12.sp)
+            if (has && d.storeId == null) {
+                OutlinedTextField(
+                    value = d.domain, onValueChange = { d = d.copy(domain = it) }, singleLine = true,
+                    label = { Text("Site du magasin, pour le logo (facultatif)") }, placeholder = { Text("exemple.fr") },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+            }
+            if (has) Row(verticalAlignment = Alignment.CenterVertically) {
+                OutlinedButton(onClick = {
+                    imagePicker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
+                }) { Text(if (preview != null) "Changer le logo" else "Choisir un logo") }
+                if (d.logoUri != null) TextButton(onClick = { d = d.copy(logoUri = null) }) { Text("Annuler") }
+            }
 
             OutlinedTextField(
                 value = d.number,
