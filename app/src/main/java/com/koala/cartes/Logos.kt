@@ -148,13 +148,20 @@ object Logos {
             for (st in order) {
                 val key = "store:${st.id}"
                 val f = storeFile(ctx, st.id)
-                if (key in tried || width(f) >= GOOD) continue
+                // La source du logo est mémorisée : si je la corrige dans une mise à jour, le logo est retéléchargé
+                val src = File(dir(ctx), "store_${st.id}.src")
+                val wanted = "${st.domain}|${st.play}|${st.ios}"
+                val sameSrc = runCatching { src.readText() }.getOrNull() == wanted
+                if (key in tried || (sameSrc && width(f) >= GOOD)) continue
                 if (st.domain.isBlank() && st.play == null && st.ios == null) continue
                 tried.add(key)
                 launch {
                     gate.withPermit {
                         val bmp = runCatching { download(st.domain, st.play, st.ios) }.getOrNull()
-                        if (bmp != null && minOf(bmp.width, bmp.height) > width(f) && runCatching { save(f, bmp) }.isSuccess) bump()
+                        if (bmp != null && minOf(bmp.width, bmp.height) >= 32 &&
+                            (!sameSrc || minOf(bmp.width, bmp.height) > width(f)) &&
+                            runCatching { save(f, bmp); src.writeText(wanted) }.isSuccess
+                        ) bump()
                     }
                 }
             }

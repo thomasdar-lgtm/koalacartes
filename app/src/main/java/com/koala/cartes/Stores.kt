@@ -201,7 +201,7 @@ object Stores {
         s("courir", "Courir", 0xFF111111, "courir.com", "courir"),
         s("footlocker", "Foot Locker", 0xFF111111, "footlocker.fr", "foot locker"),
         // Beauté, santé
-        s("douglas", "Douglas", 0xFF111111, "douglas.fr", "douglas"),
+        s("douglas", "Douglas", 0xFF111111, "douglas.de", "douglas"),
         s("kiko", "Kiko Milano", 0xFF111111, "kikocosmetics.com", "kiko"),
         s("rituals", "Rituals", 0xFF111111, "rituals.com", "rituals"),
         s("loccitane", "L'Occitane", 0xFFFFC72C, "loccitane.com", "l occitane", "loccitane"),
