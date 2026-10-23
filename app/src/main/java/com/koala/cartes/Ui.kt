@@ -132,18 +132,14 @@ fun Monogram(name: String, fg: Color, size: Int = 38) {
 fun CardTile(c: Card, onClick: () -> Unit) {
     val bg = Color(c.color); val fg = onColor(c.color)
     Box(
-        Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(16.dp))
+        Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(10.dp))
             .background(Brush.linearGradient(listOf(bg, lerp(bg, Color.Black, 0.28f))))
-            .clickable(onClick = onClick).padding(14.dp)
+            .clickable(onClick = onClick).padding(8.dp)
     ) {
-        Monogram(c.storeName, fg)
+        Monogram(c.storeName, fg, size = 24)
         Text(
-            "•••• " + c.number.takeLast(4), color = fg.copy(alpha = 0.75f), fontSize = 12.sp,
-            fontFamily = FontFamily.Monospace, modifier = Modifier.align(Alignment.TopEnd),
-        )
-        Text(
-            c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 18.sp, maxLines = 2,
-            overflow = TextOverflow.Ellipsis, lineHeight = 20.sp, modifier = Modifier.align(Alignment.BottomStart),
+            c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 12.sp, maxLines = 2,
+            overflow = TextOverflow.Ellipsis, lineHeight = 13.sp, modifier = Modifier.align(Alignment.BottomStart),
         )
     }
 }
@@ -261,10 +257,10 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAd
                     )
                 }
                 LazyVerticalGrid(
-                    columns = GridCells.Adaptive(160.dp),
+                    columns = GridCells.Adaptive(100.dp),
                     contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 100.dp),
-                    horizontalArrangement = Arrangement.spacedBy(12.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    verticalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
                     items(sorted, key = { it.id }) { c -> CardTile(c) { onOpen(c.id) } }
                 }
