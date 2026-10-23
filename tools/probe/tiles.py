@@ -31,7 +31,7 @@ for i, (name, url) in enumerate(stores):
                 if p[3] < 128: clear += 1
                 else: cols.append(p[:3])
         transp = clear * 2 > tot or not cols
-        bg = (255, 255, 255) if transp else tuple(statistics.median(c[j] for c in cols) for j in range(3))
+        bg = (255, 255, 255) if transp else tuple(int(statistics.median_low(c[j] for c in cols)) for j in range(3))
         tile = Image.new("RGBA", (TW, TH), bg + (255,))
         lh = int(TH * (0.72 if transp else 1.0)); lw = int(lh * w / h)
         lg = im.resize((lw, lh), Image.LANCZOS); tile.alpha_composite(lg, ((TW - lw) // 2, (TH - lh) // 2))
