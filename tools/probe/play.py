@@ -16,9 +16,15 @@ def icon(pkg):
     b = get(u)
     try: d = "%dx%d" % Image.open(io.BytesIO(b)).size
     except Exception: d = "?"
-    return title, u, d
+    dev = re.search(r'/store/apps/(?:dev|developer)\?id=([^"&]+)', h)
+    return title + " | dev=" + (urllib.parse.unquote_plus(dev.group(1)) if dev else "?"), u, d
 for line in open(sys.argv[1]):
     sid, q = line.strip().split("|", 1)
+    if sid == "pkg":
+        for p in q.split(","):
+            title, u, d = icon(p)
+            print(f"  [direct] {p} | {title[:80]} | {d}")
+        continue
     h = get("https://play.google.com/store/search?c=apps&hl=fr&q=" + urllib.parse.quote(q)).decode("utf-8", "ignore")
     pkgs = []
     for p in re.findall(r'details\?id=([\w.]+)', h):

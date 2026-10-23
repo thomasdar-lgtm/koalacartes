@@ -1,28 +1,26 @@
-leclerc|E.Leclerc
-intermarche|Intermarché
-casino|Casino Max
-babou|Babou
-gosport|Go Sport
-biocoop|Biocoop
-but|BUT magasin
-jardiland|Jardiland
-sephora|Sephora
-truffaut|Truffaut
-vival|Vival
-gammvert|Gamm vert
-bureauvallee|Bureau Vallée
-chaussea|Chaussea
+intermarche|Intermarché courses en ligne drive
+intermarche|Intermarché France
+pkg|fr.intermarche.apps,com.intermarche.android,fr.intermarche.android,com.mousquetaires.intermarche,fr.mousquetaires.intermarche,fr.intermarche.drive,com.intermarche.app
+casino|Casino Max supermarché
+but|BUT meubles électroménager
+jardiland|Jardiland jardinerie animalerie
+truffaut|Truffaut jardinerie
+conforama|Conforama meubles
+cultura|Cultura livres loisirs
+cora|Cora hypermarché courses
+gosport|GO Sport France
+biocoop|Biocoop magasins bio
+lahalle|La Halle chaussures vêtements
+gammvert|Gamm vert jardinerie
 grandfrais|Grand Frais
-hm|H&M
-foirfouille|La Foir'Fouille
-marionnaud|Marionnaud
-naturalia|Naturalia
-spar|Spar
-conforama|Conforama
-cora|Cora
-cultura|Cultura
-lahalle|La Halle
-leroymerlin|Leroy Merlin
-mrbricolage|Mr Bricolage
-netto|Netto
-gifi|Gifi
+netto|Netto supermarché France
+gifi|GiFi magasin déco
+marionnaud|Marionnaud parfumerie
+chaussea|Chaussea chaussures
+foirfouille|La Foir'Fouille déco
+bureauvallee|Bureau Vallée fournitures
+vival|Vival proximité Casino
+spar|Spar proximité France
+babou|Babou magasin
+mrbricolage|Mr.Bricolage bricolage
+pkg|com.infomil.bill,com.sephora,com.hm.goe,com.naturalia.mob,com.adeo.android.app,komandco.mrbricolage
