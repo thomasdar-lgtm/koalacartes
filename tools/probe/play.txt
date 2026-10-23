@@ -1,0 +1,28 @@
+leclerc|E.Leclerc
+intermarche|Intermarché
+casino|Casino Max
+babou|Babou
+gosport|Go Sport
+biocoop|Biocoop
+but|BUT magasin
+jardiland|Jardiland
+sephora|Sephora
+truffaut|Truffaut
+vival|Vival
+gammvert|Gamm vert
+bureauvallee|Bureau Vallée
+chaussea|Chaussea
+grandfrais|Grand Frais
+hm|H&M
+foirfouille|La Foir'Fouille
+marionnaud|Marionnaud
+naturalia|Naturalia
+spar|Spar
+conforama|Conforama
+cora|Cora
+cultura|Cultura
+lahalle|La Halle
+leroymerlin|Leroy Merlin
+mrbricolage|Mr Bricolage
+netto|Netto
+gifi|Gifi
