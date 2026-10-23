@@ -8,7 +8,7 @@ def get(u):
     except Exception as e:
         return b""
 def icon(pkg):
-    h = get(f"https://play.google.com/store/apps/details?id={pkg}&hl=fr").decode("utf-8", "ignore")
+    h = get(f"https://play.google.com/store/apps/details?id={pkg}&hl=fr&gl=FR").decode("utf-8", "ignore")
     t = re.search(r'<title[^>]*>([^<]*)', h); title = html.unescape(t.group(1)) if t else "?"
     m = re.search(r'<meta[^>]+property="og:image"[^>]+content="([^"]+)"', h) or re.search(r'itemprop="image"[^>]*src="([^"]+)"', h)
     if not m: return title, None, "-"
@@ -25,7 +25,7 @@ for line in open(sys.argv[1]):
             title, u, d = icon(p)
             print(f"  [direct] {p} | {title[:80]} | {d}")
         continue
-    h = get("https://play.google.com/store/search?c=apps&hl=fr&q=" + urllib.parse.quote(q)).decode("utf-8", "ignore")
+    h = get("https://play.google.com/store/search?c=apps&hl=fr&gl=FR&q=" + urllib.parse.quote(q)).decode("utf-8", "ignore")
     pkgs = []
     for p in re.findall(r'details\?id=([\w.]+)', h):
         if p not in pkgs: pkgs.append(p)
