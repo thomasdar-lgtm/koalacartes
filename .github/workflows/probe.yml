@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install pillow -q
-      - run: python3 tools/probe/audit.py > report.txt 2>&1 || true
+      - run: python3 tools/probe/find.py > report.txt 2>&1 || true
       - run: |
           mkdir /tmp/r && cp report.txt /tmp/r/ && cp tiles.png /tmp/r/ || true && cd /tmp/r
           git init -q -b probe-logs && git config user.name bot && git config user.email bot@users.noreply.github.com
