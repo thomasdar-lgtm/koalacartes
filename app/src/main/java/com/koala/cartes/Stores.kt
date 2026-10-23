@@ -15,7 +15,6 @@ object Stores {
         "intermarche" to "fr.stime.mcommerce",
         "carrefour" to "com.carrefour.fid.android",
         "auchan" to "com.auchan.android",
-        "lidl" to "com.lidl.eci.lidlplus",
         "aldi" to "fr.aldi.android",
         "casino" to "fr.casino.fidelite",
         "netto" to "com.mousquetaires.netto",
