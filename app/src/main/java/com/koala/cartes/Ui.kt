@@ -65,6 +65,8 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import kotlinx.coroutines.launch
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -169,8 +171,9 @@ private fun spaced(n: String) = if (n.length > 6 && n.all { it.isDigit() }) n.ch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAdd: () -> Unit) {
+fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (String) -> Unit, onAdd: () -> Unit) {
     val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
     var menu by remember { mutableStateOf(false) }
     var query by remember { mutableStateOf("") }
 
@@ -211,6 +214,14 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAd
                                 menu = false
                                 importer.launch(arrayOf("application/json", "application/octet-stream", "text/plain", "*/*"))
                             })
+                            DropdownMenuItem(text = { Text("Rechercher une mise à jour") }, onClick = {
+                                menu = false
+                                scope.launch {
+                                    runCatching { Updater.check() }
+                                        .onSuccess { i -> upd.info = i; if (i == null) toast(ctx, "KoalaCartes est à jour (${BuildConfig.VERSION_NAME})") }
+                                        .onFailure { toast(ctx, "Pas de connexion, réessaie plus tard") }
+                                }
+                            })
                             DropdownMenuItem(text = { Text("Version ${BuildConfig.VERSION_NAME}") }, onClick = {}, enabled = false)
                         }
                     }
@@ -225,9 +236,11 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAd
             )
         },
     ) { pad ->
+      Column(Modifier.padding(pad)) {
+        UpdateBanner(upd)
         if (cards.isEmpty()) {
             Column(
-                Modifier.padding(pad).fillMaxSize().padding(32.dp),
+                Modifier.fillMaxSize().padding(32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center,
             ) {
                 Text("Aucune carte pour l'instant", color = Color.White, fontWeight = FontWeight.Black, fontSize = 22.sp, textAlign = TextAlign.Center)
@@ -247,7 +260,7 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAd
                 cards.filter { n.isBlank() || Stores.norm(it.storeName).contains(n) || Stores.norm(it.note).contains(n) }
                     .sortedWith(compareByDescending<Card> { it.uses }.thenBy { Stores.norm(it.storeName) })
             }
-            Column(Modifier.padding(pad)) {
+            Column {
                 if (cards.size >= 6) {
                     OutlinedTextField(
                         value = query, onValueChange = { query = it }, singleLine = true,
@@ -266,6 +279,7 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, onOpen: (String) -> Unit, onAd
                 }
             }
         }
+      }
     }
 }
 

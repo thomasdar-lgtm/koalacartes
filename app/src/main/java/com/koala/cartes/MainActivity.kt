@@ -38,6 +38,8 @@ class MainActivity : ComponentActivity() {
 fun App(repo: CardRepo) {
     var screen by remember { mutableStateOf<Screen>(Screen.Home) }
     val cards by repo.cards.collectAsState()
+    val upd = remember { UpdateState() }
+    LaunchedEffect(Unit) { upd.info = runCatching { Updater.check() }.getOrNull() }
 
     fun back() {
         screen = when (val s = screen) {
@@ -51,7 +53,7 @@ fun App(repo: CardRepo) {
 
     when (val s = screen) {
         Screen.Home -> HomeScreen(
-            repo, cards,
+            repo, cards, upd,
             onOpen = { repo.markUsed(it); screen = Screen.Show(it) },
             onAdd = { screen = Screen.Scan(null) },
         )
