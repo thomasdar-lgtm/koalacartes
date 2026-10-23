@@ -79,6 +79,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
@@ -112,6 +114,8 @@ fun KoalaTheme(content: @Composable () -> Unit) = MaterialTheme(
     content = content,
 )
 
+fun onColor(c: Color): Color = if (c.luminance() > 0.5f) Navy else Color.White
+
 fun onColor(c: Long): Color {
     val r = (c shr 16 and 0xFF).toInt(); val g = (c shr 8 and 0xFF).toInt(); val b = (c and 0xFF).toInt()
     return if (0.299 * r + 0.587 * g + 0.114 * b > 170) Navy else Color.White
@@ -134,39 +138,48 @@ fun Monogram(name: String, fg: Color, size: Int = 38) {
 }
 
 @Composable
-fun LogoBox(logo: ImageBitmap, size: Int) {
-    Box(
-        Modifier.size(size.dp).clip(RoundedCornerShape((size * 0.24f).dp)).background(Color.White).padding((size * 0.08f).dp),
-        contentAlignment = Alignment.Center,
-    ) { Image(logo, null, Modifier.fillMaxSize(), contentScale = ContentScale.Fit) }
-}
-
-@Composable
-fun rememberLogo(id: String?): ImageBitmap? {
+fun rememberLogo(cardId: String?, storeId: String?): Logo? {
     val ctx = LocalContext.current
     val v = Logos.version
-    return remember(id, v) { id?.let { Logos.load(ctx, it) } }
+    return remember(cardId, storeId, v) { Logos.load(Logos.fileFor(ctx, cardId, storeId)) }
+}
+
+/** Face de la carte : le logo occupe la hauteur, son fond prolonge la tuile sur toute la largeur. */
+@Composable
+fun TileFace(name: String, color: Long, logo: Logo?, corner: Int = 10) {
+    val shape = RoundedCornerShape(corner.dp)
+    val back = if (logo != null) Modifier.background(logo.bg, shape)
+    else Color(color).let { Modifier.background(Brush.linearGradient(listOf(it, lerp(it, Color.Black, 0.28f))), shape) }
+    Box(
+        Modifier.fillMaxWidth().aspectRatio(1.586f).clip(shape).then(back),
+        contentAlignment = Alignment.Center,
+    ) {
+        if (logo != null) {
+            Image(
+                logo.image, name,
+                Modifier.fillMaxHeight(if (logo.transparent) 0.72f else 1f).aspectRatio(logo.ratio),
+                contentScale = ContentScale.Fit,
+            )
+        } else {
+            Monogram(name, onColor(color), size = 34)
+        }
+    }
 }
 
 @Composable
-fun CardTile(c: Card, onClick: () -> Unit) {
-    val bg = Color(c.color); val fg = onColor(c.color)
-    val logo = rememberLogo(c.id)
+fun NamedTile(name: String, color: Long, logo: Logo?, onClick: () -> Unit) {
     Column(Modifier.clickable(onClick = onClick), horizontalAlignment = Alignment.CenterHorizontally) {
-        Box(
-            Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(10.dp))
-                .background(Brush.linearGradient(listOf(bg, lerp(bg, Color.Black, 0.28f)))),
-            contentAlignment = Alignment.Center,
-        ) {
-            if (logo != null) LogoBox(logo, 44) else Monogram(c.storeName, fg, size = 34)
-        }
+        TileFace(name, color, logo)
         Spacer(Modifier.height(4.dp))
         Text(
-            c.storeName, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 11.sp, maxLines = 1,
+            name, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 11.sp, maxLines = 1,
             overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth(),
         )
     }
 }
+
+@Composable
+fun CardTile(c: Card, onClick: () -> Unit) = NamedTile(c.storeName, c.color, rememberLogo(c.id, c.storeId), onClick)
 
 @Composable
 fun BarcodeImage(number: String, format: String) {
@@ -325,14 +338,18 @@ fun CardScreen(c: Card, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> 
         }
     }
     var confirm by remember { mutableStateOf(false) }
-    val bg = Color(c.color); val fg = onColor(c.color)
+    val logo = rememberLogo(c.id, c.storeId)
+    val bg = logo?.bg ?: Color(c.color); val fg = onColor(bg)
 
     Column(
         Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(bg, lerp(bg, Color.Black, 0.35f)))).systemBarsPadding()
     ) {
         Row(Modifier.fillMaxWidth().padding(4.dp), verticalAlignment = Alignment.CenterVertically) {
             IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Retour", tint = fg) }
-            rememberLogo(c.id)?.let { LogoBox(it, 34); Spacer(Modifier.size(10.dp)) }
+            logo?.let {
+                Image(it.image, null, Modifier.height(36.dp).aspectRatio(it.ratio).clip(RoundedCornerShape(8.dp)), contentScale = ContentScale.Fit)
+                Spacer(Modifier.size(10.dp))
+            }
             Text(
                 c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 22.sp, maxLines = 1,
                 overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
@@ -402,18 +419,21 @@ fun EditScreen(
             Text("Magasin", color = Muted, fontSize = 13.sp)
             val has = d.storeName.isNotBlank()
             val sameStore = d.storeId == initial.storeId && d.storeName == initial.storeName && d.domain == initial.domain
-            val saved = rememberLogo(d.id)
-            val picked = remember(d.logoUri) { d.logoUri?.let { Logos.decodeUri(ctx, Uri.parse(it))?.asImageBitmap() } }
-            val preview = picked ?: if (sameStore) saved else null
-            val fg = if (has) onColor(d.color) else Color.White
+            val current = rememberLogo(if (sameStore) d.id else null, d.storeId)
+            val picked = remember(d.logoUri) { d.logoUri?.let { u -> Logos.decodeUri(ctx, Uri.parse(u))?.let { Logos.analyze(it) } } }
+            val preview = picked ?: current
+            val rowBg = if (!has) Navy3 else preview?.bg ?: Color(d.color)
+            val fg = onColor(rowBg)
             Row(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(14.dp))
-                    .background(if (has) Color(d.color) else Navy3)
+                    .background(rowBg)
                     .clickable { onPickStore(d) }.padding(14.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 if (has) {
-                    if (preview != null) LogoBox(preview, 40) else Monogram(d.storeName, fg)
+                    if (preview != null) {
+                        Image(preview.image, null, Modifier.height(40.dp).aspectRatio(preview.ratio).clip(RoundedCornerShape(8.dp)), contentScale = ContentScale.Fit)
+                    } else Monogram(d.storeName, fg)
                     Spacer(Modifier.size(12.dp))
                 }
                 Text(
@@ -511,7 +531,7 @@ fun StorePicker(onPicked: (Store) -> Unit, onCustom: (String) -> Unit, onBack: (
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
             )
             LazyVerticalGrid(
-                columns = GridCells.Adaptive(110.dp),
+                columns = GridCells.Adaptive(100.dp),
                 contentPadding = PaddingValues(16.dp),
                 horizontalArrangement = Arrangement.spacedBy(10.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -531,17 +551,7 @@ fun StorePicker(onPicked: (Store) -> Unit, onCustom: (String) -> Unit, onBack: (
                     }
                 }
                 items(list, key = { it.id }) { st ->
-                    val fg = onColor(st.color)
-                    Box(
-                        Modifier.fillMaxWidth().aspectRatio(1.586f).clip(RoundedCornerShape(12.dp))
-                            .background(Color(st.color)).clickable { onPicked(st) }.padding(8.dp),
-                        contentAlignment = Alignment.Center,
-                    ) {
-                        Text(
-                            st.name, color = fg, fontWeight = FontWeight.Black, fontSize = 14.sp,
-                            textAlign = TextAlign.Center, maxLines = 2, overflow = TextOverflow.Ellipsis,
-                        )
-                    }
+                    NamedTile(st.name, st.color, rememberLogo(null, st.id)) { onPicked(st) }
                 }
             }
         }

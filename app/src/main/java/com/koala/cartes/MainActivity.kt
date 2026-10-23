@@ -46,7 +46,8 @@ fun App(repo: CardRepo) {
     LaunchedEffect(Unit) { upd.info = runCatching { Updater.check() }.getOrNull() }
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
-    LaunchedEffect(cards) { Logos.fetchMissing(ctx, cards) }
+    LaunchedEffect(Unit) { Logos.fetchStores(ctx, cards) }
+    LaunchedEffect(cards) { Logos.fetchCustom(ctx, cards) }
 
     fun back() {
         screen = when (val s = screen) {

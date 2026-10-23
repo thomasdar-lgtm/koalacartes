@@ -7,9 +7,14 @@ import android.net.Uri
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withContext
 import java.io.File
 import java.io.InputStream
@@ -17,25 +22,67 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.util.Collections
 
+/** Un logo prêt à afficher, avec la couleur de fond qui le prolonge sur toute la tuile. */
+data class Logo(val image: ImageBitmap, val bg: Color, val transparent: Boolean, val ratio: Float)
+
 /**
- * Logos des enseignes : téléchargés une fois depuis le site du magasin (icône publiée par le site),
- * puis gardés sur le téléphone. Une image choisie dans la galerie peut les remplacer.
+ * Logos des enseignes : téléchargés une fois (appli officielle sur le Play Store, sinon site du magasin),
+ * puis gardés sur le téléphone. Une image choisie dans la galerie peut remplacer celui d'une carte.
  */
 object Logos {
     var version by mutableIntStateOf(0)
         private set
     private val tried = Collections.synchronizedSet(mutableSetOf<String>())
+    private val cache = Collections.synchronizedMap(HashMap<String, Logo?>())
+    private const val GOOD = 96
     private const val UA =
         "Mozilla/5.0 (Linux; Android 15; SM-S931B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36"
 
-    fun file(ctx: Context, id: String) = File(ctx.filesDir, "logos/$id.png")
+    private fun dir(ctx: Context) = File(ctx.filesDir, "logos")
+    fun storeFile(ctx: Context, storeId: String) = File(dir(ctx), "store_$storeId.png")
+    private fun cardFile(ctx: Context, cardId: String) = File(dir(ctx), "$cardId.png")
+    private fun customMark(ctx: Context, cardId: String) = File(dir(ctx), "$cardId.custom")
 
-    fun load(ctx: Context, id: String): ImageBitmap? {
-        val f = file(ctx, id)
-        return if (f.exists()) BitmapFactory.decodeFile(f.path)?.asImageBitmap() else null
+    /** Fichier du logo à afficher : image perso de la carte, sinon logo de l'enseigne, sinon logo du site saisi. */
+    fun fileFor(ctx: Context, cardId: String?, storeId: String?): File? = when {
+        cardId != null && customMark(ctx, cardId).exists() -> cardFile(ctx, cardId)
+        storeId != null -> storeFile(ctx, storeId)
+        cardId != null -> cardFile(ctx, cardId)
+        else -> null
     }
 
-    private fun customMark(ctx: Context, id: String) = File(ctx.filesDir, "logos/$id.custom")
+    fun load(f: File?): Logo? {
+        if (f == null || !f.exists()) return null
+        val key = "${f.path}:${f.lastModified()}"
+        cache[key]?.let { return it }
+        val bmp = BitmapFactory.decodeFile(f.path) ?: return null
+        return analyze(bmp).also { cache[key] = it }
+    }
+
+    /** Couleur du bord du logo (hors coins) : sert de fond à la tuile pour que le logo s'y fonde. */
+    fun analyze(bmp: Bitmap): Logo {
+        val w = bmp.width; val h = bmp.height
+        val inset = maxOf(1, minOf(w, h) / 25)
+        val rs = ArrayList<Int>(); val gs = ArrayList<Int>(); val bs = ArrayList<Int>()
+        var clear = 0; var total = 0
+        fun sample(x: Int, y: Int) {
+            val p = bmp.getPixel(x.coerceIn(0, w - 1), y.coerceIn(0, h - 1))
+            total++
+            if ((p ushr 24) < 128) { clear++; return }
+            rs += (p shr 16) and 0xFF; gs += (p shr 8) and 0xFF; bs += p and 0xFF
+        }
+        for (i in 0 until 24) {
+            val fx = 0.2f + 0.6f * i / 23f
+            sample((w * fx).toInt(), inset); sample((w * fx).toInt(), h - 1 - inset)
+            sample(inset, (h * fx).toInt()); sample(w - 1 - inset, (h * fx).toInt())
+        }
+        val transparent = clear * 2 > total || rs.isEmpty()
+        val bg = if (transparent) Color.White else {
+            rs.sort(); gs.sort(); bs.sort()
+            Color(rs[rs.size / 2], gs[gs.size / 2], bs[bs.size / 2])
+        }
+        return Logo(bmp.asImageBitmap(), bg, transparent, w.toFloat() / h)
+    }
 
     private fun width(f: File): Int {
         if (!f.exists()) return 0
@@ -44,27 +91,21 @@ object Logos {
         return minOf(o.outWidth, o.outHeight)
     }
 
-    /** Logo à (re)chercher : absent, ou trop petit et pas choisi à la main. */
-    private fun needs(ctx: Context, id: String): Boolean {
-        val f = file(ctx, id)
-        return !f.exists() || (!customMark(ctx, id).exists() && width(f) < GOOD)
-    }
+    private suspend fun bump() = withContext(Dispatchers.Main) { version++ }
 
-    private const val GOOD = 96
-
-    fun delete(ctx: Context, id: String) {
-        file(ctx, id).delete(); customMark(ctx, id).delete(); tried.remove(id); version++
+    /** Supprime le logo propre à une carte (image perso ou site saisi). */
+    fun delete(ctx: Context, cardId: String) {
+        cardFile(ctx, cardId).delete(); customMark(ctx, cardId).delete(); tried.remove(cardId); version++
     }
 
     /** Empêche le téléchargement automatique (une image perso arrive). */
-    fun reserve(id: String) { tried.add(id) }
+    fun reserve(cardId: String) { tried.add(cardId) }
 
-    private fun save(ctx: Context, id: String, bmp: Bitmap) {
-        val f = file(ctx, id)
+    private fun save(f: File, bmp: Bitmap) {
         f.parentFile?.mkdirs()
         val m = maxOf(bmp.width, bmp.height)
         val out = if (m > 256) Bitmap.createScaledBitmap(bmp, bmp.width * 256 / m, bmp.height * 256 / m, true) else bmp
-        val tmp = File(f.parentFile, "$id.tmp")
+        val tmp = File(f.parentFile, f.name + ".tmp")
         tmp.outputStream().use { out.compress(Bitmap.CompressFormat.PNG, 100, it) }
         tmp.renameTo(f)
     }
@@ -81,37 +122,55 @@ object Logos {
         null
     }
 
-    suspend fun importImage(ctx: Context, id: String, uri: Uri): Boolean {
-        tried.add(id)
+    suspend fun importImage(ctx: Context, cardId: String, uri: Uri): Boolean {
+        tried.add(cardId)
         val ok = withContext(Dispatchers.IO) {
             val b = decodeUri(ctx, uri, 512) ?: return@withContext false
-            runCatching { save(ctx, id, b); customMark(ctx, id).createNewFile() }.isSuccess
+            runCatching { save(cardFile(ctx, cardId), b); customMark(ctx, cardId).createNewFile() }.isSuccess
         }
         version++
         return ok
     }
 
-    /** Télécharge les logos manquants ou flous (une tentative par carte et par lancement). */
-    suspend fun fetchMissing(ctx: Context, cards: List<Card>) {
-        for (c in cards) {
-            if (c.id in tried || !needs(ctx, c.id)) continue
-            val domain = c.logoDomain() ?: continue
-            val play = Stores.byId(c.storeId)?.play
-            val done = withContext(Dispatchers.IO) {
-                val current = width(file(ctx, c.id))
-                // Même magasin déjà bien téléchargé pour une autre carte : on recopie
-                val twin = cards.firstOrNull {
-                    it.id != c.id && it.logoDomain() == domain && !customMark(ctx, it.id).exists() && width(file(ctx, it.id)) >= GOOD
-                }
-                if (twin != null) {
-                    runCatching { file(ctx, twin.id).copyTo(file(ctx, c.id), overwrite = true) }.isSuccess
-                } else {
-                    val bmp = runCatching { download(domain, play) }.getOrNull()
-                    bmp != null && minOf(bmp.width, bmp.height) > current && runCatching { save(ctx, c.id, bmp) }.isSuccess
+    /**
+     * Logos de toutes les enseignes de la liste, pour qu'ils soient visibles dès le choix du magasin.
+     * Celles déjà utilisées par une carte passent en premier. 4 téléchargements en parallèle.
+     */
+    suspend fun fetchStores(ctx: Context, cards: List<Card>) = withContext(Dispatchers.IO) {
+        // Anciennes versions : logo copié par carte, remplacé par le logo commun de l'enseigne
+        cards.filter { it.storeId != null && !customMark(ctx, it.id).exists() }.forEach { cardFile(ctx, it.id).delete() }
+        val used = cards.mapNotNull { it.storeId }.toSet()
+        val order = Stores.all.sortedBy { if (it.id in used) 0 else 1 }
+        val gate = Semaphore(4)
+        coroutineScope {
+            for (st in order) {
+                val key = "store:${st.id}"
+                val f = storeFile(ctx, st.id)
+                if (key in tried || width(f) >= GOOD) continue
+                tried.add(key)
+                launch {
+                    gate.withPermit {
+                        val bmp = runCatching { download(st.domain, st.play) }.getOrNull()
+                        if (bmp != null && minOf(bmp.width, bmp.height) > width(f) && runCatching { save(f, bmp) }.isSuccess) bump()
+                    }
                 }
             }
+        }
+    }
+
+    /** Logos des magasins hors liste pour lesquels un site a été saisi. */
+    suspend fun fetchCustom(ctx: Context, cards: List<Card>) {
+        for (c in cards) {
+            if (c.storeId != null || c.domain.isBlank() || c.id in tried) continue
+            if (customMark(ctx, c.id).exists()) continue
+            val f = cardFile(ctx, c.id)
+            if (width(f) >= GOOD) continue
             tried.add(c.id)
-            if (done) version++
+            val ok = withContext(Dispatchers.IO) {
+                val bmp = runCatching { download(c.domain, null) }.getOrNull()
+                bmp != null && minOf(bmp.width, bmp.height) > width(f) && runCatching { save(f, bmp) }.isSuccess
+            }
+            if (ok) version++
         }
     }
 
@@ -187,7 +246,7 @@ object Logos {
 
     /** Icône de l'appli officielle de l'enseigne sur le Play Store (256 px). */
     private fun playIcon(pkg: String): String? {
-        val page = get("https://play.google.com/store/apps/details?id=$pkg&hl=fr", 3_000_000) ?: return null
+        val page = get("https://play.google.com/store/apps/details?id=$pkg&hl=fr&gl=FR", 3_000_000) ?: return null
         val html = String(page.first)
         val m = Regex("""<meta[^>]+property="og:image"[^>]+content="([^"]+)"""").find(html) ?: return null
         return m.groupValues[1].replace("&amp;", "&").replace(Regex("=[a-z0-9-]+$"), "") + "=s256"

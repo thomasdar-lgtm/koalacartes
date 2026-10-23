@@ -12,10 +12,28 @@ object Stores {
     // Appli officielle sur le Play Store : icône nette quand le site n'en publie qu'une petite
     private val PLAY = mapOf(
         "leclerc" to "com.infomil.bill",
-        "sephora" to "com.sephora",
-        "hm" to "com.hm.goe",
+        "intermarche" to "fr.stime.mcommerce",
+        "carrefour" to "com.carrefour.fid.android",
+        "auchan" to "com.auchan.android",
+        "lidl" to "com.lidl.eci.lidlplus",
+        "aldi" to "fr.aldi.android",
+        "casino" to "fr.casino.fidelite",
+        "netto" to "com.mousquetaires.netto",
+        "grandfrais" to "com.grandfrais.app",
+        "picard" to "com.picard.catalogue",
         "naturalia" to "com.naturalia.mob",
         "leroymerlin" to "com.adeo.android.app",
+        "castorama" to "com.kingfisher.cafr",
+        "action" to "com.action.consumerapp",
+        "gifi" to "fr.profilweb.gifi",
+        "foirfouille" to "com.app.appfoirfouille",
+        "darty" to "com.darty.catalogue",
+        "electrodepot" to "com.pictime.electrodepot",
+        "intersport" to "com.ua.intersport.app",
+        "hm" to "com.hm.goe",
+        "sephora" to "fr.sephora.sephorafrance",
+        "nocibe" to "com.pictime.nocibe",
+        "marionnaud" to "com.marionnaud.marionnaudfrance",
     )
 
     val all: List<Store> = listOf(
