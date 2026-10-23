@@ -21,6 +21,7 @@ def dims(b):
     except Exception:
         return "pas une image"
 
+SUMMARY = []
 for domain in sys.argv[1:]:
     print(f"\n===== {domain}")
     hosts = [domain] if domain.startswith("www.") else [domain, "www." + domain]
@@ -50,9 +51,18 @@ for domain in sys.argv[1:]:
         cands += [f"https://{h}/apple-touch-icon.png", f"https://{h}/apple-touch-icon-precomposed.png"]
         cands.append(f"https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://{h}&size=256")
     cands += [f"https://www.google.com/s2/favicons?domain={domain}&sz=256", f"https://icons.duckduckgo.com/ip3/{domain}.ico"]
-    seen = set()
+    seen = set(); best = [0, ""]
     for u in cands:
         if u in seen: continue
         seen.add(u)
         st, b, final, ct = get(u)
-        print(f"  [{st}] {dims(b) if b else '-'} {ct} {u}")
+        d = dims(b) if b else '-'
+        print(f"  [{st}] {d} {ct} {u}")
+        m = re.search(r"(\d+)x(\d+)", d)
+        if m:
+            sz = min(int(m.group(1)), int(m.group(2)))
+            if sz > best[0]: best[:] = [sz, u]
+    SUMMARY.append(f"{best[0]:>4}px  {domain}  {best[1]}")
+
+print("\n===== RÉSUMÉ (meilleure taille trouvée)")
+print("\n".join(sorted(SUMMARY)))
