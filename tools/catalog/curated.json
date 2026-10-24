@@ -1,0 +1,1451 @@
+[
+ {
+  "id": "leclerc",
+  "name": "E.Leclerc",
+  "color": "#005EB8",
+  "domain": "e.leclerc",
+  "keys": [
+   "leclerc",
+   "e leclerc"
+  ],
+  "play": "com.infomil.bill"
+ },
+ {
+  "id": "carrefour",
+  "name": "Carrefour",
+  "color": "#0E4C96",
+  "domain": "carrefour.fr",
+  "keys": [
+   "carrefour"
+  ],
+  "play": "com.carrefour.fid.android"
+ },
+ {
+  "id": "auchan",
+  "name": "Auchan",
+  "color": "#E2001A",
+  "domain": "auchan.fr",
+  "keys": [
+   "auchan"
+  ],
+  "play": "com.auchan.android"
+ },
+ {
+  "id": "intermarche",
+  "name": "Intermarché",
+  "color": "#D7001B",
+  "domain": "intermarche.com",
+  "keys": [
+   "intermarche",
+   "les mousquetaires"
+  ],
+  "play": "fr.stime.mcommerce"
+ },
+ {
+  "id": "u",
+  "name": "Magasins U",
+  "color": "#E30613",
+  "domain": "magasins-u.com",
+  "keys": [
+   "super u",
+   "hyper u",
+   "u express",
+   "magasins u",
+   "cooperative u",
+   "carte u"
+  ]
+ },
+ {
+  "id": "lidl",
+  "name": "Lidl",
+  "color": "#0050AA",
+  "domain": "lidl.fr",
+  "keys": [
+   "lidl"
+  ]
+ },
+ {
+  "id": "aldi",
+  "name": "Aldi",
+  "color": "#00005F",
+  "domain": "aldi.fr",
+  "keys": [
+   "aldi"
+  ],
+  "play": "fr.aldi.android"
+ },
+ {
+  "id": "casino",
+  "name": "Casino",
+  "color": "#C8102E",
+  "domain": "supercasino.fr",
+  "keys": [
+   "casino",
+   "geant casino"
+  ],
+  "play": "fr.casino.fidelite"
+ },
+ {
+  "id": "monoprix",
+  "name": "Monoprix",
+  "color": "#D50032",
+  "domain": "monoprix.fr",
+  "keys": [
+   "monoprix"
+  ]
+ },
+ {
+  "id": "franprix",
+  "name": "Franprix",
+  "color": "#F39200",
+  "domain": "franprix.fr",
+  "keys": [
+   "franprix"
+  ]
+ },
+ {
+  "id": "netto",
+  "name": "Netto",
+  "color": "#E30613",
+  "domain": "netto.fr",
+  "keys": [
+   "netto"
+  ],
+  "play": "com.mousquetaires.netto"
+ },
+ {
+  "id": "cora",
+  "name": "Cora",
+  "color": "#E30613",
+  "domain": "cora.fr",
+  "keys": [
+   "cora"
+  ]
+ },
+ {
+  "id": "spar",
+  "name": "Spar",
+  "color": "#00843D",
+  "domain": "spar.fr",
+  "keys": [
+   "spar"
+  ]
+ },
+ {
+  "id": "vival",
+  "name": "Vival",
+  "color": "#E30613",
+  "domain": "vival.fr",
+  "keys": [
+   "vival"
+  ]
+ },
+ {
+  "id": "grandfrais",
+  "name": "Grand Frais",
+  "color": "#2E7D32",
+  "domain": "grandfrais.com",
+  "keys": [
+   "grand frais"
+  ],
+  "play": "com.grandfrais.app"
+ },
+ {
+  "id": "picard",
+  "name": "Picard",
+  "color": "#1E4F9C",
+  "domain": "picard.fr",
+  "keys": [
+   "picard"
+  ],
+  "play": "com.picard.catalogue"
+ },
+ {
+  "id": "biocoop",
+  "name": "Biocoop",
+  "color": "#6AB023",
+  "domain": "biocoop.fr",
+  "keys": [
+   "biocoop"
+  ]
+ },
+ {
+  "id": "naturalia",
+  "name": "Naturalia",
+  "color": "#78BE20",
+  "domain": "naturalia.fr",
+  "keys": [
+   "naturalia"
+  ],
+  "play": "com.naturalia.mob"
+ },
+ {
+  "id": "leroymerlin",
+  "name": "Leroy Merlin",
+  "color": "#78BE20",
+  "domain": "leroymerlin.fr",
+  "keys": [
+   "leroy merlin"
+  ],
+  "play": "com.adeo.android.app"
+ },
+ {
+  "id": "castorama",
+  "name": "Castorama",
+  "color": "#0058A3",
+  "domain": "castorama.fr",
+  "keys": [
+   "castorama"
+  ],
+  "play": "com.kingfisher.cafr"
+ },
+ {
+  "id": "bricodepot",
+  "name": "Brico Dépôt",
+  "color": "#F7A600",
+  "domain": "bricodepot.fr",
+  "keys": [
+   "brico depot"
+  ]
+ },
+ {
+  "id": "bricomarche",
+  "name": "Bricomarché",
+  "color": "#E30613",
+  "domain": "bricomarche.com",
+  "keys": [
+   "bricomarche"
+  ]
+ },
+ {
+  "id": "mrbricolage",
+  "name": "Mr.Bricolage",
+  "color": "#E2001A",
+  "domain": "mr-bricolage.fr",
+  "keys": [
+   "mr bricolage",
+   "mr.bricolage"
+  ],
+  "play": "komandco.mrbricolage"
+ },
+ {
+  "id": "weldom",
+  "name": "Weldom",
+  "color": "#EE7203",
+  "domain": "weldom.fr",
+  "keys": [
+   "weldom"
+  ]
+ },
+ {
+  "id": "gammvert",
+  "name": "Gamm vert",
+  "color": "#00973A",
+  "domain": "gammvert.fr",
+  "keys": [
+   "gamm vert"
+  ]
+ },
+ {
+  "id": "jardiland",
+  "name": "Jardiland",
+  "color": "#00A651",
+  "domain": "jardiland.com",
+  "keys": [
+   "jardiland"
+  ]
+ },
+ {
+  "id": "truffaut",
+  "name": "Truffaut",
+  "color": "#00594F",
+  "domain": "truffaut.com",
+  "keys": [
+   "truffaut"
+  ]
+ },
+ {
+  "id": "botanic",
+  "name": "Botanic",
+  "color": "#6BA539",
+  "domain": "botanic.com",
+  "keys": [
+   "botanic"
+  ]
+ },
+ {
+  "id": "ikea",
+  "name": "IKEA",
+  "color": "#0058A3",
+  "domain": "ikea.com",
+  "keys": [
+   "ikea",
+   "ikea family"
+  ]
+ },
+ {
+  "id": "conforama",
+  "name": "Conforama",
+  "color": "#E30613",
+  "domain": "conforama.fr",
+  "keys": [
+   "conforama"
+  ]
+ },
+ {
+  "id": "but",
+  "name": "BUT",
+  "color": "#E4032E",
+  "domain": "but.fr",
+  "keys": [
+   "but fr",
+   "magasins but"
+  ]
+ },
+ {
+  "id": "maisonsdumonde",
+  "name": "Maisons du Monde",
+  "color": "#3D3D3D",
+  "domain": "maisonsdumonde.com",
+  "keys": [
+   "maisons du monde"
+  ]
+ },
+ {
+  "id": "gifi",
+  "name": "Gifi",
+  "color": "#E6007E",
+  "domain": "gifi.fr",
+  "keys": [
+   "gifi"
+  ],
+  "play": "fr.profilweb.gifi"
+ },
+ {
+  "id": "action",
+  "name": "Action",
+  "color": "#0047AB",
+  "domain": "action.com",
+  "keys": [
+   "action com",
+   "magasins action"
+  ],
+  "play": "com.action.consumerapp"
+ },
+ {
+  "id": "centrakor",
+  "name": "Centrakor",
+  "color": "#E5005B",
+  "domain": "centrakor.com",
+  "keys": [
+   "centrakor"
+  ]
+ },
+ {
+  "id": "foirfouille",
+  "name": "La Foir'Fouille",
+  "color": "#F5B400",
+  "domain": "lafoirfouille.fr",
+  "keys": [
+   "foir fouille",
+   "foirfouille"
+  ],
+  "play": "com.app.appfoirfouille"
+ },
+ {
+  "id": "stokomani",
+  "name": "Stokomani",
+  "color": "#E30613",
+  "domain": "stokomani.fr",
+  "keys": [
+   "stokomani"
+  ]
+ },
+ {
+  "id": "darty",
+  "name": "Darty",
+  "color": "#E2001A",
+  "domain": "darty.com",
+  "keys": [
+   "darty"
+  ],
+  "play": "com.darty.catalogue"
+ },
+ {
+  "id": "boulanger",
+  "name": "Boulanger",
+  "color": "#F15A22",
+  "domain": "boulanger.com",
+  "keys": [
+   "boulanger"
+  ]
+ },
+ {
+  "id": "fnac",
+  "name": "Fnac",
+  "color": "#E1A925",
+  "domain": "fnac.com",
+  "keys": [
+   "fnac"
+  ]
+ },
+ {
+  "id": "cultura",
+  "name": "Cultura",
+  "color": "#6D2077",
+  "domain": "cultura.com",
+  "keys": [
+   "cultura"
+  ],
+  "play": "com.cultura.jerevends"
+ },
+ {
+  "id": "electrodepot",
+  "name": "Electro Dépôt",
+  "color": "#FFD100",
+  "domain": "electrodepot.fr",
+  "keys": [
+   "electro depot"
+  ],
+  "play": "com.pictime.electrodepot"
+ },
+ {
+  "id": "micromania",
+  "name": "Micromania",
+  "color": "#E30613",
+  "domain": "micromania.fr",
+  "keys": [
+   "micromania"
+  ]
+ },
+ {
+  "id": "kingjouet",
+  "name": "King Jouet",
+  "color": "#E30613",
+  "domain": "king-jouet.com",
+  "keys": [
+   "king jouet"
+  ]
+ },
+ {
+  "id": "joueclub",
+  "name": "JouéClub",
+  "color": "#ED1C24",
+  "domain": "joueclub.fr",
+  "keys": [
+   "joueclub",
+   "joue club"
+  ]
+ },
+ {
+  "id": "granderecre",
+  "name": "La Grande Récré",
+  "color": "#E30613",
+  "domain": "lagranderecre.fr",
+  "keys": [
+   "grande recre"
+  ]
+ },
+ {
+  "id": "bureauvallee",
+  "name": "Bureau Vallée",
+  "color": "#E30613",
+  "domain": "bureau-vallee.fr",
+  "keys": [
+   "bureau vallee"
+  ]
+ },
+ {
+  "id": "decathlon",
+  "name": "Decathlon",
+  "color": "#0082C3",
+  "domain": "decathlon.fr",
+  "keys": [
+   "decathlon"
+  ]
+ },
+ {
+  "id": "intersport",
+  "name": "Intersport",
+  "color": "#003DA5",
+  "domain": "intersport.fr",
+  "keys": [
+   "intersport"
+  ],
+  "play": "com.ua.intersport.app"
+ },
+ {
+  "id": "gosport",
+  "name": "Go Sport",
+  "color": "#E30613",
+  "domain": "go-sport.com",
+  "keys": [
+   "go sport"
+  ]
+ },
+ {
+  "id": "sport2000",
+  "name": "Sport 2000",
+  "color": "#E2001A",
+  "domain": "sport2000.fr",
+  "keys": [
+   "sport 2000"
+  ]
+ },
+ {
+  "id": "kiabi",
+  "name": "Kiabi",
+  "color": "#0E3F7E",
+  "domain": "kiabi.com",
+  "keys": [
+   "kiabi"
+  ]
+ },
+ {
+  "id": "hm",
+  "name": "H&M",
+  "color": "#E50010",
+  "domain": "hm.com",
+  "keys": [
+   "h&m",
+   "h & m"
+  ],
+  "play": "com.hm.goe"
+ },
+ {
+  "id": "zara",
+  "name": "Zara",
+  "color": "#111111",
+  "domain": "zara.com",
+  "keys": [
+   "zara"
+  ]
+ },
+ {
+  "id": "celio",
+  "name": "Celio",
+  "color": "#E30613",
+  "domain": "celio.com",
+  "keys": [
+   "celio"
+  ]
+ },
+ {
+  "id": "jules",
+  "name": "Jules",
+  "color": "#1A1A1A",
+  "domain": "jules.com",
+  "keys": [
+   "jules"
+  ]
+ },
+ {
+  "id": "lahalle",
+  "name": "La Halle",
+  "color": "#E30613",
+  "domain": "lahalle.com",
+  "keys": [
+   "la halle"
+  ]
+ },
+ {
+  "id": "gemo",
+  "name": "Gémo",
+  "color": "#E6007E",
+  "domain": "gemo.fr",
+  "keys": [
+   "gemo"
+  ]
+ },
+ {
+  "id": "chaussea",
+  "name": "Chaussea",
+  "color": "#E30613",
+  "domain": "chaussea.com",
+  "keys": [
+   "chaussea"
+  ]
+ },
+ {
+  "id": "okaidi",
+  "name": "Okaïdi",
+  "color": "#E5007D",
+  "domain": "okaidi.fr",
+  "keys": [
+   "okaidi"
+  ]
+ },
+ {
+  "id": "sephora",
+  "name": "Sephora",
+  "color": "#111111",
+  "domain": "sephora.fr",
+  "keys": [
+   "sephora"
+  ],
+  "play": "fr.sephora.sephorafrance"
+ },
+ {
+  "id": "nocibe",
+  "name": "Nocibé",
+  "color": "#E4007C",
+  "domain": "nocibe.fr",
+  "keys": [
+   "nocibe"
+  ],
+  "play": "com.pictime.nocibe"
+ },
+ {
+  "id": "marionnaud",
+  "name": "Marionnaud",
+  "color": "#8B1E3F",
+  "domain": "marionnaud.fr",
+  "keys": [
+   "marionnaud"
+  ],
+  "play": "com.marionnaud.marionnaudfrance"
+ },
+ {
+  "id": "yvesrocher",
+  "name": "Yves Rocher",
+  "color": "#00754A",
+  "domain": "yves-rocher.fr",
+  "keys": [
+   "yves rocher"
+  ]
+ },
+ {
+  "id": "maxizoo",
+  "name": "Maxi Zoo",
+  "color": "#003DA5",
+  "domain": "maxizoo.fr",
+  "keys": [
+   "maxi zoo"
+  ]
+ },
+ {
+  "id": "animalis",
+  "name": "Animalis",
+  "color": "#F39200",
+  "domain": "animalis.com",
+  "keys": [
+   "animalis"
+  ]
+ },
+ {
+  "id": "totalenergies",
+  "name": "TotalEnergies",
+  "color": "#E4002B",
+  "domain": "totalenergies.fr",
+  "keys": [
+   "totalenergies",
+   "total energies"
+  ]
+ },
+ {
+  "id": "flunch",
+  "name": "Flunch",
+  "color": "#E30613",
+  "domain": "flunch.fr",
+  "keys": [
+   "flunch"
+  ]
+ },
+ {
+  "id": "starbucks",
+  "name": "Starbucks",
+  "color": "#00704A",
+  "domain": "starbucks.fr",
+  "keys": [
+   "starbucks"
+  ]
+ },
+ {
+  "id": "pathe",
+  "name": "Pathé",
+  "color": "#FFC20E",
+  "domain": "pathe.fr",
+  "keys": [
+   "pathe"
+  ]
+ },
+ {
+  "id": "cgr",
+  "name": "CGR Cinémas",
+  "color": "#E30613",
+  "domain": "cgrcinemas.fr",
+  "keys": [
+   "cgr"
+  ]
+ },
+ {
+  "id": "leaderprice",
+  "name": "Leader Price",
+  "color": "#E2001A",
+  "domain": "",
+  "keys": [
+   "leader price"
+  ]
+ },
+ {
+  "id": "coccimarket",
+  "name": "Coccimarket",
+  "color": "#E30613",
+  "domain": "coccimarket.fr",
+  "keys": [
+   "coccimarket",
+   "cocci market"
+  ]
+ },
+ {
+  "id": "match",
+  "name": "Supermarchés Match",
+  "color": "#E30613",
+  "domain": "supermarchesmatch.fr",
+  "keys": [
+   "supermarches match"
+  ],
+  "ios": 1148591369
+ },
+ {
+  "id": "colruyt",
+  "name": "Colruyt",
+  "color": "#E30613",
+  "domain": "colruyt.fr",
+  "keys": [
+   "colruyt"
+  ]
+ },
+ {
+  "id": "biocbon",
+  "name": "Bio c' Bon",
+  "color": "#7AB51D",
+  "domain": "biocbon.fr",
+  "keys": [
+   "bio c bon"
+  ]
+ },
+ {
+  "id": "lavieclaire",
+  "name": "La Vie Claire",
+  "color": "#8DC63F",
+  "domain": "lavieclaire.com",
+  "keys": [
+   "la vie claire"
+  ]
+ },
+ {
+  "id": "thiriet",
+  "name": "Thiriet",
+  "color": "#1D3F8C",
+  "domain": "thiriet.com",
+  "keys": [
+   "thiriet"
+  ]
+ },
+ {
+  "id": "marieblachere",
+  "name": "Marie Blachère",
+  "color": "#B3001B",
+  "domain": "marieblachere.com",
+  "keys": [
+   "marie blachere"
+  ]
+ },
+ {
+  "id": "metro",
+  "name": "Metro",
+  "color": "#003D7C",
+  "domain": "metro.fr",
+  "keys": [
+   "metro cash",
+   "metro france"
+  ]
+ },
+ {
+  "id": "promocash",
+  "name": "Promocash",
+  "color": "#E30613",
+  "domain": "promocash.com",
+  "keys": [
+   "promocash"
+  ]
+ },
+ {
+  "id": "costco",
+  "name": "Costco",
+  "color": "#E31837",
+  "domain": "costco.fr",
+  "keys": [
+   "costco"
+  ]
+ },
+ {
+  "id": "mcdonalds",
+  "name": "McDonald's",
+  "color": "#DA291C",
+  "domain": "mcdonalds.fr",
+  "keys": [
+   "mcdonald",
+   "mcdonalds"
+  ]
+ },
+ {
+  "id": "burgerking",
+  "name": "Burger King",
+  "color": "#D62300",
+  "domain": "burgerking.fr",
+  "keys": [
+   "burger king"
+  ],
+  "play": "air.com.unit9.bkFrApp"
+ },
+ {
+  "id": "kfc",
+  "name": "KFC",
+  "color": "#E4002B",
+  "domain": "kfc.fr",
+  "keys": [
+   "kfc"
+  ],
+  "play": "fr.kfc.mobileapp"
+ },
+ {
+  "id": "quick",
+  "name": "Quick",
+  "color": "#E30613",
+  "domain": "quick.fr",
+  "keys": [
+   "quick fr",
+   "quick restaurants"
+  ],
+  "play": "be.lvlp.Quick"
+ },
+ {
+  "id": "subway",
+  "name": "Subway",
+  "color": "#008C15",
+  "domain": "subway.com",
+  "keys": [
+   "subway"
+  ],
+  "play": "com.rexsubs.mysub"
+ },
+ {
+  "id": "dominos",
+  "name": "Domino's",
+  "color": "#006491",
+  "domain": "dominos.fr",
+  "keys": [
+   "domino s pizza",
+   "dominos"
+  ],
+  "play": "com.dominos.dominossite"
+ },
+ {
+  "id": "pizzahut",
+  "name": "Pizza Hut",
+  "color": "#E4002B",
+  "domain": "pizzahut.fr",
+  "keys": [
+   "pizza hut"
+  ],
+  "play": "com.pizzahut.france"
+ },
+ {
+  "id": "paul",
+  "name": "Paul",
+  "color": "#1A1A1A",
+  "domain": "paul.fr",
+  "keys": [
+   "boulangerie paul"
+  ]
+ },
+ {
+  "id": "briochedoree",
+  "name": "Brioche Dorée",
+  "color": "#C8102E",
+  "domain": "briochedoree.fr",
+  "keys": [
+   "brioche doree"
+  ],
+  "play": "fr.intact.briochedoree.staging"
+ },
+ {
+  "id": "columbus",
+  "name": "Columbus Café",
+  "color": "#8B5E3C",
+  "domain": "columbuscafe.com",
+  "keys": [
+   "columbus cafe"
+  ]
+ },
+ {
+  "id": "buffalo",
+  "name": "Buffalo Grill",
+  "color": "#C8102E",
+  "domain": "buffalo-grill.fr",
+  "keys": [
+   "buffalo grill"
+  ]
+ },
+ {
+  "id": "courtepaille",
+  "name": "Courtepaille",
+  "color": "#E30613",
+  "domain": "courtepaille.com",
+  "keys": [
+   "courtepaille"
+  ]
+ },
+ {
+  "id": "hippopotamus",
+  "name": "Hippopotamus",
+  "color": "#00594F",
+  "domain": "hippopotamus.fr",
+  "keys": [
+   "hippopotamus"
+  ]
+ },
+ {
+  "id": "delarte",
+  "name": "Del Arte",
+  "color": "#C8102E",
+  "domain": "delarte.fr",
+  "keys": [
+   "del arte"
+  ],
+  "play": "fr.delarte.mobileapp"
+ },
+ {
+  "id": "norauto",
+  "name": "Norauto",
+  "color": "#004C97",
+  "domain": "norauto.fr",
+  "keys": [
+   "norauto"
+  ]
+ },
+ {
+  "id": "feuvert",
+  "name": "Feu Vert",
+  "color": "#009640",
+  "domain": "feuvert.fr",
+  "keys": [
+   "feu vert"
+  ]
+ },
+ {
+  "id": "midas",
+  "name": "Midas",
+  "color": "#FFD100",
+  "domain": "midas.fr",
+  "keys": [
+   "midas"
+  ]
+ },
+ {
+  "id": "speedy",
+  "name": "Speedy",
+  "color": "#E30613",
+  "domain": "speedy.fr",
+  "keys": [
+   "speedy"
+  ]
+ },
+ {
+  "id": "points",
+  "name": "Point S",
+  "color": "#E30613",
+  "domain": "point-s.fr",
+  "keys": [
+   "point s"
+  ]
+ },
+ {
+  "id": "roady",
+  "name": "Roady",
+  "color": "#E30613",
+  "domain": "roady.fr",
+  "keys": [
+   "roady"
+  ]
+ },
+ {
+  "id": "esso",
+  "name": "Esso",
+  "color": "#0033A0",
+  "domain": "",
+  "keys": [
+   "esso"
+  ]
+ },
+ {
+  "id": "shell",
+  "name": "Shell",
+  "color": "#FFD500",
+  "domain": "shell.fr",
+  "keys": [
+   "shell"
+  ]
+ },
+ {
+  "id": "avia",
+  "name": "Avia",
+  "color": "#E30613",
+  "domain": "avia-france.fr",
+  "keys": [
+   "avia"
+  ]
+ },
+ {
+  "id": "optic2000",
+  "name": "Optic 2000",
+  "color": "#0055A4",
+  "domain": "optic2000.com",
+  "keys": [
+   "optic 2000"
+  ]
+ },
+ {
+  "id": "krys",
+  "name": "Krys",
+  "color": "#E4002B",
+  "domain": "krys.com",
+  "keys": [
+   "krys"
+  ]
+ },
+ {
+  "id": "afflelou",
+  "name": "Alain Afflelou",
+  "color": "#111111",
+  "domain": "afflelou.com",
+  "keys": [
+   "afflelou"
+  ]
+ },
+ {
+  "id": "atol",
+  "name": "Atol",
+  "color": "#0072BC",
+  "domain": "opticiens-atol.com",
+  "keys": [
+   "atol"
+  ]
+ },
+ {
+  "id": "grandoptical",
+  "name": "Grand Optical",
+  "color": "#1A1A1A",
+  "domain": "grandoptical.com",
+  "keys": [
+   "grand optical"
+  ]
+ },
+ {
+  "id": "generaleoptique",
+  "name": "Générale d'Optique",
+  "color": "#0072BC",
+  "domain": "generale-optique.com",
+  "keys": [
+   "generale d optique"
+  ]
+ },
+ {
+  "id": "primark",
+  "name": "Primark",
+  "color": "#0DB5E7",
+  "domain": "primark.com",
+  "keys": [
+   "primark"
+  ]
+ },
+ {
+  "id": "cea",
+  "name": "C&A",
+  "color": "#00539F",
+  "domain": "c-and-a.com",
+  "keys": [
+   "c&a"
+  ],
+  "play": "com.canda.mobileapp"
+ },
+ {
+  "id": "uniqlo",
+  "name": "Uniqlo",
+  "color": "#E60012",
+  "domain": "uniqlo.com",
+  "keys": [
+   "uniqlo"
+  ]
+ },
+ {
+  "id": "mango",
+  "name": "Mango",
+  "color": "#111111",
+  "domain": "mango.com",
+  "keys": [
+   "mango"
+  ]
+ },
+ {
+  "id": "bershka",
+  "name": "Bershka",
+  "color": "#111111",
+  "domain": "bershka.com",
+  "keys": [
+   "bershka"
+  ]
+ },
+ {
+  "id": "promod",
+  "name": "Promod",
+  "color": "#111111",
+  "domain": "promod.fr",
+  "keys": [
+   "promod"
+  ]
+ },
+ {
+  "id": "pimkie",
+  "name": "Pimkie",
+  "color": "#E6007E",
+  "domain": "pimkie.fr",
+  "keys": [
+   "pimkie"
+  ],
+  "ios": 897026650
+ },
+ {
+  "id": "jennyfer",
+  "name": "Jennyfer",
+  "color": "#111111",
+  "domain": "jennyfer.com",
+  "keys": [
+   "jennyfer"
+  ]
+ },
+ {
+  "id": "etam",
+  "name": "Etam",
+  "color": "#111111",
+  "domain": "etam.com",
+  "keys": [
+   "etam"
+  ]
+ },
+ {
+  "id": "undiz",
+  "name": "Undiz",
+  "color": "#E6007E",
+  "domain": "undiz.com",
+  "keys": [
+   "undiz"
+  ]
+ },
+ {
+  "id": "damart",
+  "name": "Damart",
+  "color": "#003DA5",
+  "domain": "damart.fr",
+  "keys": [
+   "damart"
+  ]
+ },
+ {
+  "id": "galeries",
+  "name": "Galeries Lafayette",
+  "color": "#111111",
+  "domain": "galerieslafayette.com",
+  "keys": [
+   "galeries lafayette"
+  ]
+ },
+ {
+  "id": "printemps",
+  "name": "Printemps",
+  "color": "#111111",
+  "domain": "printemps.com",
+  "keys": [
+   "printemps com"
+  ]
+ },
+ {
+  "id": "tapealoeil",
+  "name": "Tape à l'œil",
+  "color": "#E30613",
+  "domain": "tapealoeil.com",
+  "keys": [
+   "tape a l oeil"
+  ]
+ },
+ {
+  "id": "dpam",
+  "name": "Du Pareil au Même",
+  "color": "#0072BC",
+  "domain": "dpam.com",
+  "keys": [
+   "du pareil au meme",
+   "dpam"
+  ]
+ },
+ {
+  "id": "vertbaudet",
+  "name": "Vertbaudet",
+  "color": "#009FE3",
+  "domain": "vertbaudet.fr",
+  "keys": [
+   "vertbaudet"
+  ]
+ },
+ {
+  "id": "eram",
+  "name": "Eram",
+  "color": "#E30613",
+  "domain": "eram.fr",
+  "keys": [
+   "eram"
+  ]
+ },
+ {
+  "id": "besson",
+  "name": "Besson Chaussures",
+  "color": "#111111",
+  "domain": "besson-chaussures.com",
+  "keys": [
+   "besson"
+  ]
+ },
+ {
+  "id": "courir",
+  "name": "Courir",
+  "color": "#111111",
+  "domain": "courir.com",
+  "keys": [
+   "courir"
+  ]
+ },
+ {
+  "id": "footlocker",
+  "name": "Foot Locker",
+  "color": "#111111",
+  "domain": "footlocker.fr",
+  "keys": [
+   "foot locker"
+  ]
+ },
+ {
+  "id": "douglas",
+  "name": "Douglas",
+  "color": "#111111",
+  "domain": "douglas.de",
+  "keys": [
+   "douglas"
+  ]
+ },
+ {
+  "id": "kiko",
+  "name": "Kiko Milano",
+  "color": "#111111",
+  "domain": "kikocosmetics.com",
+  "keys": [
+   "kiko"
+  ]
+ },
+ {
+  "id": "rituals",
+  "name": "Rituals",
+  "color": "#111111",
+  "domain": "rituals.com",
+  "keys": [
+   "rituals"
+  ]
+ },
+ {
+  "id": "loccitane",
+  "name": "L'Occitane",
+  "color": "#FFC72C",
+  "domain": "loccitane.com",
+  "keys": [
+   "l occitane",
+   "loccitane"
+  ]
+ },
+ {
+  "id": "lush",
+  "name": "Lush",
+  "color": "#111111",
+  "domain": "lush.com",
+  "keys": [
+   "lush"
+  ],
+  "play": "com.lush.app"
+ },
+ {
+  "id": "pharmalafayette",
+  "name": "Pharmacie Lafayette",
+  "color": "#00A651",
+  "domain": "pharmacielafayette.com",
+  "keys": [
+   "pharmacie lafayette"
+  ]
+ },
+ {
+  "id": "natdec",
+  "name": "Nature & Découvertes",
+  "color": "#2E5E3E",
+  "domain": "natureetdecouvertes.com",
+  "keys": [
+   "nature & decouvertes",
+   "nature et decouvertes"
+  ]
+ },
+ {
+  "id": "hema",
+  "name": "Hema",
+  "color": "#E30613",
+  "domain": "hema.com",
+  "keys": [
+   "hema"
+  ]
+ },
+ {
+  "id": "flyingtiger",
+  "name": "Flying Tiger",
+  "color": "#111111",
+  "domain": "flyingtiger.com",
+  "keys": [
+   "flying tiger"
+  ]
+ },
+ {
+  "id": "alinea",
+  "name": "Alinéa",
+  "color": "#111111",
+  "domain": "alinea.com",
+  "keys": [
+   "alinea"
+  ]
+ },
+ {
+  "id": "zodio",
+  "name": "Zôdio",
+  "color": "#E6007E",
+  "domain": "zodio.fr",
+  "keys": [
+   "zodio"
+  ]
+ },
+ {
+  "id": "casa",
+  "name": "Casa",
+  "color": "#111111",
+  "domain": "casashops.com",
+  "keys": [
+   "casa shops"
+  ]
+ },
+ {
+  "id": "bm",
+  "name": "B&M (ex-Babou)",
+  "color": "#5B2C82",
+  "domain": "bmstores.fr",
+  "keys": [
+   "b&m",
+   "babou"
+  ],
+  "play": "fr.bmstores.bmfrance"
+ },
+ {
+  "id": "noz",
+  "name": "Noz",
+  "color": "#FFD100",
+  "domain": "noz.fr",
+  "keys": [
+   "noz"
+  ]
+ },
+ {
+  "id": "maxibazar",
+  "name": "Maxi Bazar",
+  "color": "#E30613",
+  "domain": "maxibazar.fr",
+  "keys": [
+   "maxi bazar"
+  ]
+ },
+ {
+  "id": "bricoman",
+  "name": "Bricoman",
+  "color": "#F39200",
+  "domain": "bricoman.fr",
+  "keys": [
+   "bricoman"
+  ]
+ },
+ {
+  "id": "pointp",
+  "name": "Point.P",
+  "color": "#E30613",
+  "domain": "pointp.fr",
+  "keys": [
+   "point p"
+  ]
+ },
+ {
+  "id": "ldlc",
+  "name": "LDLC",
+  "color": "#1E5AA8",
+  "domain": "ldlc.com",
+  "keys": [
+   "ldlc"
+  ]
+ },
+ {
+  "id": "toysrus",
+  "name": "Toys\"R\"Us",
+  "color": "#0055A4",
+  "domain": "toysrus.fr",
+  "keys": [
+   "toys r us"
+  ]
+ },
+ {
+  "id": "tomandco",
+  "name": "Tom&Co",
+  "color": "#009FE3",
+  "domain": "tomandco.com",
+  "keys": [
+   "tom&co",
+   "tom & co"
+  ]
+ },
+ {
+  "id": "auvieuxcampeur",
+  "name": "Au Vieux Campeur",
+  "color": "#2E5E3E",
+  "domain": "auvieuxcampeur.fr",
+  "keys": [
+   "vieux campeur"
+  ]
+ },
+ {
+  "id": "ugc",
+  "name": "UGC",
+  "color": "#111111",
+  "domain": "ugc.fr",
+  "keys": [
+   "ugc"
+  ]
+ },
+ {
+  "id": "kinepolis",
+  "name": "Kinepolis",
+  "color": "#E30613",
+  "domain": "kinepolis.fr",
+  "keys": [
+   "kinepolis"
+  ]
+ }
+]

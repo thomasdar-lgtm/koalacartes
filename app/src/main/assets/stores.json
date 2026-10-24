@@ -1,0 +1,6499 @@
+[
+{
+"id": "leclerc",
+"name": "E.Leclerc",
+"color": "#005EB8",
+"domain": "e.leclerc",
+"keys": [
+"leclerc",
+"e leclerc",
+"e leclerc espace culturel"
+],
+"play": "com.infomil.bill",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/E.Leclerc logo.svg"
+},
+{
+"id": "carrefour",
+"name": "Carrefour",
+"color": "#0E4C96",
+"domain": "carrefour.fr",
+"keys": [
+"carrefour",
+"carrefour city",
+"carrefour contact",
+"carrefour montagne"
+],
+"play": "com.carrefour.fid.android"
+},
+{
+"id": "auchan",
+"name": "Auchan",
+"color": "#E2001A",
+"domain": "auchan.fr",
+"keys": [
+"auchan",
+"auchan drive",
+"auchan supermarche"
+],
+"play": "com.auchan.android",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Auchan Retail logo.svg"
+},
+{
+"id": "intermarche",
+"name": "Intermarché",
+"color": "#D7001B",
+"domain": "intermarche.com",
+"keys": [
+"intermarche",
+"les mousquetaires",
+"intermarche drive",
+"intermarche hyper",
+"intermarche super",
+"intermarche contact",
+"intermarche express"
+],
+"play": "fr.stime.mcommerce"
+},
+{
+"id": "u",
+"name": "Magasins U",
+"color": "#E30613",
+"domain": "magasins-u.com",
+"keys": [
+"super u",
+"hyper u",
+"u express",
+"magasins u",
+"cooperative u",
+"carte u"
+]
+},
+{
+"id": "lidl",
+"name": "Lidl",
+"color": "#0050AA",
+"domain": "lidl.fr",
+"keys": [
+"lidl"
+]
+},
+{
+"id": "aldi",
+"name": "Aldi",
+"color": "#00005F",
+"domain": "aldi.fr",
+"keys": [
+"aldi"
+],
+"play": "fr.aldi.android",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/AldiNord-WorldwideLogo.svg"
+},
+{
+"id": "casino",
+"name": "Casino",
+"color": "#C8102E",
+"domain": "supercasino.fr",
+"keys": [
+"casino",
+"geant casino"
+],
+"play": "fr.casino.fidelite",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo of Casino Supermarchés.svg"
+},
+{
+"id": "monoprix",
+"name": "Monoprix",
+"color": "#D50032",
+"domain": "monoprix.fr",
+"keys": [
+"monoprix"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Monoprix logo.svg"
+},
+{
+"id": "franprix",
+"name": "Franprix",
+"color": "#F39200",
+"domain": "franprix.fr",
+"keys": [
+"franprix"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Franprix - 2015.svg"
+},
+{
+"id": "netto",
+"name": "Netto",
+"color": "#E30613",
+"domain": "netto.fr",
+"keys": [
+"netto"
+],
+"play": "com.mousquetaires.netto",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/French Netto logo 2019.svg"
+},
+{
+"id": "cora",
+"name": "Cora",
+"color": "#E30613",
+"domain": "cora.fr",
+"keys": [
+"cora"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cora logo.svg"
+},
+{
+"id": "spar",
+"name": "Spar",
+"color": "#00843D",
+"domain": "spar.fr",
+"keys": [
+"spar"
+]
+},
+{
+"id": "vival",
+"name": "Vival",
+"color": "#E30613",
+"domain": "vival.fr",
+"keys": [
+"vival"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FVival%20by%20Casino%20logo.png&width=150"
+},
+{
+"id": "grandfrais",
+"name": "Grand Frais",
+"color": "#2E7D32",
+"domain": "grandfrais.com",
+"keys": [
+"grand frais"
+],
+"play": "com.grandfrais.app",
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FGrand%20Frais%20logo.png&width=150"
+},
+{
+"id": "picard",
+"name": "Picard",
+"color": "#1E4F9C",
+"domain": "picard.fr",
+"keys": [
+"picard"
+],
+"play": "com.picard.catalogue"
+},
+{
+"id": "biocoop",
+"name": "Biocoop",
+"color": "#6AB023",
+"domain": "biocoop.fr",
+"keys": [
+"biocoop"
+]
+},
+{
+"id": "naturalia",
+"name": "Naturalia",
+"color": "#78BE20",
+"domain": "naturalia.fr",
+"keys": [
+"naturalia"
+],
+"play": "com.naturalia.mob",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Naturalia.svg"
+},
+{
+"id": "leroymerlin",
+"name": "Leroy Merlin",
+"color": "#78BE20",
+"domain": "leroymerlin.fr",
+"keys": [
+"leroy merlin"
+],
+"play": "com.adeo.android.app"
+},
+{
+"id": "castorama",
+"name": "Castorama",
+"color": "#0058A3",
+"domain": "castorama.fr",
+"keys": [
+"castorama"
+],
+"play": "com.kingfisher.cafr",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Castorama - logo (France, 2014-).svg"
+},
+{
+"id": "bricodepot",
+"name": "Brico Dépôt",
+"color": "#F7A600",
+"domain": "bricodepot.fr",
+"keys": [
+"brico depot"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Brico Depot logo 2021.svg"
+},
+{
+"id": "bricomarche",
+"name": "Bricomarché",
+"color": "#E30613",
+"domain": "bricomarche.com",
+"keys": [
+"bricomarche"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Bricomarché logo 2022.svg"
+},
+{
+"id": "mrbricolage",
+"name": "Mr.Bricolage",
+"color": "#E2001A",
+"domain": "mr-bricolage.fr",
+"keys": [
+"mr bricolage",
+"mr.bricolage"
+],
+"play": "komandco.mrbricolage",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Mr.Bricolage logo.svg"
+},
+{
+"id": "weldom",
+"name": "Weldom",
+"color": "#EE7203",
+"domain": "weldom.fr",
+"keys": [
+"weldom"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Weldom logo 2012.svg"
+},
+{
+"id": "gammvert",
+"name": "Gamm vert",
+"color": "#00973A",
+"domain": "gammvert.fr",
+"keys": [
+"gamm vert"
+]
+},
+{
+"id": "jardiland",
+"name": "Jardiland",
+"color": "#00A651",
+"domain": "jardiland.com",
+"keys": [
+"jardiland"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLOGO%20JLD%20Blocmarque%20Signature%20Q.jpg&width=150"
+},
+{
+"id": "truffaut",
+"name": "Truffaut",
+"color": "#00594F",
+"domain": "truffaut.com",
+"keys": [
+"truffaut"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLOGO-TRUFFAUT-VERT-01.png&width=150"
+},
+{
+"id": "botanic",
+"name": "Botanic",
+"color": "#6BA539",
+"domain": "botanic.com",
+"keys": [
+"botanic"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FBOTANIC%20LOGO.jpg&width=150"
+},
+{
+"id": "ikea",
+"name": "IKEA",
+"color": "#0058A3",
+"domain": "ikea.com",
+"keys": [
+"ikea",
+"ikea family"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Ikea logo.svg"
+},
+{
+"id": "conforama",
+"name": "Conforama",
+"color": "#E30613",
+"domain": "conforama.fr",
+"keys": [
+"conforama"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Conforama logo.svg"
+},
+{
+"id": "but",
+"name": "BUT",
+"color": "#E4032E",
+"domain": "but.fr",
+"keys": [
+"but fr",
+"magasins but"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-BUT.svg"
+},
+{
+"id": "maisonsdumonde",
+"name": "Maisons du Monde",
+"color": "#3D3D3D",
+"domain": "maisonsdumonde.com",
+"keys": [
+"maisons du monde"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Maisons du Monde logo.svg"
+},
+{
+"id": "gifi",
+"name": "Gifi",
+"color": "#E6007E",
+"domain": "gifi.fr",
+"keys": [
+"gifi"
+],
+"play": "fr.profilweb.gifi",
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FGifi%20logo%202012.png&width=150"
+},
+{
+"id": "action",
+"name": "Action",
+"color": "#0047AB",
+"domain": "action.com",
+"keys": [
+"action com",
+"magasins action"
+],
+"play": "com.action.consumerapp",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Action Nederland Logo 2020.svg"
+},
+{
+"id": "centrakor",
+"name": "Centrakor",
+"color": "#E5005B",
+"domain": "centrakor.com",
+"keys": [
+"centrakor"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FNEW%20LOGO%20Centrakor%20Stores.png&width=150"
+},
+{
+"id": "foirfouille",
+"name": "La Foir'Fouille",
+"color": "#F5B400",
+"domain": "lafoirfouille.fr",
+"keys": [
+"foir fouille",
+"foirfouille"
+],
+"play": "com.app.appfoirfouille"
+},
+{
+"id": "stokomani",
+"name": "Stokomani",
+"color": "#E30613",
+"domain": "stokomani.fr",
+"keys": [
+"stokomani"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Stokomani Logo.svg"
+},
+{
+"id": "darty",
+"name": "Darty",
+"color": "#E2001A",
+"domain": "darty.com",
+"keys": [
+"darty"
+],
+"play": "com.darty.catalogue",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Darty.svg"
+},
+{
+"id": "boulanger",
+"name": "Boulanger",
+"color": "#F15A22",
+"domain": "boulanger.com",
+"keys": [
+"boulanger"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Boulanger logo.svg"
+},
+{
+"id": "fnac",
+"name": "Fnac",
+"color": "#E1A925",
+"domain": "fnac.com",
+"keys": [
+"fnac"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Fnac Logo.svg"
+},
+{
+"id": "cultura",
+"name": "Cultura",
+"color": "#6D2077",
+"domain": "cultura.com",
+"keys": [
+"cultura"
+],
+"play": "com.cultura.jerevends"
+},
+{
+"id": "electrodepot",
+"name": "Electro Dépôt",
+"color": "#FFD100",
+"domain": "electrodepot.fr",
+"keys": [
+"electro depot"
+],
+"play": "com.pictime.electrodepot"
+},
+{
+"id": "micromania",
+"name": "Micromania",
+"color": "#E30613",
+"domain": "micromania.fr",
+"keys": [
+"micromania"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo de Micromania-Zing.svg"
+},
+{
+"id": "kingjouet",
+"name": "King Jouet",
+"color": "#E30613",
+"domain": "king-jouet.com",
+"keys": [
+"king jouet"
+]
+},
+{
+"id": "joueclub",
+"name": "JouéClub",
+"color": "#ED1C24",
+"domain": "joueclub.fr",
+"keys": [
+"joueclub",
+"joue club"
+]
+},
+{
+"id": "granderecre",
+"name": "La Grande Récré",
+"color": "#E30613",
+"domain": "lagranderecre.fr",
+"keys": [
+"grande recre"
+]
+},
+{
+"id": "bureauvallee",
+"name": "Bureau Vallée",
+"color": "#E30613",
+"domain": "bureau-vallee.fr",
+"keys": [
+"bureau vallee"
+]
+},
+{
+"id": "decathlon",
+"name": "Decathlon",
+"color": "#0082C3",
+"domain": "decathlon.fr",
+"keys": [
+"decathlon"
+]
+},
+{
+"id": "intersport",
+"name": "Intersport",
+"color": "#003DA5",
+"domain": "intersport.fr",
+"keys": [
+"intersport"
+],
+"play": "com.ua.intersport.app"
+},
+{
+"id": "gosport",
+"name": "Go Sport",
+"color": "#E30613",
+"domain": "go-sport.com",
+"keys": [
+"go sport"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FGO%20Sport%20logo.png&width=150"
+},
+{
+"id": "sport2000",
+"name": "Sport 2000",
+"color": "#E2001A",
+"domain": "sport2000.fr",
+"keys": [
+"sport 2000"
+]
+},
+{
+"id": "kiabi",
+"name": "Kiabi",
+"color": "#0E3F7E",
+"domain": "kiabi.com",
+"keys": [
+"kiabi"
+]
+},
+{
+"id": "hm",
+"name": "H&M",
+"color": "#E50010",
+"domain": "hm.com",
+"keys": [
+"h&m",
+"h & m"
+],
+"play": "com.hm.goe"
+},
+{
+"id": "zara",
+"name": "Zara",
+"color": "#111111",
+"domain": "zara.com",
+"keys": [
+"zara"
+]
+},
+{
+"id": "celio",
+"name": "Celio",
+"color": "#E30613",
+"domain": "celio.com",
+"keys": [
+"celio"
+]
+},
+{
+"id": "jules",
+"name": "Jules",
+"color": "#1A1A1A",
+"domain": "jules.com",
+"keys": [
+"jules"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Jules%202019.jpg&width=150"
+},
+{
+"id": "lahalle",
+"name": "La Halle",
+"color": "#E30613",
+"domain": "lahalle.com",
+"keys": [
+"la halle"
+]
+},
+{
+"id": "gemo",
+"name": "Gémo",
+"color": "#E6007E",
+"domain": "gemo.fr",
+"keys": [
+"gemo"
+]
+},
+{
+"id": "chaussea",
+"name": "Chaussea",
+"color": "#E30613",
+"domain": "chaussea.com",
+"keys": [
+"chaussea"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FChaussea%20logo.jpg&width=150"
+},
+{
+"id": "okaidi",
+"name": "Okaïdi",
+"color": "#E5007D",
+"domain": "okaidi.fr",
+"keys": [
+"okaidi"
+]
+},
+{
+"id": "sephora",
+"name": "Sephora",
+"color": "#111111",
+"domain": "sephora.fr",
+"keys": [
+"sephora"
+],
+"play": "fr.sephora.sephorafrance"
+},
+{
+"id": "nocibe",
+"name": "Nocibé",
+"color": "#E4007C",
+"domain": "nocibe.fr",
+"keys": [
+"nocibe"
+],
+"play": "com.pictime.nocibe",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Nocibe.svg"
+},
+{
+"id": "marionnaud",
+"name": "Marionnaud",
+"color": "#8B1E3F",
+"domain": "marionnaud.fr",
+"keys": [
+"marionnaud"
+],
+"play": "com.marionnaud.marionnaudfrance",
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Marionnaud.svg"
+},
+{
+"id": "yvesrocher",
+"name": "Yves Rocher",
+"color": "#00754A",
+"domain": "yves-rocher.fr",
+"keys": [
+"yves rocher"
+]
+},
+{
+"id": "maxizoo",
+"name": "Maxi Zoo",
+"color": "#003DA5",
+"domain": "maxizoo.fr",
+"keys": [
+"maxi zoo"
+]
+},
+{
+"id": "animalis",
+"name": "Animalis",
+"color": "#F39200",
+"domain": "animalis.com",
+"keys": [
+"animalis"
+]
+},
+{
+"id": "totalenergies",
+"name": "TotalEnergies",
+"color": "#E4002B",
+"domain": "totalenergies.fr",
+"keys": [
+"totalenergies",
+"total energies"
+]
+},
+{
+"id": "flunch",
+"name": "Flunch",
+"color": "#E30613",
+"domain": "flunch.fr",
+"keys": [
+"flunch"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Restaurant%20Flunch.jpg&width=150"
+},
+{
+"id": "starbucks",
+"name": "Starbucks",
+"color": "#00704A",
+"domain": "starbucks.fr",
+"keys": [
+"starbucks"
+]
+},
+{
+"id": "pathe",
+"name": "Pathé",
+"color": "#FFC20E",
+"domain": "pathe.fr",
+"keys": [
+"pathe"
+]
+},
+{
+"id": "cgr",
+"name": "CGR Cinémas",
+"color": "#E30613",
+"domain": "cgrcinemas.fr",
+"keys": [
+"cgr"
+]
+},
+{
+"id": "leaderprice",
+"name": "Leader Price",
+"color": "#E2001A",
+"domain": "",
+"keys": [
+"leader price"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Leader Price - 2017.svg"
+},
+{
+"id": "coccimarket",
+"name": "Coccimarket",
+"color": "#E30613",
+"domain": "coccimarket.fr",
+"keys": [
+"coccimarket",
+"cocci market",
+"coccimarket city"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCoccimarket%20logo.png&width=150"
+},
+{
+"id": "match",
+"name": "Supermarchés Match",
+"color": "#E30613",
+"domain": "supermarchesmatch.fr",
+"keys": [
+"supermarches match"
+],
+"ios": 1148591369,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSupermarch%C3%A9%20Match%20logo%20France.png&width=150"
+},
+{
+"id": "colruyt",
+"name": "Colruyt",
+"color": "#E30613",
+"domain": "colruyt.fr",
+"keys": [
+"colruyt"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Colruyt.svg"
+},
+{
+"id": "biocbon",
+"name": "Bio c' Bon",
+"color": "#7AB51D",
+"domain": "biocbon.fr",
+"keys": [
+"bio c bon"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Bio C'Bon.svg"
+},
+{
+"id": "lavieclaire",
+"name": "La Vie Claire",
+"color": "#8DC63F",
+"domain": "lavieclaire.com",
+"keys": [
+"la vie claire"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20LaVieClaire%202022.jpg&width=150"
+},
+{
+"id": "thiriet",
+"name": "Thiriet",
+"color": "#1D3F8C",
+"domain": "thiriet.com",
+"keys": [
+"thiriet"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FVertebral%20artery%20fusiform%20aneurysm%20geometry%20in%20predicting%20rupture%20risk.pdf&width=150"
+},
+{
+"id": "marieblachere",
+"name": "Marie Blachère",
+"color": "#B3001B",
+"domain": "marieblachere.com",
+"keys": [
+"marie blachere"
+]
+},
+{
+"id": "metro",
+"name": "Metro",
+"color": "#003D7C",
+"domain": "metro.fr",
+"keys": [
+"metro cash",
+"metro france"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/MetroC+C-Logo.svg"
+},
+{
+"id": "promocash",
+"name": "Promocash",
+"color": "#E30613",
+"domain": "promocash.com",
+"keys": [
+"promocash"
+]
+},
+{
+"id": "costco",
+"name": "Costco",
+"color": "#E31837",
+"domain": "costco.fr",
+"keys": [
+"costco"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Costco Wholesale logo 2010-10-26.svg"
+},
+{
+"id": "mcdonalds",
+"name": "McDonald's",
+"color": "#DA291C",
+"domain": "mcdonalds.fr",
+"keys": [
+"mcdonald",
+"mcdonalds"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/McDonald's square 2020.svg"
+},
+{
+"id": "burgerking",
+"name": "Burger King",
+"color": "#D62300",
+"domain": "burgerking.fr",
+"keys": [
+"burger king"
+],
+"play": "air.com.unit9.bkFrApp"
+},
+{
+"id": "kfc",
+"name": "KFC",
+"color": "#E4002B",
+"domain": "kfc.fr",
+"keys": [
+"kfc"
+],
+"play": "fr.kfc.mobileapp"
+},
+{
+"id": "quick",
+"name": "Quick",
+"color": "#E30613",
+"domain": "quick.fr",
+"keys": [
+"quick fr",
+"quick restaurants"
+],
+"play": "be.lvlp.Quick",
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FQuick%202023%20logo.webp&width=150"
+},
+{
+"id": "subway",
+"name": "Subway",
+"color": "#008C15",
+"domain": "subway.com",
+"keys": [
+"subway"
+],
+"play": "com.rexsubs.mysub"
+},
+{
+"id": "dominos",
+"name": "Domino's",
+"color": "#006491",
+"domain": "dominos.fr",
+"keys": [
+"domino s pizza",
+"dominos"
+],
+"play": "com.dominos.dominossite"
+},
+{
+"id": "pizzahut",
+"name": "Pizza Hut",
+"color": "#E4002B",
+"domain": "pizzahut.fr",
+"keys": [
+"pizza hut"
+],
+"play": "com.pizzahut.france"
+},
+{
+"id": "paul",
+"name": "Paul",
+"color": "#1A1A1A",
+"domain": "paul.fr",
+"keys": [
+"boulangerie paul"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Paul.png&width=150"
+},
+{
+"id": "briochedoree",
+"name": "Brioche Dorée",
+"color": "#C8102E",
+"domain": "briochedoree.fr",
+"keys": [
+"brioche doree"
+],
+"play": "fr.intact.briochedoree.staging"
+},
+{
+"id": "columbus",
+"name": "Columbus Café",
+"color": "#8B5E3C",
+"domain": "columbuscafe.com",
+"keys": [
+"columbus cafe"
+]
+},
+{
+"id": "buffalo",
+"name": "Buffalo Grill",
+"color": "#C8102E",
+"domain": "buffalo-grill.fr",
+"keys": [
+"buffalo grill"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Buffalo%20Grill.png&width=150"
+},
+{
+"id": "courtepaille",
+"name": "Courtepaille",
+"color": "#E30613",
+"domain": "courtepaille.com",
+"keys": [
+"courtepaille"
+]
+},
+{
+"id": "hippopotamus",
+"name": "Hippopotamus",
+"color": "#00594F",
+"domain": "hippopotamus.fr",
+"keys": [
+"hippopotamus"
+]
+},
+{
+"id": "delarte",
+"name": "Del Arte",
+"color": "#C8102E",
+"domain": "delarte.fr",
+"keys": [
+"del arte"
+],
+"play": "fr.delarte.mobileapp"
+},
+{
+"id": "norauto",
+"name": "Norauto",
+"color": "#004C97",
+"domain": "norauto.fr",
+"keys": [
+"norauto"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo NORAUTO Blue.svg"
+},
+{
+"id": "feuvert",
+"name": "Feu Vert",
+"color": "#009640",
+"domain": "feuvert.fr",
+"keys": [
+"feu vert"
+]
+},
+{
+"id": "midas",
+"name": "Midas",
+"color": "#FFD100",
+"domain": "midas.fr",
+"keys": [
+"midas"
+]
+},
+{
+"id": "speedy",
+"name": "Speedy",
+"color": "#E30613",
+"domain": "speedy.fr",
+"keys": [
+"speedy"
+]
+},
+{
+"id": "points",
+"name": "Point S",
+"color": "#E30613",
+"domain": "point-s.fr",
+"keys": [
+"point s"
+]
+},
+{
+"id": "roady",
+"name": "Roady",
+"color": "#E30613",
+"domain": "roady.fr",
+"keys": [
+"roady"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FRoady-centre-auto-logo-2015.jpg&width=150"
+},
+{
+"id": "esso",
+"name": "Esso",
+"color": "#0033A0",
+"domain": "",
+"keys": [
+"esso"
+]
+},
+{
+"id": "shell",
+"name": "Shell",
+"color": "#FFD500",
+"domain": "shell.fr",
+"keys": [
+"shell"
+]
+},
+{
+"id": "avia",
+"name": "Avia",
+"color": "#E30613",
+"domain": "avia-france.fr",
+"keys": [
+"avia"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/AVIA International logo.svg"
+},
+{
+"id": "optic2000",
+"name": "Optic 2000",
+"color": "#0055A4",
+"domain": "optic2000.com",
+"keys": [
+"optic 2000"
+]
+},
+{
+"id": "krys",
+"name": "Krys",
+"color": "#E4002B",
+"domain": "krys.com",
+"keys": [
+"krys"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20KRYS%20GROUP.png&width=150"
+},
+{
+"id": "afflelou",
+"name": "Alain Afflelou",
+"color": "#111111",
+"domain": "afflelou.com",
+"keys": [
+"afflelou"
+]
+},
+{
+"id": "atol",
+"name": "Atol",
+"color": "#0072BC",
+"domain": "opticiens-atol.com",
+"keys": [
+"atol"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FATOL%20BIEN%20VOIR%20BIEN%20ETRE.jpg&width=150"
+},
+{
+"id": "grandoptical",
+"name": "Grand Optical",
+"color": "#1A1A1A",
+"domain": "grandoptical.com",
+"keys": [
+"grand optical"
+]
+},
+{
+"id": "generaleoptique",
+"name": "Générale d'Optique",
+"color": "#0072BC",
+"domain": "generale-optique.com",
+"keys": [
+"generale d optique"
+]
+},
+{
+"id": "primark",
+"name": "Primark",
+"color": "#0DB5E7",
+"domain": "primark.com",
+"keys": [
+"primark"
+]
+},
+{
+"id": "cea",
+"name": "C&A",
+"color": "#00539F",
+"domain": "c-and-a.com",
+"keys": [
+"c&a"
+],
+"play": "com.canda.mobileapp"
+},
+{
+"id": "uniqlo",
+"name": "Uniqlo",
+"color": "#E60012",
+"domain": "uniqlo.com",
+"keys": [
+"uniqlo"
+]
+},
+{
+"id": "mango",
+"name": "Mango",
+"color": "#111111",
+"domain": "mango.com",
+"keys": [
+"mango"
+]
+},
+{
+"id": "bershka",
+"name": "Bershka",
+"color": "#111111",
+"domain": "bershka.com",
+"keys": [
+"bershka"
+]
+},
+{
+"id": "promod",
+"name": "Promod",
+"color": "#111111",
+"domain": "promod.fr",
+"keys": [
+"promod"
+]
+},
+{
+"id": "pimkie",
+"name": "Pimkie",
+"color": "#E6007E",
+"domain": "pimkie.fr",
+"keys": [
+"pimkie"
+],
+"ios": 897026650,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Pimkie Logo 03.2022.svg"
+},
+{
+"id": "jennyfer",
+"name": "Jennyfer",
+"color": "#111111",
+"domain": "jennyfer.com",
+"keys": [
+"jennyfer"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Jennyfer.png&width=150"
+},
+{
+"id": "etam",
+"name": "Etam",
+"color": "#111111",
+"domain": "etam.com",
+"keys": [
+"etam"
+]
+},
+{
+"id": "undiz",
+"name": "Undiz",
+"color": "#E6007E",
+"domain": "undiz.com",
+"keys": [
+"undiz"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Undiz.webp&width=150"
+},
+{
+"id": "damart",
+"name": "Damart",
+"color": "#003DA5",
+"domain": "damart.fr",
+"keys": [
+"damart"
+]
+},
+{
+"id": "galeries",
+"name": "Galeries Lafayette",
+"color": "#111111",
+"domain": "galerieslafayette.com",
+"keys": [
+"galeries lafayette"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20galeries%20lafayette.jpg&width=150"
+},
+{
+"id": "printemps",
+"name": "Printemps",
+"color": "#111111",
+"domain": "printemps.com",
+"keys": [
+"printemps com"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogoprintemps2022.png&width=150"
+},
+{
+"id": "tapealoeil",
+"name": "Tape à l'œil",
+"color": "#E30613",
+"domain": "tapealoeil.com",
+"keys": [
+"tape a l oeil"
+]
+},
+{
+"id": "dpam",
+"name": "Du Pareil au Même",
+"color": "#0072BC",
+"domain": "dpam.com",
+"keys": [
+"du pareil au meme",
+"dpam"
+]
+},
+{
+"id": "vertbaudet",
+"name": "Vertbaudet",
+"color": "#009FE3",
+"domain": "vertbaudet.fr",
+"keys": [
+"vertbaudet"
+]
+},
+{
+"id": "eram",
+"name": "Eram",
+"color": "#E30613",
+"domain": "eram.fr",
+"keys": [
+"eram"
+]
+},
+{
+"id": "besson",
+"name": "Besson Chaussures",
+"color": "#111111",
+"domain": "besson-chaussures.com",
+"keys": [
+"besson"
+]
+},
+{
+"id": "courir",
+"name": "Courir",
+"color": "#111111",
+"domain": "courir.com",
+"keys": [
+"courir"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Courir (logo).svg"
+},
+{
+"id": "footlocker",
+"name": "Foot Locker",
+"color": "#111111",
+"domain": "footlocker.fr",
+"keys": [
+"foot locker"
+]
+},
+{
+"id": "douglas",
+"name": "Douglas",
+"color": "#111111",
+"domain": "douglas.de",
+"keys": [
+"douglas"
+]
+},
+{
+"id": "kiko",
+"name": "Kiko Milano",
+"color": "#111111",
+"domain": "kikocosmetics.com",
+"keys": [
+"kiko"
+]
+},
+{
+"id": "rituals",
+"name": "Rituals",
+"color": "#111111",
+"domain": "rituals.com",
+"keys": [
+"rituals"
+]
+},
+{
+"id": "loccitane",
+"name": "L'Occitane",
+"color": "#FFC72C",
+"domain": "loccitane.com",
+"keys": [
+"l occitane",
+"loccitane"
+]
+},
+{
+"id": "lush",
+"name": "Lush",
+"color": "#111111",
+"domain": "lush.com",
+"keys": [
+"lush"
+],
+"play": "com.lush.app"
+},
+{
+"id": "pharmalafayette",
+"name": "Pharmacie Lafayette",
+"color": "#00A651",
+"domain": "pharmacielafayette.com",
+"keys": [
+"pharmacie lafayette"
+]
+},
+{
+"id": "natdec",
+"name": "Nature & Découvertes",
+"color": "#2E5E3E",
+"domain": "natureetdecouvertes.com",
+"keys": [
+"nature & decouvertes",
+"nature et decouvertes"
+]
+},
+{
+"id": "hema",
+"name": "Hema",
+"color": "#E30613",
+"domain": "hema.com",
+"keys": [
+"hema"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/HEMA Logo.svg"
+},
+{
+"id": "flyingtiger",
+"name": "Flying Tiger",
+"color": "#111111",
+"domain": "flyingtiger.com",
+"keys": [
+"flying tiger"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Flying Tiger Copenhagen.svg"
+},
+{
+"id": "alinea",
+"name": "Alinéa",
+"color": "#111111",
+"domain": "alinea.com",
+"keys": [
+"alinea"
+]
+},
+{
+"id": "zodio",
+"name": "Zôdio",
+"color": "#E6007E",
+"domain": "zodio.fr",
+"keys": [
+"zodio"
+]
+},
+{
+"id": "casa",
+"name": "Casa",
+"color": "#111111",
+"domain": "casashops.com",
+"keys": [
+"casa shops"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa Belgium logo.svg"
+},
+{
+"id": "bm",
+"name": "B&M (ex-Babou)",
+"color": "#5B2C82",
+"domain": "bmstores.fr",
+"keys": [
+"b&m",
+"babou"
+],
+"play": "fr.bmstores.bmfrance"
+},
+{
+"id": "noz",
+"name": "Noz",
+"color": "#FFD100",
+"domain": "noz.fr",
+"keys": [
+"noz"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Noz.svg"
+},
+{
+"id": "maxibazar",
+"name": "Maxi Bazar",
+"color": "#E30613",
+"domain": "maxibazar.fr",
+"keys": [
+"maxi bazar"
+]
+},
+{
+"id": "bricoman",
+"name": "Bricoman",
+"color": "#F39200",
+"domain": "bricoman.fr",
+"keys": [
+"bricoman"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Bricoman.svg"
+},
+{
+"id": "pointp",
+"name": "Point.P",
+"color": "#E30613",
+"domain": "pointp.fr",
+"keys": [
+"point p"
+]
+},
+{
+"id": "ldlc",
+"name": "LDLC",
+"color": "#1E5AA8",
+"domain": "ldlc.com",
+"keys": [
+"ldlc"
+]
+},
+{
+"id": "toysrus",
+"name": "Toys\"R\"Us",
+"color": "#0055A4",
+"domain": "toysrus.fr",
+"keys": [
+"toys r us"
+]
+},
+{
+"id": "tomandco",
+"name": "Tom&Co",
+"color": "#009FE3",
+"domain": "tomandco.com",
+"keys": [
+"tom&co",
+"tom & co"
+]
+},
+{
+"id": "auvieuxcampeur",
+"name": "Au Vieux Campeur",
+"color": "#2E5E3E",
+"domain": "auvieuxcampeur.fr",
+"keys": [
+"vieux campeur"
+]
+},
+{
+"id": "ugc",
+"name": "UGC",
+"color": "#111111",
+"domain": "ugc.fr",
+"keys": [
+"ugc"
+],
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FUGC%202018.png&width=150"
+},
+{
+"id": "kinepolis",
+"name": "Kinepolis",
+"color": "#E30613",
+"domain": "kinepolis.fr",
+"keys": [
+"kinepolis"
+],
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kinepolis.svg"
+},
+{
+"id": "1083",
+"name": "1083",
+"domain": "1083.fr",
+"keys": [],
+"osm": true
+},
+{
+"id": "123parebrise",
+"name": "123 Pare-Brise",
+"domain": "123parebrise.fr",
+"keys": [
+"123 pare brise"
+],
+"osm": true
+},
+{
+"id": "3brasseurs",
+"name": "3 Brasseurs",
+"domain": "",
+"keys": [
+"3 brasseurs"
+],
+"osm": true
+},
+{
+"id": "8ahuit",
+"name": "8 à Huit",
+"domain": "franchise-proximite.carrefour.com",
+"keys": [
+"8 a huit"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo 8 A Huit.svg"
+},
+{
+"id": "aglass",
+"name": "A+Glass",
+"domain": "aplusglass.com",
+"keys": [
+"a glass"
+],
+"osm": true
+},
+{
+"id": "alaisebreizh",
+"name": "À l'Aise Breizh",
+"domain": "alaisebreizh.com",
+"keys": [
+"a l aise breizh"
+],
+"osm": true
+},
+{
+"id": "asadventure",
+"name": "A.S.Adventure",
+"domain": "asadventure.com",
+"keys": [
+"a s adventure"
+],
+"osm": true
+},
+{
+"id": "abercrombiefitch",
+"name": "Abercrombie & Fitch",
+"domain": "abercrombie.com",
+"keys": [
+"abercrombie & fitch"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Abercrombie & Fitch logo.svg"
+},
+{
+"id": "acaiconcept",
+"name": "Açaí Concept",
+"domain": "acaiconcept.com",
+"keys": [
+"acai concept"
+],
+"osm": true
+},
+{
+"id": "acuitis",
+"name": "Acuitis",
+"domain": "fr.acuitis.com",
+"keys": [
+"acuitis"
+],
+"osm": true
+},
+{
+"id": "ad",
+"name": "AD",
+"domain": "ad.fr",
+"keys": [],
+"osm": true
+},
+{
+"id": "adopt",
+"name": "Adopt'",
+"domain": "adopt.com",
+"keys": [
+"adopt"
+],
+"osm": true
+},
+{
+"id": "agnesb",
+"name": "Agnès B.",
+"domain": "agnesb.com",
+"keys": [
+"agnes b"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FAgn%C3%A8s%20b.%20logo.png&width=150"
+},
+{
+"id": "aigle",
+"name": "Aigle",
+"domain": "aigle.com",
+"keys": [
+"aigle"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Entreprise Aigle.svg"
+},
+{
+"id": "akena",
+"name": "Akena",
+"domain": "hotels-akena.com",
+"keys": [
+"akena"
+],
+"osm": true
+},
+{
+"id": "alicedelice",
+"name": "Alice Délice",
+"domain": "alicedelice.com",
+"keys": [
+"alice delice"
+],
+"osm": true
+},
+{
+"id": "allsaints",
+"name": "AllSaints",
+"domain": "allsaints.com",
+"keys": [
+"allsaints"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Allsaints logo.svg"
+},
+{
+"id": "alltricks",
+"name": "Alltricks",
+"domain": "alltricks.fr",
+"keys": [
+"alltricks"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Alltricks.svg"
+},
+{
+"id": "alphegapharmacy",
+"name": "Alphega Pharmacy",
+"domain": "alphega-pharmacy.co.uk",
+"keys": [
+"alphega pharmacy"
+],
+"osm": true
+},
+{
+"id": "ambiancestyles",
+"name": "Ambiance & Styles",
+"domain": "ambianceetstyles.com",
+"keys": [
+"ambiance & styles",
+"ambiance styles",
+"ambiances et styles"
+],
+"osm": true
+},
+{
+"id": "amorino",
+"name": "Amorino",
+"domain": "amorino.com",
+"keys": [
+"amorino"
+],
+"osm": true
+},
+{
+"id": "anantara",
+"name": "Anantara",
+"domain": "anantara.com",
+"keys": [
+"anantara"
+],
+"osm": true
+},
+{
+"id": "andre",
+"name": "André",
+"domain": "andre.fr",
+"keys": [
+"andre"
+],
+"osm": true
+},
+{
+"id": "ange",
+"name": "Ange",
+"domain": "boulangerie-ange.fr",
+"keys": [],
+"osm": true
+},
+{
+"id": "antoineetlili",
+"name": "Antoine et Lili",
+"domain": "fr.antoineetlili.com",
+"keys": [
+"antoine et lili"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Antoine Et Tlili.svg"
+},
+{
+"id": "antonwillem",
+"name": "Anton & Willem",
+"domain": "anton-et-willem.fr",
+"keys": [
+"anton & willem"
+],
+"osm": true
+},
+{
+"id": "antonelle",
+"name": "Antonelle",
+"domain": "antonelle.com",
+"keys": [
+"antonelle"
+],
+"osm": true
+},
+{
+"id": "appartcity",
+"name": "Appart'City",
+"domain": "appartcity.com",
+"keys": [
+"appart city"
+],
+"osm": true
+},
+{
+"id": "arche",
+"name": "Arche",
+"domain": "arche.com",
+"keys": [
+"arche"
+],
+"osm": true
+},
+{
+"id": "armandthiery",
+"name": "Armand Thiery",
+"domain": "armandthiery.fr",
+"keys": [
+"armand thiery"
+],
+"osm": true
+},
+{
+"id": "armorlux",
+"name": "Armor Lux",
+"domain": "armorlux.com",
+"keys": [
+"armor lux"
+],
+"osm": true
+},
+{
+"id": "arthur",
+"name": "Arthur",
+"domain": "arthur.fr",
+"keys": [
+"arthur"
+],
+"osm": true
+},
+{
+"id": "arthusbertrand",
+"name": "Arthus Bertrand",
+"domain": "fr.arthusbertrand.com",
+"keys": [
+"arthus bertrand"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20r%C3%A9seaux.jpg&width=150"
+},
+{
+"id": "as24",
+"name": "AS 24",
+"domain": "as24.com",
+"keys": [
+"as 24"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLOGO%20AS%2024.png&width=150"
+},
+{
+"id": "aubureau",
+"name": "Au Bureau",
+"domain": "aubureau.fr",
+"keys": [
+"au bureau"
+],
+"osm": true
+},
+{
+"id": "aupaindemongrandpere",
+"name": "Au Pain de mon Grand-Père",
+"domain": "aupaindemongrandpere.com",
+"keys": [
+"au pain de mon grand pere"
+],
+"osm": true
+},
+{
+"id": "aubert",
+"name": "Aubert",
+"domain": "aubert.com",
+"keys": [
+"aubert"
+],
+"osm": true
+},
+{
+"id": "augustin",
+"name": "Augustin",
+"domain": "les-pains-augustin.com",
+"keys": [
+"augustin"
+],
+"osm": true
+},
+{
+"id": "autogrill",
+"name": "Autogrill",
+"domain": "autogrill.com",
+"keys": [
+"autogrill"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Autogrill-Logo.svg"
+},
+{
+"id": "autoprimo",
+"name": "AUTOPRIMO",
+"domain": "autoprimo.com",
+"keys": [
+"autoprimo"
+],
+"osm": true
+},
+{
+"id": "autourdebebe",
+"name": "Autour de Bébé",
+"domain": "autourdebebe.com",
+"keys": [
+"autour de bebe"
+],
+"osm": true
+},
+{
+"id": "avatacar",
+"name": "Avatacar",
+"domain": "avatacar.com",
+"keys": [
+"avatacar"
+],
+"osm": true
+},
+{
+"id": "avril",
+"name": "Avril",
+"domain": "avril-beaute.fr",
+"keys": [
+"avril"
+],
+"osm": true
+},
+{
+"id": "bagelcorner",
+"name": "Bagel Corner",
+"domain": "bagelcorner.fr",
+"keys": [
+"bagel corner"
+],
+"osm": true
+},
+{
+"id": "balladins",
+"name": "Balladins",
+"domain": "balladins.com",
+"keys": [
+"balladins"
+],
+"osm": true
+},
+{
+"id": "bananamoon",
+"name": "Banana Moon",
+"domain": "bananamoon.com",
+"keys": [
+"banana moon"
+],
+"osm": true
+},
+{
+"id": "banette",
+"name": "Banette",
+"domain": "banette.fr",
+"keys": [
+"banette"
+],
+"osm": true
+},
+{
+"id": "barrys",
+"name": "Barry's",
+"domain": "barrys.com",
+"keys": [
+"barry s"
+],
+"osm": true
+},
+{
+"id": "basicfit",
+"name": "Basic-Fit",
+"domain": "basic-fit.com",
+"keys": [
+"basic fit"
+],
+"osm": true
+},
+{
+"id": "basilicco",
+"name": "Basilic & Co",
+"domain": "basilic-and-co.com",
+"keys": [
+"basilic & co"
+],
+"osm": true
+},
+{
+"id": "beautysuccess",
+"name": "Beauty Success",
+"domain": "beautysuccess.fr",
+"keys": [
+"beauty success"
+],
+"osm": true
+},
+{
+"id": "belchicken",
+"name": "Belchicken",
+"domain": "belchicken.com",
+"keys": [
+"belchicken"
+],
+"osm": true
+},
+{
+"id": "bestdrive",
+"name": "BestDrive",
+"domain": "bestdrive.fr",
+"keys": [
+"bestdrive"
+],
+"osm": true
+},
+{
+"id": "bexley",
+"name": "Bexley",
+"domain": "bexley.fr",
+"keys": [
+"bexley"
+],
+"osm": true
+},
+{
+"id": "bi1",
+"name": "bi1",
+"domain": "bi1.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FBi1.png&width=150"
+},
+{
+"id": "bigfernand",
+"name": "Big Fernand",
+"domain": "bigfernand.com",
+"keys": [
+"big fernand"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Big%20Fernand.png&width=150"
+},
+{
+"id": "bioburger",
+"name": "Bioburger",
+"domain": "bioburger.fr",
+"keys": [
+"bioburger"
+],
+"osm": true
+},
+{
+"id": "biomonde",
+"name": "Biomonde",
+"domain": "biomonde.fr",
+"keys": [
+"biomonde"
+],
+"osm": true
+},
+{
+"id": "bistroregent",
+"name": "Bistro Régent",
+"domain": "bistro-regent.fr",
+"keys": [
+"bistro regent"
+],
+"osm": true
+},
+{
+"id": "bizzbee",
+"name": "Bizzbee",
+"domain": "b-z-b.com",
+"keys": [
+"bizzbee"
+],
+"osm": true
+},
+{
+"id": "blacksheepcoffee",
+"name": "Black Sheep Coffee",
+"domain": "leavetheherdbehind.com",
+"keys": [
+"black sheep coffee"
+],
+"osm": true
+},
+{
+"id": "blackstore",
+"name": "Blackstore",
+"domain": "blackstore.fr",
+"keys": [
+"blackstore"
+],
+"osm": true
+},
+{
+"id": "bleulibellule",
+"name": "Bleu Libellule",
+"domain": "bleulibellule.com",
+"keys": [
+"bleu libellule"
+],
+"osm": true
+},
+{
+"id": "bleuforet",
+"name": "Bleuforêt",
+"domain": "bleuforet.fr",
+"keys": [
+"bleuforet"
+],
+"osm": true
+},
+{
+"id": "bocage",
+"name": "Bocage",
+"domain": "bocage.fr",
+"keys": [
+"bocage"
+],
+"osm": true
+},
+{
+"id": "bodyminute",
+"name": "Body Minute",
+"domain": "bodyminute.com",
+"keys": [
+"body minute"
+],
+"osm": true
+},
+{
+"id": "bonapp",
+"name": "Bon App!",
+"domain": "carrefour.fr",
+"keys": [
+"bon app"
+],
+"osm": true
+},
+{
+"id": "bonnegueule",
+"name": "Bonne Gueule",
+"domain": "bonnegueule.fr",
+"keys": [
+"bonne gueule"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FBonnegueule%20officiel.png&width=150"
+},
+{
+"id": "bonobo",
+"name": "Bonobo",
+"domain": "bonoboplanet.com",
+"keys": [
+"bonobo"
+],
+"osm": true
+},
+{
+"id": "boulangeriefeuillette",
+"name": "Boulangerie Feuillette",
+"domain": "feuillette.fr",
+"keys": [
+"boulangerie feuillette",
+"feuillette"
+],
+"osm": true
+},
+{
+"id": "boulangerielouise",
+"name": "Boulangerie Louise",
+"domain": "boulangerielouise.com",
+"keys": [
+"boulangerie louise"
+],
+"osm": true
+},
+{
+"id": "bouticycle",
+"name": "Bouticycle",
+"domain": "bouticycle.com",
+"keys": [
+"bouticycle"
+],
+"osm": true
+},
+{
+"id": "bpshop",
+"name": "BP Shop",
+"domain": "bp.com",
+"keys": [
+"bp shop"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Bp textlogo.svg"
+},
+{
+"id": "breal",
+"name": "Bréal",
+"domain": "breal.net",
+"keys": [
+"breal"
+],
+"osm": true
+},
+{
+"id": "breizhcafe",
+"name": "Breizh Café",
+"domain": "breizhcafe.com",
+"keys": [
+"breizh cafe"
+],
+"osm": true
+},
+{
+"id": "brice",
+"name": "Brice",
+"domain": "brice.fr",
+"keys": [
+"brice"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLOGO%20BRICE%20Noir.png&width=150"
+},
+{
+"id": "brico",
+"name": "Brico",
+"domain": "brico.be",
+"keys": [
+"brico",
+"brico cash"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Brico logo.svg"
+},
+{
+"id": "bricopro",
+"name": "Bricopro",
+"domain": "bricopro.fr",
+"keys": [
+"bricopro"
+],
+"osm": true
+},
+{
+"id": "bricorama",
+"name": "Bricorama",
+"domain": "bricorama.fr",
+"keys": [
+"bricorama"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Bricorama 2022 logo.svg"
+},
+{
+"id": "brithotel",
+"name": "Brit Hotel",
+"domain": "brithotel.fr",
+"keys": [
+"brit hotel"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogobrithotel.png&width=150"
+},
+{
+"id": "brutbutcher",
+"name": "Brut Butcher",
+"domain": "brutbutcher.com",
+"keys": [
+"brut butcher"
+],
+"osm": true
+},
+{
+"id": "buchhandlungwaltherkonig",
+"name": "Buchhandlung Walther König",
+"domain": "buchhandlung-walther-koenig.de",
+"keys": [
+"buchhandlung konig",
+"buchhandlung walther konig",
+"konig",
+"walther konig"
+],
+"osm": true
+},
+{
+"id": "bulgari",
+"name": "Bulgari",
+"domain": "bulgari.com",
+"keys": [
+"bulgari"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FBVLGARI%2C%20Bulgari%20photography%20by%20david%20adam%20kess%2C%20madrid%202016.jpg&width=150"
+},
+{
+"id": "burton",
+"name": "Burton",
+"domain": "burton.co.uk",
+"keys": [
+"burton"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Burton Menswear logo.svg"
+},
+{
+"id": "cestdeuxeuros",
+"name": "C'est deux euros",
+"domain": "cestdeuxeuros.com",
+"keys": [
+"c est deux euros"
+],
+"osm": true
+},
+{
+"id": "curdeble",
+"name": "Cœur de Blé",
+"domain": "coeurdeble.fr",
+"keys": [
+"c ur de ble"
+],
+"osm": true
+},
+{
+"id": "cachecache",
+"name": "Cache Cache",
+"domain": "cache-cache.fr",
+"keys": [
+"cache cache"
+],
+"osm": true
+},
+{
+"id": "cafefrei",
+"name": "Cafe Frei",
+"domain": "cafefrei.hu",
+"keys": [
+"cafe frei"
+],
+"osm": true
+},
+{
+"id": "cafejoyeux",
+"name": "Café Joyeux",
+"domain": "cafejoyeux.com",
+"keys": [
+"cafe joyeux"
+],
+"osm": true
+},
+{
+"id": "calida",
+"name": "Calida",
+"domain": "calida.com",
+"keys": [
+"calida"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCALIDA%20logo-yellow.png&width=150"
+},
+{
+"id": "camaieu",
+"name": "Camaïeu",
+"domain": "camaieu.com",
+"keys": [
+"camaieu"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLOGO%20CAMAIEU%20BLACK.png&width=150"
+},
+{
+"id": "camillealbane",
+"name": "Camille Albane",
+"domain": "camillealbane.com",
+"keys": [
+"camille albane"
+],
+"osm": true
+},
+{
+"id": "campaillette",
+"name": "Campaillette",
+"domain": "campaillette.com",
+"keys": [
+"campaillette"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Campaillette.svg"
+},
+{
+"id": "campanile",
+"name": "Campanile",
+"domain": "campanile.com",
+"keys": [
+"campanile"
+],
+"osm": true
+},
+{
+"id": "canopy",
+"name": "Canopy",
+"domain": "canopy3.hilton.com",
+"keys": [
+"canopy"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Canopy Hotels Logo.svg"
+},
+{
+"id": "caribbeancinemas",
+"name": "Caribbean Cinemas",
+"domain": "caribbeancinemas.com",
+"keys": [
+"caribbean cinemas"
+],
+"osm": true
+},
+{
+"id": "carlance",
+"name": "Carlance",
+"domain": "carlance.fr",
+"keys": [
+"carlance"
+],
+"osm": true
+},
+{
+"id": "carlin",
+"name": "Carlin",
+"domain": "carlin.es",
+"keys": [
+"carlin"
+],
+"osm": true
+},
+{
+"id": "caroll",
+"name": "Caroll",
+"domain": "caroll.com",
+"keys": [
+"caroll"
+],
+"osm": true
+},
+{
+"id": "carreblanc",
+"name": "Carré Blanc",
+"domain": "carreblanc.com",
+"keys": [
+"carre blanc"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Carr%C3%A9%20Blanc.png&width=150"
+},
+{
+"id": "casetify",
+"name": "Casetify",
+"domain": "casetify.com",
+"keys": [
+"casetify"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCasetify%20logo.png&width=150"
+},
+{
+"id": "cavavin",
+"name": "Cavavin",
+"domain": "cavavin.co",
+"keys": [
+"cavavin"
+],
+"osm": true
+},
+{
+"id": "cedeo",
+"name": "CEDEO",
+"domain": "cedeo.fr",
+"keys": [
+"cedeo"
+],
+"osm": true
+},
+{
+"id": "ceriseetpotiron",
+"name": "Cerise et Potiron",
+"domain": "cerise-et-potiron.fr",
+"keys": [
+"cerise et potiron"
+],
+"osm": true
+},
+{
+"id": "chamastacos",
+"name": "Chamas Tacos",
+"domain": "chamas-tacos.com",
+"keys": [
+"chamas tacos"
+],
+"osm": true
+},
+{
+"id": "chateaudax",
+"name": "Chateau d'Ax",
+"domain": "chateau-dax.it",
+"keys": [
+"chateau d ax"
+],
+"osm": true
+},
+{
+"id": "chaussexpo",
+"name": "Chaussexpo",
+"domain": "chaussexpo.fr",
+"keys": [
+"chaussexpo"
+],
+"osm": true
+},
+{
+"id": "chaussonmateriaux",
+"name": "Chausson Matériaux",
+"domain": "chausson.fr",
+"keys": [
+"chausson materiaux"
+],
+"osm": true
+},
+{
+"id": "chevignon",
+"name": "Chevignon",
+"domain": "chevignon.fr",
+"keys": [
+"chevignon"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FChevignon.jpg&width=150"
+},
+{
+"id": "chezlancien",
+"name": "Chez l'Ancien",
+"domain": "chezlancien.fr",
+"keys": [
+"chez l ancien"
+],
+"osm": true
+},
+{
+"id": "chickenspot",
+"name": "Chicken Spot",
+"domain": "chickenspot.com",
+"keys": [
+"chicken spot"
+],
+"osm": true
+},
+{
+"id": "chickenstreet",
+"name": "Chicken Street",
+"domain": "chickenstreet.fr",
+"keys": [
+"chicken street"
+],
+"osm": true
+},
+{
+"id": "christinelaure",
+"name": "Christine Laure",
+"domain": "christine-laure.fr",
+"keys": [
+"christine laure"
+],
+"osm": true
+},
+{
+"id": "churchs",
+"name": "Church's",
+"domain": "church-footwear.com",
+"keys": [
+"church s"
+],
+"osm": true
+},
+{
+"id": "cigkoftem",
+"name": "Çiğköftem",
+"domain": "cigkoftem.com",
+"keys": [
+"cigkoftem"
+],
+"osm": true
+},
+{
+"id": "cineville",
+"name": "Cinéville",
+"domain": "cineville.fr",
+"keys": [
+"cineville"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Cin%C3%A9ville.png&width=150"
+},
+{
+"id": "citizenm",
+"name": "citizenM",
+"domain": "citizenm.com",
+"keys": [
+"citizenm"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCitizenM%20logo%20transparent.png&width=150"
+},
+{
+"id": "citronvert",
+"name": "Citron Vert",
+"domain": "citron-vert.fr",
+"keys": [
+"citron vert"
+],
+"osm": true
+},
+{
+"id": "classcroute",
+"name": "Class'croute",
+"domain": "classcroute.com",
+"keys": [
+"class croute"
+],
+"osm": true
+},
+{
+"id": "classicallblacks",
+"name": "Classic All Blacks",
+"domain": "blacks-legend.com",
+"keys": [
+"classic all blacks"
+],
+"osm": true
+},
+{
+"id": "cleor",
+"name": "Cleor",
+"domain": "cleor.com",
+"keys": [
+"cleor"
+],
+"osm": true
+},
+{
+"id": "coccinelleexpress",
+"name": "Coccinelle Express",
+"domain": "coccinelle.fr",
+"keys": [
+"coccinelle express"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCoccinelle%20express%20logo.png&width=150"
+},
+{
+"id": "coccinellesupermarche",
+"name": "Coccinelle Supermarché",
+"domain": "coccinelle.fr",
+"keys": [
+"coccinelle supermarche"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCoccinelle%20supermarche%20logo.png&width=150"
+},
+{
+"id": "coiffco",
+"name": "Coiff&Co",
+"domain": "coiffandco.com",
+"keys": [
+"coiff&co"
+],
+"osm": true
+},
+{
+"id": "cojean",
+"name": "Cojean",
+"domain": "cojean.fr",
+"keys": [
+"cojean"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-cojean-2022.jpg&width=150"
+},
+{
+"id": "comptoirdescotonniers",
+"name": "Comptoir des Cotonniers",
+"domain": "comptoirdescotonniers.com",
+"keys": [
+"comptoir des cotonniers"
+],
+"osm": true
+},
+{
+"id": "comtessedubarry",
+"name": "Comtesse du Barry",
+"domain": "comtessedubarry.com",
+"keys": [
+"comtesse du barry"
+],
+"osm": true
+},
+{
+"id": "coopatlantique",
+"name": "Coop Atlantique",
+"domain": "coop-atlantique.fr",
+"keys": [
+"coop atlantique"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FCoop-Atlantique.png&width=150"
+},
+{
+"id": "copenhagencoffeelab",
+"name": "Copenhagen Coffee Lab",
+"domain": "copenhagencoffeelab.com",
+"keys": [
+"copenhagen coffee lab"
+],
+"osm": true
+},
+{
+"id": "copytop",
+"name": "Copy-Top",
+"domain": "copytop.com",
+"keys": [
+"copy top"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-COPY-TOP.png&width=150"
+},
+{
+"id": "cosmoparis",
+"name": "Cosmoparis",
+"domain": "cosmoparis.com",
+"keys": [
+"cosmoparis"
+],
+"osm": true
+},
+{
+"id": "cotenature",
+"name": "Côté Nature",
+"domain": "bio-cotenature.fr",
+"keys": [
+"cote nature"
+],
+"osm": true
+},
+{
+"id": "cotesushi",
+"name": "Côté Sushi",
+"domain": "cotesushi.com",
+"keys": [
+"cote sushi"
+],
+"osm": true
+},
+{
+"id": "croustygame",
+"name": "Crousty Game",
+"domain": "croustygame.com",
+"keys": [
+"crousty game"
+],
+"osm": true
+},
+{
+"id": "culinarion",
+"name": "Culinarion",
+"domain": "culinarion.com",
+"keys": [
+"culinarion"
+],
+"osm": true
+},
+{
+"id": "culturevelo",
+"name": "Culture Vélo",
+"domain": "culturevelo.com",
+"keys": [
+"culture velo"
+],
+"osm": true
+},
+{
+"id": "cyclable",
+"name": "Cyclable",
+"domain": "cyclable.com",
+"keys": [
+"cyclable"
+],
+"osm": true
+},
+{
+"id": "cyrillus",
+"name": "Cyrillus",
+"domain": "cyrillus.fr",
+"keys": [
+"cyrillus"
+],
+"osm": true
+},
+{
+"id": "dammannfreres",
+"name": "Dammann Frères",
+"domain": "dammann.fr",
+"keys": [
+"dammann freres"
+],
+"osm": true
+},
+{
+"id": "danjohn",
+"name": "Dan John",
+"domain": "danjohn.com",
+"keys": [
+"dan john"
+],
+"osm": true
+},
+{
+"id": "darjeeling",
+"name": "Darjeeling",
+"domain": "darjeeling.fr",
+"keys": [
+"darjeeling"
+],
+"osm": true
+},
+{
+"id": "dats24",
+"name": "DATS 24",
+"domain": "customer.dats24.be",
+"keys": [
+"dats 24"
+],
+"osm": true
+},
+{
+"id": "daybyday",
+"name": "day by day",
+"domain": "daybyday-shop.com",
+"keys": [
+"day by day"
+],
+"osm": true
+},
+{
+"id": "defursac",
+"name": "De Fursac",
+"domain": "fursac.com",
+"keys": [
+"de fursac"
+],
+"osm": true
+},
+{
+"id": "deneuville",
+"name": "De Neuville",
+"domain": "chocolat-deneuville.com",
+"keys": [
+"de neuville"
+],
+"osm": true
+},
+{
+"id": "decimas",
+"name": "Decimas",
+"domain": "decimas.com",
+"keys": [
+"decimas"
+],
+"osm": true
+},
+{
+"id": "delko",
+"name": "Delko",
+"domain": "delko.com",
+"keys": [
+"delko"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-delko-2025.png&width=150"
+},
+{
+"id": "depiltech",
+"name": "Dépil Tech",
+"domain": "depiltech.com",
+"keys": [
+"depil tech"
+],
+"osm": true
+},
+{
+"id": "despetitshauts",
+"name": "Des Petits Hauts",
+"domain": "despetitshauts.com",
+"keys": [
+"des petits hauts"
+],
+"osm": true
+},
+{
+"id": "descamps",
+"name": "Descamps",
+"domain": "descamps.com",
+"keys": [
+"descamps"
+],
+"osm": true
+},
+{
+"id": "dessange",
+"name": "Dessange",
+"domain": "dessange.com",
+"keys": [
+"dessange"
+],
+"osm": true
+},
+{
+"id": "devernois",
+"name": "Devernois",
+"domain": "devernois.fr",
+"keys": [
+"devernois"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Devernois logo.svg"
+},
+{
+"id": "devred",
+"name": "Devred",
+"domain": "devred.com",
+"keys": [
+"devred"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20DEVRED%201902.jpg&width=150"
+},
+{
+"id": "dim",
+"name": "Dim",
+"domain": "dim.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Dim.png&width=150"
+},
+{
+"id": "disneystore",
+"name": "Disney Store",
+"domain": "shopdisney.com",
+"keys": [
+"disney store",
+"the disney store"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Disney Store 2024 logo.svg"
+},
+{
+"id": "distinxion",
+"name": "Distinxion",
+"domain": "distinxion.fr",
+"keys": [
+"distinxion"
+],
+"osm": true
+},
+{
+"id": "districenter",
+"name": "DistriCenter",
+"domain": "districenter.fr",
+"keys": [
+"districenter"
+],
+"osm": true
+},
+{
+"id": "doppiomalto",
+"name": "Doppio Malto",
+"domain": "doppiomalto.com",
+"keys": [
+"doppio malto"
+],
+"osm": true
+},
+{
+"id": "drivercenter",
+"name": "Driver Center",
+"domain": "drivercenter.eu",
+"keys": [
+"driver center",
+"pneumobil"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20der%20Driver%20Reifen%20und%20KFZ-Technik%20GmbH.jpg&width=150"
+},
+{
+"id": "dubruitdanslacuisine",
+"name": "Du Bruit dans la Cuisine",
+"domain": "dubruitdanslacuisine.fr",
+"keys": [
+"du bruit dans la cuisine"
+],
+"osm": true
+},
+{
+"id": "dufouxchocolats",
+"name": "Dufoux Chocolats",
+"domain": "chocolatsdufoux.com",
+"keys": [
+"dufoux chocolats"
+],
+"osm": true
+},
+{
+"id": "dunelondon",
+"name": "Dune London",
+"domain": "dunelondon.com",
+"keys": [
+"dune london"
+],
+"osm": true
+},
+{
+"id": "dyneff",
+"name": "Dyneff",
+"domain": "dyneff.fr",
+"keys": [
+"dyneff"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Dyneff.svg"
+},
+{
+"id": "eatsalad",
+"name": "Eat Salad",
+"domain": "eatsalad.com",
+"keys": [
+"eat salad"
+],
+"osm": true
+},
+{
+"id": "ecomiam",
+"name": "Écomiam",
+"domain": "ecomiam.com",
+"keys": [
+"ecomiam"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20%C3%89comiam.png&width=150"
+},
+{
+"id": "ecoutervoir",
+"name": "Écouter Voir",
+"domain": "ecoutervoir.fr",
+"keys": [
+"ecouter voir",
+"les opticiens mutualistes",
+"opticiens mutualistes"
+],
+"osm": true
+},
+{
+"id": "edenpark",
+"name": "Eden Park",
+"domain": "eden-park.fr",
+"keys": [
+"eden park"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Eden Park 2.svg"
+},
+{
+"id": "edwin",
+"name": "EDWIN",
+"domain": "",
+"keys": [
+"edwin"
+],
+"osm": true
+},
+{
+"id": "ekosport",
+"name": "Ekosport",
+"domain": "ekosport.fr",
+"keys": [
+"ekosport"
+],
+"osm": true
+},
+{
+"id": "elganso",
+"name": "El Ganso",
+"domain": "elganso.com",
+"keys": [
+"el ganso"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FEl%20ganso.jpg&width=150"
+},
+{
+"id": "elan",
+"name": "Elan",
+"domain": "total-proxi-energies.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Elan.svg"
+},
+{
+"id": "elephantbleu",
+"name": "Éléphant Bleu",
+"domain": "elephantbleu.fr",
+"keys": [
+"elephant bleu"
+],
+"osm": true
+},
+{
+"id": "elsiesante",
+"name": "Elsie Santé",
+"domain": "elsie-sante.fr",
+"keys": [
+"elsie sante"
+],
+"osm": true
+},
+{
+"id": "enishop",
+"name": "Eni Shop",
+"domain": "eni.com",
+"keys": [
+"agip eni",
+"eni shop",
+"eni station"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Eni wordmark.svg"
+},
+{
+"id": "enjoytacos",
+"name": "Enjoy Tacos",
+"domain": "enjoytacos.com",
+"keys": [
+"enjoy tacos"
+],
+"osm": true
+},
+{
+"id": "equivalenza",
+"name": "Equivalenza",
+"domain": "equivalenza.com",
+"keys": [
+"equivalenza"
+],
+"osm": true
+},
+{
+"id": "ericbompard",
+"name": "Éric Bompard",
+"domain": "eric-bompard.com",
+"keys": [
+"eric bompard"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Éric Bompard.svg"
+},
+{
+"id": "erickayser",
+"name": "Eric Kayser",
+"domain": "maison-kayser.com",
+"keys": [
+"eric kayser",
+"la maison kayser",
+"maison eric kayser",
+"maison kayser"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMaison%20Kayser%20International%20Logo.png&width=150"
+},
+{
+"id": "espacedesmarques",
+"name": "Espace des Marques",
+"domain": "espace-des-marques.com",
+"keys": [
+"espace des marques"
+],
+"osm": true
+},
+{
+"id": "espacemontagne",
+"name": "Espace Montagne",
+"domain": "espacemontagne.com",
+"keys": [
+"espace montagne"
+],
+"osm": true
+},
+{
+"id": "essentielantwerp",
+"name": "Essentiel Antwerp",
+"domain": "essentiel-antwerp.com",
+"keys": [
+"essentiel antwerp"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Essentiel-antwerp-logo.svg"
+},
+{
+"id": "estheticcenter",
+"name": "Esthetic Center",
+"domain": "esthetic-center.com",
+"keys": [
+"esthetic center"
+],
+"osm": true
+},
+{
+"id": "euromaster",
+"name": "Euromaster",
+"domain": "euromastergroup.com",
+"keys": [
+"euromaster"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FERM%20Logo%20Rahmen%20RGB%20claim.png&width=150"
+},
+{
+"id": "europeche",
+"name": "Europeche",
+"domain": "europeche.fr",
+"keys": [
+"europeche"
+],
+"osm": true
+},
+{
+"id": "eurotyre",
+"name": "Eurotyre",
+"domain": "eurotyre.fr",
+"keys": [
+"eurotyre"
+],
+"osm": true
+},
+{
+"id": "ewigo",
+"name": "Ewigo",
+"domain": "ewigo.com",
+"keys": [
+"ewigo"
+],
+"osm": true
+},
+{
+"id": "exehotels",
+"name": "Exe Hotels",
+"domain": "eurostarshotels.co.uk",
+"keys": [
+"exe hotels"
+],
+"osm": true
+},
+{
+"id": "exki",
+"name": "Exki",
+"domain": "exki.com",
+"keys": [],
+"osm": true
+},
+{
+"id": "faguo",
+"name": "Faguo",
+"domain": "faguo-store.com",
+"keys": [
+"faguo"
+],
+"osm": true
+},
+{
+"id": "farrowball",
+"name": "Farrow & Ball",
+"domain": "farrow-ball.com",
+"keys": [
+"farrow & ball"
+],
+"osm": true
+},
+{
+"id": "fasthotel",
+"name": "Fasthôtel",
+"domain": "fasthotel.com",
+"keys": [
+"fasthotel"
+],
+"osm": true
+},
+{
+"id": "fatherssons",
+"name": "Fathers & Sons",
+"domain": "fatherandsons.fr",
+"keys": [
+"fathers & sons"
+],
+"osm": true
+},
+{
+"id": "festivaldespains",
+"name": "Festival des Pains",
+"domain": "festivaldespains.com",
+"keys": [
+"festival des pains"
+],
+"osm": true
+},
+{
+"id": "figaret",
+"name": "Figaret",
+"domain": "figaret.com",
+"keys": [
+"figaret"
+],
+"osm": true
+},
+{
+"id": "finsbury",
+"name": "Finsbury",
+"domain": "finsbury-shoes.com",
+"keys": [
+"finsbury"
+],
+"osm": true
+},
+{
+"id": "fitnesspark",
+"name": "Fitness Park",
+"domain": "fitnesspark.fr",
+"keys": [
+"fitness park"
+],
+"osm": true
+},
+{
+"id": "fitnessboutique",
+"name": "FitnessBoutique",
+"domain": "fitnessboutique.fr",
+"keys": [
+"fitnessboutique"
+],
+"osm": true
+},
+{
+"id": "fitshop",
+"name": "Fitshop",
+"domain": "fitshop.de",
+"keys": [
+"fitshop",
+"sport tiedje"
+],
+"osm": true
+},
+{
+"id": "fiveguys",
+"name": "Five Guys",
+"domain": "fiveguys.com",
+"keys": [
+"five guys"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Five Guys logo.svg"
+},
+{
+"id": "flowerburger",
+"name": "Flower Burger",
+"domain": "flowerburger.it",
+"keys": [
+"flower burger"
+],
+"osm": true
+},
+{
+"id": "fly",
+"name": "Fly",
+"domain": "fly.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Fly-Logo.svg"
+},
+{
+"id": "foodmaker",
+"name": "Foodmaker",
+"domain": "foodmaker.be",
+"keys": [
+"foodmaker"
+],
+"osm": true
+},
+{
+"id": "foussier",
+"name": "Foussier",
+"domain": "foussier.fr",
+"keys": [
+"foussier"
+],
+"osm": true
+},
+{
+"id": "franceloisirs",
+"name": "France Loisirs",
+"domain": "franceloisirs.com",
+"keys": [
+"france loisirs"
+],
+"osm": true
+},
+{
+"id": "franceparebrise",
+"name": "France Pare-Brise",
+"domain": "franceparebrise.fr",
+"keys": [
+"france pare brise"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FFRANCE%20PARE%20BRISE-LOGO-2017-St-GOBAIN-V1-RVB.jpg&width=150"
+},
+{
+"id": "franckprovost",
+"name": "Franck Provost",
+"domain": "franckprovost.com",
+"keys": [
+"franck provost"
+],
+"osm": true
+},
+{
+"id": "fransbonhomme",
+"name": "Frans Bonhomme",
+"domain": "fransbonhomme.fr",
+"keys": [
+"frans bonhomme"
+],
+"osm": true
+},
+{
+"id": "fredericmoreno",
+"name": "Frédéric Moreno",
+"domain": "frederic-moreno.com",
+"keys": [
+"frederic moreno"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Fr%C3%A9d%C3%A9ric%20Moreno.jpg&width=150"
+},
+{
+"id": "freelance",
+"name": "Free Lance",
+"domain": "freelance.fr",
+"keys": [
+"free lance"
+],
+"osm": true
+},
+{
+"id": "freepeople",
+"name": "Free People",
+"domain": "freepeople.com",
+"keys": [
+"free people"
+],
+"osm": true
+},
+{
+"id": "fresh",
+"name": "Fresh",
+"domain": "fresh.fr",
+"keys": [
+"fresh"
+],
+"osm": true
+},
+{
+"id": "gladalle",
+"name": "G La Dalle",
+"domain": "g-ladalle.com",
+"keys": [
+"g la dalle"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/G La Dalle.svg"
+},
+{
+"id": "g20",
+"name": "G20",
+"domain": "supermarchesg20.com",
+"keys": [],
+"osm": true
+},
+{
+"id": "gatopreto",
+"name": "Gato Preto",
+"domain": "gatopreto.com",
+"keys": [
+"gato preto"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FA%20loja%20do%20Gato%20Preto.jpg&width=150"
+},
+{
+"id": "gedimat",
+"name": "Gedimat",
+"domain": "gedimat.fr",
+"keys": [
+"gedimat"
+],
+"osm": true
+},
+{
+"id": "georgesrech",
+"name": "Georges Rech",
+"domain": "georges-rech.fr",
+"keys": [
+"georges rech"
+],
+"osm": true
+},
+{
+"id": "gitem",
+"name": "Gitem",
+"domain": "gitem.fr",
+"keys": [
+"gitem"
+],
+"osm": true
+},
+{
+"id": "glacesmoustache",
+"name": "Glaces Moustache",
+"domain": "glaces-moustache.fr",
+"keys": [
+"glaces moustache"
+],
+"osm": true
+},
+{
+"id": "glassauto",
+"name": "GlassAuto",
+"domain": "glassauto.fr",
+"keys": [
+"glassauto"
+],
+"osm": true
+},
+{
+"id": "gouiranbeaute",
+"name": "Gouiran Beauté",
+"domain": "gouiran-beaute.com",
+"keys": [
+"gouiran beaute"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Gouiran%20Beaut%C3%A9.png&width=150"
+},
+{
+"id": "graindemalice",
+"name": "Grain de Malice",
+"domain": "graindemalice.fr",
+"keys": [
+"grain de malice"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FGrain%20de%20Malice%20logo.png&width=150"
+},
+{
+"id": "granado",
+"name": "Granado",
+"domain": "granado.com.br",
+"keys": [
+"granado"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo da Granado Pharmácias.svg"
+},
+{
+"id": "grom",
+"name": "Grom",
+"domain": "gromgelato.com",
+"keys": [
+"grom gelaterie artigianali",
+"grom gelato"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Grom.svg"
+},
+{
+"id": "guydegrenne",
+"name": "Guy Degrenne",
+"domain": "degrenne.fr",
+"keys": [
+"guy degrenne"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FDEGRENNEParis.jpg&width=150"
+},
+{
+"id": "hhotels",
+"name": "H-Hotels",
+"domain": "h-hotels.com",
+"keys": [
+"h hotels"
+],
+"osm": true
+},
+{
+"id": "hstern",
+"name": "H. Stern",
+"domain": "hstern.com.br",
+"keys": [
+"h stern"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logotipo da HStern (2015).svg"
+},
+{
+"id": "habitat",
+"name": "Habitat",
+"domain": "habitat.co.uk",
+"keys": [
+"habitat"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Habitat Logotyp.svg"
+},
+{
+"id": "hagebaumarkt",
+"name": "Hagebaumarkt",
+"domain": "hagebau.com",
+"keys": [
+"hagebau",
+"hagebaumarkt"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagebau Logo 2022.svg"
+},
+{
+"id": "hansanders",
+"name": "Hans Anders",
+"domain": "hansanders.nl",
+"keys": [
+"hans anders",
+"hans anders opticiens"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo of Hans Anders.svg"
+},
+{
+"id": "hapik",
+"name": "Hapik",
+"domain": "hapik.fr",
+"keys": [
+"hapik",
+"rock up",
+"the hapik group"
+],
+"osm": true
+},
+{
+"id": "harmontblaine",
+"name": "Harmont & Blaine",
+"domain": "harmontblaine.com",
+"keys": [
+"harmont & blaine"
+],
+"osm": true
+},
+{
+"id": "hautetcourt",
+"name": "Haut et Court",
+"domain": "hautetcourt.com",
+"keys": [
+"haut et court"
+],
+"osm": true
+},
+{
+"id": "histoiredor",
+"name": "Histoire d'Or",
+"domain": "histoiredor.com",
+"keys": [
+"histoire d or"
+],
+"osm": true
+},
+{
+"id": "hmarket",
+"name": "Hmarket",
+"domain": "hmarket.fr",
+"keys": [
+"hmarket"
+],
+"osm": true
+},
+{
+"id": "hoka",
+"name": "Hoka",
+"domain": "hoka.com",
+"keys": [],
+"osm": true
+},
+{
+"id": "honestgreens",
+"name": "Honest Greens",
+"domain": "honestgreens.com",
+"keys": [
+"honest greens"
+],
+"osm": true
+},
+{
+"id": "hotelf1",
+"name": "hotelF1",
+"domain": "hotelf1.accor.com",
+"keys": [
+"formule 1",
+"hotelf1"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/HotelF1 logo.svg"
+},
+{
+"id": "huilaushan",
+"name": "Hui Lau Shan",
+"domain": "hkhls.com",
+"keys": [
+"hui lau shan"
+],
+"osm": true
+},
+{
+"id": "hypercacher",
+"name": "Hypercacher",
+"domain": "hypercacher.com",
+"keys": [
+"hypercacher"
+],
+"osm": true
+},
+{
+"id": "ikks",
+"name": "Ikks",
+"domain": "ikks.com",
+"keys": [],
+"osm": true
+},
+{
+"id": "indianacafe",
+"name": "Indiana Café",
+"domain": "indianacafe.fr",
+"keys": [
+"indiana cafe"
+],
+"osm": true
+},
+{
+"id": "interflora",
+"name": "Interflora",
+"domain": "interflora.co.uk",
+"keys": [
+"interflora"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Fleurop 2017 logo.svg"
+},
+{
+"id": "ippudo",
+"name": "Ippudo",
+"domain": "ippudo.com",
+"keys": [
+"ippudo"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FIppudo%20Logo.png&width=150"
+},
+{
+"id": "islandpoke",
+"name": "Island Poké",
+"domain": "islandpoke.com",
+"keys": [
+"island poke"
+],
+"osm": true
+},
+{
+"id": "izac",
+"name": "Izac",
+"domain": "izac.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FIZAC%20logo.png&width=150"
+},
+{
+"id": "jackwolfskin",
+"name": "Jack Wolfskin",
+"domain": "jack-wolfskin.com",
+"keys": [
+"jack wolfskin"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Jack%20Wolfskin%202022.png&width=150"
+},
+{
+"id": "jbmartin",
+"name": "JB Martin",
+"domain": "jbmartin.fr",
+"keys": [
+"jb martin"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FJBMARTIN%20Logo.jpg&width=150"
+},
+{
+"id": "jdsports",
+"name": "JD Sports",
+"domain": "jdsports.de",
+"keys": [
+"jd sports"
+],
+"osm": true
+},
+{
+"id": "jeanlouisdavid",
+"name": "Jean Louis David",
+"domain": "jeanlouisdavid.com",
+"keys": [
+"jean louis david"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Jean%20Louis%20David.jpg&width=150"
+},
+{
+"id": "jeffdebruges",
+"name": "Jeff de Bruges",
+"domain": "jeff-de-bruges.com",
+"keys": [
+"jeff de bruges"
+],
+"osm": true
+},
+{
+"id": "jimmyfairly",
+"name": "Jimmy Fairly",
+"domain": "jimmyfairly.com",
+"keys": [
+"jimmy fairly"
+],
+"osm": true
+},
+{
+"id": "jonak",
+"name": "Jonak",
+"domain": "jonak.fr",
+"keys": [
+"jonak"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-jonak.svg"
+},
+{
+"id": "joystacos",
+"name": "Joys Tacos",
+"domain": "",
+"keys": [
+"joys tacos"
+],
+"osm": true
+},
+{
+"id": "juliendorcel",
+"name": "Julien d'Orcel",
+"domain": "juliendorcel.com",
+"keys": [
+"julien d orcel"
+],
+"osm": true
+},
+{
+"id": "juliusmeinl",
+"name": "Julius Meinl",
+"domain": "juliusmeinl.com",
+"keys": [
+"julius meinl"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Julius Meinl (2004).svg"
+},
+{
+"id": "kway",
+"name": "K-Way",
+"domain": "k-way.fr",
+"keys": [
+"k way"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/K-Way logo.svg"
+},
+{
+"id": "k1speed",
+"name": "K1 Speed",
+"domain": "k1speed.com",
+"keys": [
+"k1 speed"
+],
+"osm": true
+},
+{
+"id": "kaporal",
+"name": "Kaporal",
+"domain": "kaporal-officiel.com",
+"keys": [
+"kaporal"
+],
+"osm": true
+},
+{
+"id": "karlmarcjohn",
+"name": "Karl Marc John",
+"domain": "karlmarcjohn.com",
+"keys": [
+"karl marc john"
+],
+"osm": true
+},
+{
+"id": "karmaautomotive",
+"name": "Karma Automotive",
+"domain": "karmaautomotive.com",
+"keys": [
+"karma automotive"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Karma Automomotive logo 2021.svg"
+},
+{
+"id": "keepcool",
+"name": "KeepCool",
+"domain": "keepcool.fr",
+"keys": [
+"keepcool"
+],
+"osm": true
+},
+{
+"id": "kroustysabaidi",
+"name": "Krousty Sabaïdi",
+"domain": "kroustyresto.fr",
+"keys": [
+"krousty sabaidi"
+],
+"osm": true
+},
+{
+"id": "kruidvat",
+"name": "Kruidvat",
+"domain": "kruidvat.nl",
+"keys": [
+"kruidvat"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kruidvat logo.svg"
+},
+{
+"id": "kujten",
+"name": "Kujten",
+"domain": "kujten.com",
+"keys": [
+"kujten"
+],
+"osm": true
+},
+{
+"id": "kunzpressing",
+"name": "Kunz Pressing",
+"domain": "kunz.fr",
+"keys": [
+"kunz pressing"
+],
+"osm": true
+},
+{
+"id": "kyriad",
+"name": "Kyriad",
+"domain": "kyriad.com",
+"keys": [
+"kyriad"
+],
+"osm": true
+},
+{
+"id": "lanticapizzeriadamichele",
+"name": "L'Antica Pizzeria da Michele",
+"domain": "damichele.net",
+"keys": [
+"l antica pizzeria da michele"
+],
+"osm": true
+},
+{
+"id": "lappartfitness",
+"name": "L'Appart Fitness",
+"domain": "lappartfitness.com",
+"keys": [
+"l appart fitness"
+],
+"osm": true
+},
+{
+"id": "latelierpapilles",
+"name": "L'Atelier Papilles",
+"domain": "latelier-papilles.com",
+"keys": [
+"atelier papilles",
+"l atelier papilles"
+],
+"osm": true
+},
+{
+"id": "leauvive",
+"name": "L'Eau Vive",
+"domain": "eau-vive.com",
+"keys": [
+"l eau vive"
+],
+"osm": true
+},
+{
+"id": "lentrepotdubricolage",
+"name": "L'Entrepôt du Bricolage",
+"domain": "entrepot-du-bricolage.fr",
+"keys": [
+"l entrepot du bricolage"
+],
+"osm": true
+},
+{
+"id": "lorangebleue",
+"name": "L'Orange Bleue",
+"domain": "lorangebleue.fr",
+"keys": [
+"l orange bleue"
+],
+"osm": true
+},
+{
+"id": "losteria",
+"name": "L'Osteria",
+"domain": "losteria.net",
+"keys": [
+"l osteria"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FL'Osteria%20Logo.jpg&width=150"
+},
+{
+"id": "laboiteapizza",
+"name": "La Boîte à Pizza",
+"domain": "laboiteapizza.com",
+"keys": [
+"la boite a pizza"
+],
+"osm": true
+},
+{
+"id": "laboucherie",
+"name": "La Boucherie",
+"domain": "la-boucherie.fr",
+"keys": [
+"la boucherie"
+],
+"osm": true
+},
+{
+"id": "laboutiqueducoiffeur",
+"name": "La Boutique du Coiffeur",
+"domain": "laboutiqueducoiffeur.com",
+"keys": [
+"la boutique du coiffeur"
+],
+"osm": true
+},
+{
+"id": "lacasadelascarcasas",
+"name": "La Casa de las Carcasas",
+"domain": "lacasadelascarcasas.es",
+"keys": [
+"la casa de las carcasas"
+],
+"osm": true
+},
+{
+"id": "lacervoiserie",
+"name": "La Cervoiserie",
+"domain": "lacervoiserie.com",
+"keys": [
+"la cervoiserie"
+],
+"osm": true
+},
+{
+"id": "lacompagniedespetits",
+"name": "La Compagnie des Petits",
+"domain": "lacompagniedespetits.com",
+"keys": [
+"la compagnie des petits"
+],
+"osm": true
+},
+{
+"id": "lacriee",
+"name": "La Criée",
+"domain": "lacriee.com",
+"keys": [
+"la criee"
+],
+"osm": true
+},
+{
+"id": "lacroissanterie",
+"name": "La Croissanterie",
+"domain": "lacroissanterie.fr",
+"keys": [
+"la croissanterie"
+],
+"osm": true
+},
+{
+"id": "lafabriquecookies",
+"name": "La Fabrique Cookies",
+"domain": "lafabrique-cookies.fr",
+"keys": [
+"la fabrique cookies"
+],
+"osm": true
+},
+{
+"id": "lafeemaraboutee",
+"name": "La Fée Maraboutée",
+"domain": "lafeemaraboutee.fr",
+"keys": [
+"la fee maraboutee"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo La Fée Maraboutée.svg"
+},
+{
+"id": "lamiecaline",
+"name": "La Mie Câline",
+"domain": "lamiecaline.com",
+"keys": [
+"la mie caline"
+],
+"osm": true
+},
+{
+"id": "lapanetiere",
+"name": "La Panetière",
+"domain": "lapanetiere.fr",
+"keys": [
+"la panetiere"
+],
+"osm": true
+},
+{
+"id": "lapataterie",
+"name": "La Pataterie",
+"domain": "lapataterie.fr",
+"keys": [
+"la pataterie"
+],
+"osm": true
+},
+{
+"id": "lapizzadenico",
+"name": "La Pizza de Nico",
+"domain": "lapizzadenico.com",
+"keys": [
+"la pizza de nico"
+],
+"osm": true
+},
+{
+"id": "laplace",
+"name": "La Place",
+"domain": "laplace.com",
+"keys": [
+"la place"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLa%20Place%20logo.png&width=150"
+},
+{
+"id": "laplateformedubatiment",
+"name": "La Plateforme du Bâtiment",
+"domain": "laplateforme.com",
+"keys": [
+"la plateforme du batiment"
+],
+"osm": true
+},
+{
+"id": "laprocure",
+"name": "La Procure",
+"domain": "laprocure.com",
+"keys": [
+"la procure"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-La-Procure.jpg&width=150"
+},
+{
+"id": "laromana",
+"name": "La Romana",
+"domain": "gelateriaromana.com",
+"keys": [
+"la romana"
+],
+"osm": true
+},
+{
+"id": "latalemelerie",
+"name": "La Talemelerie",
+"domain": "latalemelerie.com",
+"keys": [
+"la talemelerie",
+"talemelerie"
+],
+"osm": true
+},
+{
+"id": "latavernetabledecaractere",
+"name": "La Taverne - Table de caractère",
+"domain": "lestavernes.com",
+"keys": [
+"la taverne table de caractere"
+],
+"osm": true
+},
+{
+"id": "lapeyre",
+"name": "Lapeyre",
+"domain": "groupe-lapeyre.com",
+"keys": [
+"lapeyre"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FGroupe%20Lapeyre.jpeg&width=150"
+},
+{
+"id": "lasergameevolution",
+"name": "Laser Game Evolution",
+"domain": "lasergame-evolution.com",
+"keys": [
+"laser game evolution"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Laser%20Game%20Evolution.png&width=150"
+},
+{
+"id": "lauratodd",
+"name": "Laura Todd",
+"domain": "lauratodd.com",
+"keys": [
+"laura todd"
+],
+"osm": true
+},
+{
+"id": "lechocolatalainducasse",
+"name": "Le Chocolat Alain Ducasse",
+"domain": "lechocolat-alainducasse.com",
+"keys": [
+"le chocolat alain ducasse"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Le%20chocolat%20Alain%20Ducasse%202022.png&width=150"
+},
+{
+"id": "lefive",
+"name": "Le Five",
+"domain": "lefive.fr",
+"keys": [
+"le five"
+],
+"osm": true
+},
+{
+"id": "lekiosqueapizzas",
+"name": "Le Kiosque à Pizzas",
+"domain": "le-kiosque-a-pizzas.com",
+"keys": [
+"le kiosque a pizzas"
+],
+"osm": true
+},
+{
+"id": "lemarchedacote",
+"name": "le marché d'à côté",
+"domain": "",
+"keys": [
+"le marche d a cote",
+"marche d a cote"
+],
+"osm": true
+},
+{
+"id": "lepaindujour",
+"name": "Le Pain du Jour",
+"domain": "le-pain-du-jour.com",
+"keys": [
+"le pain du jour"
+],
+"osm": true
+},
+{
+"id": "leparadisdufruit",
+"name": "Le Paradis du Fruit",
+"domain": "leparadisdufruit.fr",
+"keys": [
+"le paradis du fruit"
+],
+"osm": true
+},
+{
+"id": "lepetrinribeirou",
+"name": "Le Pétrin Ribeïrou",
+"domain": "petrin-ribeirou.com",
+"keys": [
+"le petrin ribeirou"
+],
+"osm": true
+},
+{
+"id": "leslipfrancais",
+"name": "Le Slip Français",
+"domain": "leslipfrancais.fr",
+"keys": [
+"le slip francais"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-Le-Slip-Francais.png&width=150"
+},
+{
+"id": "letacosdelyon",
+"name": "Le Tacos de Lyon",
+"domain": "letacosdelyon.com",
+"keys": [
+"le tacos de lyon"
+],
+"osm": true
+},
+{
+"id": "letempsdescerises",
+"name": "Le Temps des Cerises",
+"domain": "letempsdescerises.com",
+"keys": [
+"le temps des cerises"
+],
+"osm": true
+},
+{
+"id": "leondebruxelles",
+"name": "Léon de Bruxelles",
+"domain": "restaurantleon.fr",
+"keys": [
+"leon de bruxelles"
+],
+"osm": true
+},
+{
+"id": "lesburgersdepapa",
+"name": "Les Burgers de Papa",
+"domain": "lesburgersdepapa.fr",
+"keys": [
+"les burgers de papa"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Burger%20de%20Papa.png&width=150"
+},
+{
+"id": "lescomptoirsdelabio",
+"name": "Les Comptoirs De La Bio",
+"domain": "lescomptoirsdelabio.fr",
+"keys": [
+"les comptoirs de la bio"
+],
+"osm": true
+},
+{
+"id": "lesecransdeparis",
+"name": "Les Écrans de Paris",
+"domain": "lesecransdeparis.fr",
+"keys": [
+"les ecrans de paris"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Les%20%C3%89crans%20de%20Paris.jpg&width=150"
+},
+{
+"id": "leseleveursdelacharentonne",
+"name": "Les Éleveurs de la Charentonne",
+"domain": "leseleveursdelacharentonne.fr",
+"keys": [
+"les eleveurs de la charentonne"
+],
+"osm": true
+},
+{
+"id": "lesfournilsdefrance",
+"name": "Les Fournils de France",
+"domain": "lesfournilsdefrance.com",
+"keys": [
+"les fournils de france"
+],
+"osm": true
+},
+{
+"id": "libertygym",
+"name": "Liberty Gym",
+"domain": "libertygym.fr",
+"keys": [
+"liberty gym"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Liberty Gym.svg"
+},
+{
+"id": "linvosges",
+"name": "Linvosges",
+"domain": "linvosges.com",
+"keys": [
+"linvosges"
+],
+"osm": true
+},
+{
+"id": "lissac",
+"name": "Lissac",
+"domain": "lissac.fr",
+"keys": [
+"lissac",
+"lissac opticien"
+],
+"osm": true
+},
+{
+"id": "llaollao",
+"name": "Llaollao",
+"domain": "llaollaoweb.com",
+"keys": [
+"llaollao"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLlaollao.png&width=150"
+},
+{
+"id": "logishotels",
+"name": "Logis Hotels",
+"domain": "logishotels.com",
+"keys": [
+"logis",
+"logis hotels"
+],
+"osm": true
+},
+{
+"id": "louispion",
+"name": "Louis Pion",
+"domain": "louispion.fr",
+"keys": [
+"louis pion"
+],
+"osm": true
+},
+{
+"id": "lululemon",
+"name": "Lululemon",
+"domain": "shop.lululemon.com",
+"keys": [
+"lululemon"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Lululemon Athletica logo.svg"
+},
+{
+"id": "lunettespourtous",
+"name": "Lunettes Pour Tous",
+"domain": "lunettespourtous.com",
+"keys": [
+"lunettes pour tous"
+],
+"osm": true
+},
+{
+"id": "lyf",
+"name": "lyf",
+"domain": "discoverasr.com",
+"keys": [],
+"osm": true
+},
+{
+"id": "lynxoptique",
+"name": "Lynx Optique",
+"domain": "lynx-optique.com",
+"keys": [
+"lynx optique"
+],
+"osm": true
+},
+{
+"id": "mafermeenville",
+"name": "Ma Ferme en Ville",
+"domain": "mafermeenville.fr",
+"keys": [
+"ma ferme en ville"
+],
+"osm": true
+},
+{
+"id": "maloa",
+"name": "Ma'loa",
+"domain": "maloa.com",
+"keys": [
+"ma loa"
+],
+"osm": true
+},
+{
+"id": "madura",
+"name": "Madura",
+"domain": "madura.fr",
+"keys": [
+"madura"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMadura%20Decoration.jpg&width=150"
+},
+{
+"id": "magasinvert",
+"name": "Magasin Vert",
+"domain": "magasin-point-vert.fr",
+"keys": [
+"magasin vert"
+],
+"osm": true
+},
+{
+"id": "maison123",
+"name": "Maison 123",
+"domain": "maison123.com",
+"keys": [
+"maison 123"
+],
+"osm": true
+},
+{
+"id": "maisonbecam",
+"name": "Maison Bécam",
+"domain": "maisonbecam.com",
+"keys": [
+"maison becam"
+],
+"osm": true
+},
+{
+"id": "maisondelapresse",
+"name": "Maison de la Presse",
+"domain": "maisondelapresse.com",
+"keys": [
+"maison de la presse"
+],
+"osm": true
+},
+{
+"id": "maisonherenger",
+"name": "Maison Herenger",
+"domain": "maison-herenger.fr",
+"keys": [
+"maison herenger"
+],
+"osm": true
+},
+{
+"id": "maisonnicolas",
+"name": "Maison Nicolas",
+"domain": "nicolas.com",
+"keys": [
+"maison nicolas"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Maison%20Nicolas%20bordeaux.png&width=150"
+},
+{
+"id": "maisonplanchot",
+"name": "Maison Planchot",
+"domain": "maisonplanchot.com",
+"keys": [
+"maison planchot"
+],
+"osm": true
+},
+{
+"id": "majestic",
+"name": "Majestic",
+"domain": "majestic-cinemas.com",
+"keys": [
+"majestic"
+],
+"osm": true
+},
+{
+"id": "malvon",
+"name": "Malvón",
+"domain": "malvon.es",
+"keys": [
+"malvon"
+],
+"osm": true
+},
+{
+"id": "mamashelter",
+"name": "Mama Shelter",
+"domain": "mamashelter.com",
+"keys": [
+"mama shelter"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMama%20Shelter%20Logo%202015.png&width=150"
+},
+{
+"id": "mangeonsfrais",
+"name": "Mangeons Frais",
+"domain": "mangeonsfrais.com",
+"keys": [
+"mangeons frais"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Mangeons%20Frais.png&width=150"
+},
+{
+"id": "marcorian",
+"name": "Marc Orian",
+"domain": "marc-orian.com",
+"keys": [
+"marc orian"
+],
+"osm": true
+},
+{
+"id": "marcelfils",
+"name": "Marcel & fils",
+"domain": "marceletfils.com",
+"keys": [
+"marcel & fils"
+],
+"osm": true
+},
+{
+"id": "mariette",
+"name": "Mariette",
+"domain": "",
+"keys": [
+"mariette"
+],
+"osm": true
+},
+{
+"id": "masterpoulet",
+"name": "Master Poulet",
+"domain": "master-poulet.fr",
+"keys": [
+"master poulet"
+],
+"osm": true
+},
+{
+"id": "materielvelocom",
+"name": "Materiel-velo.com",
+"domain": "materiel-velo.com",
+"keys": [
+"materiel velo",
+"materiel velo com"
+],
+"osm": true
+},
+{
+"id": "maty",
+"name": "MATY",
+"domain": "maty.com",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo MATY.svg"
+},
+{
+"id": "mauboussin",
+"name": "Mauboussin",
+"domain": "mauboussin.fr",
+"keys": [
+"mauboussin"
+],
+"osm": true
+},
+{
+"id": "maurices",
+"name": "Maurices",
+"domain": "maurices.com",
+"keys": [
+"maurices"
+],
+"osm": true
+},
+{
+"id": "maxetmoi",
+"name": "Max et Moi",
+"domain": "maxemoi.com",
+"keys": [
+"max et moi"
+],
+"osm": true
+},
+{
+"id": "maxilivres",
+"name": "Maxilivres",
+"domain": "maxilivres.fr",
+"keys": [
+"maxilivres"
+],
+"osm": true
+},
+{
+"id": "mda",
+"name": "MDA",
+"domain": "mda-electromenager.com",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMDA%20Electromenager.png&width=150"
+},
+{
+"id": "mediprix",
+"name": "Mediprix",
+"domain": "mediprix.fr",
+"keys": [
+"mediprix"
+],
+"osm": true
+},
+{
+"id": "medoretcompagnie",
+"name": "Médor et Compagnie",
+"domain": "medoretcie.com",
+"keys": [
+"medor et compagnie"
+],
+"osm": true
+},
+{
+"id": "megarama",
+"name": "Megarama",
+"domain": "megarama.fr",
+"keys": [
+"megarama"
+],
+"osm": true
+},
+{
+"id": "memphis",
+"name": "Memphis",
+"domain": "memphis-restaurant.com",
+"keys": [
+"memphis"
+],
+"osm": true
+},
+{
+"id": "mesdemoisellesparis",
+"name": "Mes Demoiselles Paris",
+"domain": "mesdemoisellesparis.com",
+"keys": [
+"mes demoiselles paris"
+],
+"osm": true
+},
+{
+"id": "meublesgautier",
+"name": "Meubles Gautier",
+"domain": "gautier.fr",
+"keys": [
+"gautier",
+"les meubles gautier",
+"meubles gautier"
+],
+"osm": true
+},
+{
+"id": "meuhrestaurant",
+"name": "MEUH! Restaurant",
+"domain": "meuh-restaurant.fr",
+"keys": [
+"meuh restaurant"
+],
+"osm": true
+},
+{
+"id": "mezzodipasta",
+"name": "Mezzo di Pasta",
+"domain": "mezzodipasta.de",
+"keys": [
+"mezzo di pasta"
+],
+"osm": true
+},
+{
+"id": "migros",
+"name": "Migros",
+"domain": "migros.ch",
+"keys": [
+"migros"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Migros.svg"
+},
+{
+"id": "milliescookies",
+"name": "Millie's Cookies",
+"domain": "milliescookies.com",
+"keys": [
+"millie s cookies"
+],
+"osm": true
+},
+{
+"id": "minelli",
+"name": "Minelli",
+"domain": "minelli.fr",
+"keys": [
+"minelli"
+],
+"osm": true
+},
+{
+"id": "miseaugreen",
+"name": "Mise au Green",
+"domain": "mise-au-green.com",
+"keys": [
+"mise au green"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Mise%20Au%20Green.gif&width=150"
+},
+{
+"id": "misscookiescoffee",
+"name": "Miss Cookies Coffee",
+"domain": "misscookies.com",
+"keys": [
+"miss cookies coffee"
+],
+"osm": true
+},
+{
+"id": "mistergarden",
+"name": "Mister Garden",
+"domain": "mister-garden.com",
+"keys": [
+"mister garden"
+],
+"osm": true
+},
+{
+"id": "misterspex",
+"name": "Mister Spex",
+"domain": "misterspex.de",
+"keys": [
+"mister spex"
+],
+"osm": true
+},
+{
+"id": "mixmarkt",
+"name": "Mix Markt",
+"domain": "mixmarkt.eu",
+"keys": [
+"mini mix markt",
+"mix markt"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/MIX Markt Logo.svg"
+},
+{
+"id": "mk2",
+"name": "MK2",
+"domain": "mk2.com",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMK2%20(8061225699).jpg&width=150"
+},
+{
+"id": "mobilierdefrance",
+"name": "Mobilier de France",
+"domain": "mobilierdefrance.com",
+"keys": [
+"mobilier de france"
+],
+"osm": true
+},
+{
+"id": "momentea",
+"name": "Momen'Tea",
+"domain": "momentea.com",
+"keys": [
+"momen tea"
+],
+"osm": true
+},
+{
+"id": "monceaufleurs",
+"name": "Monceau Fleurs",
+"domain": "emova-group.com",
+"keys": [
+"monceau fleurs"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Emova%20Group.jpg&width=150"
+},
+{
+"id": "mondialparebrise",
+"name": "Mondial Pare-Brise",
+"domain": "mondialparebrise.fr",
+"keys": [
+"mondial pare brise"
+],
+"osm": true
+},
+{
+"id": "mondialtissus",
+"name": "Mondial Tissus",
+"domain": "mondialtissus.com",
+"keys": [
+"mondial tissus"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogomondialtissus.png&width=150"
+},
+{
+"id": "mondovelo",
+"name": "Mondovélo",
+"domain": "sport2000.fr",
+"keys": [
+"mondovelo"
+],
+"osm": true
+},
+{
+"id": "mongelli",
+"name": "Mongelli",
+"domain": "pizza-mongelli.com",
+"keys": [
+"mongelli"
+],
+"osm": true
+},
+{
+"id": "monsieurmeuble",
+"name": "Monsieur Meuble",
+"domain": "monsieur-meuble.com",
+"keys": [
+"monsieur meuble"
+],
+"osm": true
+},
+{
+"id": "monsieurstore",
+"name": "Monsieur Store",
+"domain": "monsieurstore.com",
+"keys": [
+"monsieur store"
+],
+"osm": true
+},
+{
+"id": "montresandco",
+"name": "Montres and Co",
+"domain": "montresandco.com",
+"keys": [
+"montres and co"
+],
+"osm": true
+},
+{
+"id": "morgan",
+"name": "Morgan",
+"domain": "morgandetoi.fr",
+"keys": [
+"morgan"
+],
+"osm": true
+},
+{
+"id": "mrpretzels",
+"name": "Mr. Pretzels",
+"domain": "mrpretzels.com",
+"keys": [
+"mr pretzels"
+],
+"osm": true
+},
+{
+"id": "msmode",
+"name": "MS Mode",
+"domain": "msmode.nl",
+"keys": [
+"ms mode"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FMS%20Mode%20logo.png&width=150"
+},
+{
+"id": "muji",
+"name": "Muji",
+"domain": "ryohin-keikaku.jp",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/MUJI logo.svg"
+},
+{
+"id": "nafnaf",
+"name": "NAF NAF",
+"domain": "",
+"keys": [
+"naf naf"
+],
+"osm": true
+},
+{
+"id": "natalys",
+"name": "Natalys",
+"domain": "natalys.com",
+"keys": [
+"natalys"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo natalys.svg"
+},
+{
+"id": "natureo",
+"name": "naturéO",
+"domain": "natureo-bio.fr",
+"keys": [
+"natureo"
+],
+"osm": true
+},
+{
+"id": "neoness",
+"name": "Neoness",
+"domain": "neoness.fr",
+"keys": [
+"neoness"
+],
+"osm": true
+},
+{
+"id": "newlook",
+"name": "New Look",
+"domain": "newlook.com",
+"keys": [
+"new look"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/New Look logo 2012.svg"
+},
+{
+"id": "newman",
+"name": "New Man",
+"domain": "newman.fr",
+"keys": [
+"new man"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FAmbigram%20New%20Man%20logo%20by%20Raymond%20Loewy.png&width=150"
+},
+{
+"id": "newschooltacos",
+"name": "New School Tacos",
+"domain": "newschooltacos.fr",
+"keys": [
+"new school tacos"
+],
+"osm": true
+},
+{
+"id": "nhcollectionhotels",
+"name": "NH Collection Hotels",
+"domain": "nh-hotels.com",
+"keys": [
+"nh collection hotels"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FNH%20Hotel%20Group%20logo.png&width=150"
+},
+{
+"id": "norma",
+"name": "Norma",
+"domain": "norma-online.de",
+"keys": [
+"norma"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Norma Logo.svg"
+},
+{
+"id": "normal",
+"name": "Normal",
+"domain": "normalstores.com",
+"keys": [
+"normal"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Normal logo.svg"
+},
+{
+"id": "nousantigaspi",
+"name": "NOUS anti-gaspi",
+"domain": "nousantigaspi.com",
+"keys": [
+"nous anti gaspi"
+],
+"osm": true
+},
+{
+"id": "otacos",
+"name": "O'Tacos",
+"domain": "o-tacos.fr",
+"keys": [
+"o tacos"
+],
+"osm": true
+},
+{
+"id": "oakberryacaibowls",
+"name": "Oakberry Açaí bowls",
+"domain": "oakberry.com",
+"keys": [
+"oakberry acai bowls"
+],
+"osm": true
+},
+{
+"id": "ogiberri",
+"name": "Ogi Berri",
+"domain": "ogiberri.com",
+"keys": [
+"ogi berri"
+],
+"osm": true
+},
+{
+"id": "oldwildwest",
+"name": "Old Wild West",
+"domain": "oldwildwest.it",
+"keys": [
+"old wild west"
+],
+"osm": true
+},
+{
+"id": "olivergrant",
+"name": "Oliver Grant",
+"domain": "olivergrant.com",
+"keys": [
+"oliver grant"
+],
+"osm": true
+},
+{
+"id": "olympia",
+"name": "Olympia",
+"domain": "",
+"keys": [
+"olympia"
+],
+"osm": true
+},
+{
+"id": "onair",
+"name": "On Air",
+"domain": "",
+"keys": [
+"on air",
+"on air fitness"
+],
+"osm": true
+},
+{
+"id": "opticalcenter",
+"name": "Optical Center",
+"domain": "optical-center.fr",
+"keys": [
+"optical center"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20opticalcenter.jpg&width=150"
+},
+{
+"id": "orcanta",
+"name": "Orcanta",
+"domain": "orcanta.fr",
+"keys": [
+"orcanta"
+],
+"osm": true
+},
+{
+"id": "pablo",
+"name": "Pablo",
+"domain": "pablo.fr",
+"keys": [
+"pablo"
+],
+"osm": true
+},
+{
+"id": "palaisdesthes",
+"name": "Palais des Thés",
+"domain": "palaisdesthes.com",
+"keys": [
+"palais des thes"
+],
+"osm": true
+},
+{
+"id": "paniersympa",
+"name": "Panier Sympa",
+"domain": "codifrance.fr",
+"keys": [
+"panier sympa"
+],
+"osm": true
+},
+{
+"id": "paprika",
+"name": "Paprika",
+"domain": "paprika-shopping.be",
+"keys": [
+"paprika"
+],
+"osm": true
+},
+{
+"id": "paraboot",
+"name": "Paraboot",
+"domain": "paraboot.com",
+"keys": [
+"paraboot"
+],
+"osm": true
+},
+{
+"id": "pascalcoste",
+"name": "Pascal Coste",
+"domain": "pascalcoste.com",
+"keys": [
+"pascal coste"
+],
+"osm": true
+},
+{
+"id": "patagonia",
+"name": "Patagonia",
+"domain": "patagonia.com",
+"keys": [
+"patagonia"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Patagonia (Unternehmen) logo.svg"
+},
+{
+"id": "pataugas",
+"name": "Pataugas",
+"domain": "pataugas.com",
+"keys": [
+"pataugas"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-Pataugas.jpg&width=150"
+},
+{
+"id": "pbpouletbraise",
+"name": "PB Poulet Braisé",
+"domain": "pbpouletbraise.fr",
+"keys": [
+"au poulet braise",
+"pb poulet braise",
+"poulet braise"
+],
+"osm": true
+},
+{
+"id": "petitbateau",
+"name": "Petit Bateau",
+"domain": "petit-bateau.com",
+"keys": [
+"petit bateau"
+],
+"osm": true
+},
+{
+"id": "phildar",
+"name": "Phildar",
+"domain": "phildar.fr",
+"keys": [
+"phildar"
+],
+"osm": true
+},
+{
+"id": "pitaya",
+"name": "Pitaya",
+"domain": "pitaya-thaistreetfood.com",
+"keys": [
+"pitaya"
+],
+"osm": true
+},
+{
+"id": "pizzacosy",
+"name": "Pizza Cosy",
+"domain": "pizzacosy.fr",
+"keys": [
+"pizza cosy"
+],
+"osm": true
+},
+{
+"id": "pizzapai",
+"name": "Pizza Paï",
+"domain": "pizzapai.fr",
+"keys": [
+"pizza pai"
+],
+"osm": true
+},
+{
+"id": "pizzatime",
+"name": "Pizza Time",
+"domain": "pizzatime.fr",
+"keys": [
+"pizza time"
+],
+"osm": true
+},
+{
+"id": "poivrerouge",
+"name": "Poivre Rouge",
+"domain": "poivre-rouge.com",
+"keys": [
+"poivre rouge"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-poivre-rouge.png&width=150"
+},
+{
+"id": "pokawa",
+"name": "Pokawa",
+"domain": "restaurants.pokawa.com",
+"keys": [
+"pokawa"
+],
+"osm": true
+},
+{
+"id": "pokehouse",
+"name": "Poke House",
+"domain": "poke-house.com",
+"keys": [
+"poke house"
+],
+"osm": true
+},
+{
+"id": "poltronesofa",
+"name": "Poltronesofà",
+"domain": "poltronesofa.com",
+"keys": [
+"poltronesofa"
+],
+"osm": true
+},
+{
+"id": "pommedepain",
+"name": "Pomme de Pain",
+"domain": "pommedepain.fr",
+"keys": [
+"pomme de pain"
+],
+"osm": true
+},
+{
+"id": "popmart",
+"name": "Pop Mart",
+"domain": "popmart.com",
+"keys": [
+"pop mart"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Pop Mart logo.svg"
+},
+{
+"id": "precisium",
+"name": "Précisium",
+"domain": "precisium.fr",
+"keys": [
+"precisium"
+],
+"osm": true
+},
+{
+"id": "premiereclasse",
+"name": "Première Classe",
+"domain": "premiereclasse.com",
+"keys": [
+"premiere classe"
+],
+"osm": true
+},
+{
+"id": "prenatal",
+"name": "Prénatal",
+"domain": "prenatal.com",
+"keys": [
+"prenatal"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Prenatal logo.svg"
+},
+{
+"id": "pretamanger",
+"name": "Pret A Manger",
+"domain": "pret.com",
+"keys": [
+"pret a manger",
+"veggie pret"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/PretAManger logo.svg"
+},
+{
+"id": "primaprix",
+"name": "Primaprix",
+"domain": "primaprix.es",
+"keys": [
+"primaprix"
+],
+"osm": true
+},
+{
+"id": "procie",
+"name": "PRO&Cie",
+"domain": "procie.com",
+"keys": [
+"pro&cie"
+],
+"osm": true
+},
+{
+"id": "provenchalles",
+"name": "Provenc'halles",
+"domain": "provenc-halles.fr",
+"keys": [
+"provenc halles"
+],
+"osm": true
+},
+{
+"id": "proxi",
+"name": "Proxi",
+"domain": "franchise.carrefour.com",
+"keys": [
+"proxi",
+"proxy"
+],
+"osm": true
+},
+{
+"id": "qipao",
+"name": "Qipao",
+"domain": "qipao.fr",
+"keys": [
+"qipao"
+],
+"osm": true
+},
+{
+"id": "raffles",
+"name": "Raffles",
+"domain": "raffles.com",
+"keys": [
+"raffles"
+],
+"osm": true
+},
+{
+"id": "rapidparebrise",
+"name": "Rapid Pare-Brise",
+"domain": "rapidparebrise.fr",
+"keys": [
+"rapid pare brise"
+],
+"osm": true
+},
+{
+"id": "rayban",
+"name": "Ray-Ban",
+"domain": "ray-ban.com",
+"keys": [
+"ray ban"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Ray-Ban logo 2.svg"
+},
+{
+"id": "richardson",
+"name": "Richardson",
+"domain": "richardson.fr",
+"keys": [
+"richardson"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo-RICHARDSON.jpg&width=150"
+},
+{
+"id": "roddgunn",
+"name": "Rodd & Gunn",
+"domain": "roddandgunn.com",
+"keys": [
+"rodd & gunn"
+],
+"osm": true
+},
+{
+"id": "rondedespains",
+"name": "Ronde des Pains",
+"domain": "",
+"keys": [
+"ronde des pains"
+],
+"osm": true
+},
+{
+"id": "roommate",
+"name": "Room Mate",
+"domain": "room-matehotels.com",
+"keys": [
+"room mate"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo room mate hotels.svg"
+},
+{
+"id": "rougegorge",
+"name": "RougeGorge",
+"domain": "rougegorge.com",
+"keys": [
+"rougegorge"
+],
+"osm": true
+},
+{
+"id": "sadaharuaoki",
+"name": "Sadaharu Aoki",
+"domain": "sadaharuaoki.com",
+"keys": [
+"sadaharu aoki"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20Sadaharu%20Aoki.jpg&width=150"
+},
+{
+"id": "sagacosmetics",
+"name": "Saga Cosmetics",
+"domain": "sagacosmetics.com",
+"keys": [
+"saga cosmetics"
+],
+"osm": true
+},
+{
+"id": "saintjames",
+"name": "Saint James",
+"domain": "saint-james.com",
+"keys": [
+"saint james"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSAINT%20JAMES%20n%C3%A9%20de%20la%20mer.png&width=150"
+},
+{
+"id": "sallybeauty",
+"name": "Sally Beauty",
+"domain": "sallybeauty.com",
+"keys": [
+"sally beauty"
+],
+"osm": true
+},
+{
+"id": "salsa",
+"name": "Salsa",
+"domain": "salsajeans.com",
+"keys": [
+"salsa"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSalsa%20Jeans%20Logo.png&width=150"
+},
+{
+"id": "samse",
+"name": "Samse",
+"domain": "groupe-samse.fr",
+"keys": [
+"samse"
+],
+"osm": true
+},
+{
+"id": "sanmarina",
+"name": "San Marina",
+"domain": "sanmarina.fr",
+"keys": [
+"san marina"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSan%20marina%20logo.png&width=150"
+},
+{
+"id": "sandro",
+"name": "Sandro",
+"domain": "sandro-paris.com",
+"keys": [
+"sandro"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSandro-logo.jpg&width=150"
+},
+{
+"id": "satoriz",
+"name": "Satoriz",
+"domain": "satoriz.fr",
+"keys": [
+"satoriz"
+],
+"osm": true
+},
+{
+"id": "screwfix",
+"name": "Screwfix",
+"domain": "screwfix.com",
+"keys": [
+"screwfix"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Screwfix logo.svg"
+},
+{
+"id": "seidensticker",
+"name": "Seidensticker",
+"domain": "seidensticker.com",
+"keys": [
+"seidensticker"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Seidensticker-Wortmarke.svg"
+},
+{
+"id": "sergeblanco",
+"name": "Serge Blanco",
+"domain": "sergeblanco.com",
+"keys": [
+"serge blanco"
+],
+"osm": true
+},
+{
+"id": "sergentmajor",
+"name": "Sergent Major",
+"domain": "sergent-major.com",
+"keys": [
+"sergent major"
+],
+"osm": true
+},
+{
+"id": "sezane",
+"name": "Sézane",
+"domain": "sezane.com",
+"keys": [
+"sezane"
+],
+"osm": true
+},
+{
+"id": "sherpa",
+"name": "Sherpa",
+"domain": "sherpa.net",
+"keys": [
+"sherpa"
+],
+"osm": true
+},
+{
+"id": "shisoburger",
+"name": "Shiso Burger",
+"domain": "shisoburger.com",
+"keys": [
+"shiso burger"
+],
+"osm": true
+},
+{
+"id": "signorizza",
+"name": "Signorizza",
+"domain": "signorizza.com",
+"keys": [
+"signorizza"
+],
+"osm": true
+},
+{
+"id": "sinequanone",
+"name": "Sinéquanone",
+"domain": "",
+"keys": [
+"sinequanone"
+],
+"osm": true
+},
+{
+"id": "skiset",
+"name": "Skiset",
+"domain": "skiset.com",
+"keys": [
+"skiset"
+],
+"osm": true
+},
+{
+"id": "smooy",
+"name": "smöoy",
+"domain": "smooy.com",
+"keys": [
+"smooy"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSm%C3%B6oy-logo.png&width=150"
+},
+{
+"id": "smuggler",
+"name": "Smuggler",
+"domain": "smuggler.fr",
+"keys": [
+"smuggler"
+],
+"osm": true
+},
+{
+"id": "smyths",
+"name": "Smyths",
+"domain": "smythstoys.com",
+"keys": [
+"picwictoys",
+"smyths",
+"smyths toys"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Smyths Logo.svg"
+},
+{
+"id": "snipes",
+"name": "Snipes",
+"domain": "snipes.com",
+"keys": [
+"snipes"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Snipes logo.svg"
+},
+{
+"id": "sobio",
+"name": "So.bio",
+"domain": "sobio.fr",
+"keys": [
+"so bio"
+],
+"osm": true
+},
+{
+"id": "soeur",
+"name": "Soeur",
+"domain": "soeur.fr",
+"keys": [
+"soeur"
+],
+"osm": true
+},
+{
+"id": "solaris",
+"name": "Solaris",
+"domain": "solaris.fr",
+"keys": [
+"solaris"
+],
+"osm": true
+},
+{
+"id": "sophielebreuilly",
+"name": "Sophie Lebreuilly",
+"domain": "sophie-lebreuilly.com",
+"keys": [
+"sophie lebreuilly"
+],
+"osm": true
+},
+{
+"id": "spizzico",
+"name": "Spizzico",
+"domain": "spizzico.it",
+"keys": [
+"spizzico"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Spizzico logo.svg"
+},
+{
+"id": "staycity",
+"name": "Staycity",
+"domain": "staycity.com",
+"keys": [
+"staycity",
+"staycity aparthotel",
+"staycity aparthotels"
+],
+"osm": true
+},
+{
+"id": "stefanel",
+"name": "Stefanel",
+"domain": "stefanel.com",
+"keys": [
+"stefanel"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FStefanel%20logo%202021.png&width=150"
+},
+{
+"id": "stuartweitzman",
+"name": "Stuart Weitzman",
+"domain": "stuartweitzman.com",
+"keys": [
+"stuart weitzman"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Stuart Weitzman.svg"
+},
+{
+"id": "suavinex",
+"name": "Suavinex",
+"domain": "suavinex.com",
+"keys": [
+"suavinex"
+],
+"osm": true
+},
+{
+"id": "sudexpress",
+"name": "Sud Express",
+"domain": "sudexpress.com",
+"keys": [
+"sud express"
+],
+"osm": true
+},
+{
+"id": "sugar",
+"name": "Sugar",
+"domain": "sugarproduct.com",
+"keys": [
+"sugar"
+],
+"osm": true
+},
+{
+"id": "supeco",
+"name": "Supeco",
+"domain": "supeco.fr",
+"keys": [
+"supeco"
+],
+"osm": true
+},
+{
+"id": "surehotel",
+"name": "Sure Hotel",
+"domain": "bestwestern.com",
+"keys": [
+"sure hotel",
+"sure hotel collection"
+],
+"osm": true
+},
+{
+"id": "sushishop",
+"name": "Sushi Shop",
+"domain": "sushishop.eu",
+"keys": [
+"sushi shop"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSushi%20Shop.jpg&width=150"
+},
+{
+"id": "tacobell",
+"name": "Taco Bell",
+"domain": "tacobell.com",
+"keys": [
+"taco bell"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/1984TacoBellSign.svg"
+},
+{
+"id": "tacosavenue",
+"name": "Tacos Avenue",
+"domain": "tacos-avenue.com",
+"keys": [
+"tacos avenue"
+],
+"osm": true
+},
+{
+"id": "takkofashion",
+"name": "Takko Fashion",
+"domain": "takko.com",
+"keys": [
+"takko fashion"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/TakkoLogo.svg"
+},
+{
+"id": "takosking",
+"name": "Takos King",
+"domain": "",
+"keys": [
+"takos king"
+],
+"osm": true
+},
+{
+"id": "tamaris",
+"name": "Tamaris",
+"domain": "tamaris.com",
+"keys": [
+"tamaris"
+],
+"osm": true
+},
+{
+"id": "tamoil",
+"name": "Tamoil",
+"domain": "tamoil.com",
+"keys": [
+"tamoil",
+"tamoil italia spa"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamoil.svg"
+},
+{
+"id": "tapestrycollection",
+"name": "Tapestry Collection",
+"domain": "hilton.com",
+"keys": [
+"tapestry collection",
+"tapestry collection by hilton"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FTapestry-Collection-By-Hilton-Logo.png&width=150"
+},
+{
+"id": "tastycrousty",
+"name": "Tasty Crousty",
+"domain": "tastycrousty.io",
+"keys": [
+"tasty crousty"
+],
+"osm": true
+},
+{
+"id": "tati",
+"name": "Tati",
+"domain": "tati.fr",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FTati%20logo%202013.png&width=150"
+},
+{
+"id": "tchip",
+"name": "Tchip",
+"domain": "tchip.fr",
+"keys": [
+"tchip",
+"tchip coiffure"
+],
+"osm": true
+},
+{
+"id": "thecoffee",
+"name": "The Coffee",
+"domain": "thecoffee.jp",
+"keys": [
+"the coffee"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo-TheCoffee.svg"
+},
+{
+"id": "theconranshop",
+"name": "The Conran Shop",
+"domain": "theconranshop.com",
+"keys": [
+"the conran shop"
+],
+"osm": true
+},
+{
+"id": "thekooples",
+"name": "The Kooples",
+"domain": "thekooples.com",
+"keys": [
+"the kooples"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FLogo%20The%20Kooples.jpg&width=150"
+},
+{
+"id": "theoriginalsaccess",
+"name": "The Originals Access",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals access"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FThe%20Originals%20Access%20.jpg&width=150"
+},
+{
+"id": "theoriginalsboutique",
+"name": "The Originals Boutique",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals boutique"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FThe%20Originals%20Boutique.png&width=150"
+},
+{
+"id": "theoriginalscity",
+"name": "The Originals City",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals city"
+],
+"osm": true
+},
+{
+"id": "theoriginalscollection",
+"name": "The Originals Collection",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals collection"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FThe%20Originals%20Collection%20.jpg&width=150"
+},
+{
+"id": "theoriginalsrelais",
+"name": "The Originals Relais",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals relais"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FThe%20Originals%20Relais.jpg&width=150"
+},
+{
+"id": "theoriginalsresidence",
+"name": "The Originals Residence",
+"domain": "theoriginalshotels.com",
+"keys": [
+"the originals residence"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FThe%20Originals%20Residence.jpg&width=150"
+},
+{
+"id": "tollens",
+"name": "Tollens",
+"domain": "tollens.com",
+"keys": [
+"tollens"
+],
+"osm": true
+},
+{
+"id": "toolstation",
+"name": "Toolstation",
+"domain": "toolstation.com",
+"keys": [
+"toolstation",
+"toolstation uk"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FToolstation-Logo.png&width=150"
+},
+{
+"id": "topgarage",
+"name": "Top Garage",
+"domain": "top-garage.fr",
+"keys": [
+"top garage"
+],
+"osm": true
+},
+{
+"id": "topsecret",
+"name": "Top Secret",
+"domain": "topsecret.pl",
+"keys": [
+"top secret"
+],
+"osm": true
+},
+{
+"id": "toyokoinn",
+"name": "Toyoko Inn",
+"domain": "toyoko-inn.com",
+"keys": [
+"toyoko inn"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo toyoko inn.svg"
+},
+{
+"id": "transgourmet",
+"name": "Transgourmet",
+"domain": "transgourmet.com",
+"keys": [
+"transgourmet"
+],
+"osm": true
+},
+{
+"id": "trespass",
+"name": "Trespass",
+"domain": "trespass.com",
+"keys": [
+"trespass"
+],
+"osm": true
+},
+{
+"id": "tuttipizza",
+"name": "Tutti Pizza",
+"domain": "tutti-pizza.com",
+"keys": [
+"tutti pizza"
+],
+"osm": true
+},
+{
+"id": "ullapopken",
+"name": "Ulla Popken",
+"domain": "ullapopken.de",
+"keys": [
+"ulla popken"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FUlla%20Popken%20neu.png&width=150"
+},
+{
+"id": "unjourailleurs",
+"name": "Un Jour Ailleurs",
+"domain": "unjourailleurs.com",
+"keys": [
+"un jour ailleurs"
+],
+"osm": true
+},
+{
+"id": "utopia",
+"name": "Utopia",
+"domain": "cinemas-utopia.org",
+"keys": [
+"utopia"
+],
+"osm": true
+},
+{
+"id": "vandb",
+"name": "V and B",
+"domain": "vandb.fr",
+"keys": [
+"v and b",
+"vins et bieres"
+],
+"osm": true
+},
+{
+"id": "valero",
+"name": "Valero",
+"domain": "valero.com",
+"keys": [
+"valero"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Valero Energy logo.svg"
+},
+{
+"id": "valmano",
+"name": "Valmano",
+"domain": "valmano.de",
+"keys": [
+"valmano"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Valmano Logo (2020).svg"
+},
+{
+"id": "vandervalk",
+"name": "Van der Valk",
+"domain": "valk.com",
+"keys": [
+"van der valk"
+],
+"osm": true
+},
+{
+"id": "vibs",
+"name": "Vib's",
+"domain": "vibs.com",
+"keys": [
+"vib s"
+],
+"osm": true
+},
+{
+"id": "vicomtea",
+"name": "Vicomte A",
+"domain": "vicomte-a.com",
+"keys": [
+"vicomte a"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/w/index.php?title=Special%3ARedirect%2Ffile%2FSS16-profilFB-03.jpg&width=150"
+},
+{
+"id": "villaverde",
+"name": "Villaverde",
+"domain": "villaverde.fr",
+"keys": [
+"villaverde"
+],
+"osm": true
+},
+{
+"id": "visionplus",
+"name": "Vision Plus",
+"domain": "lecollectifdeslunetiers.fr",
+"keys": [
+"vision plus"
+],
+"osm": true
+},
+{
+"id": "vitaliberte",
+"name": "Vita Liberté",
+"domain": "vitaliberte.fr",
+"keys": [
+"vita liberte"
+],
+"osm": true
+},
+{
+"id": "vito",
+"name": "Vito",
+"domain": "vito-corse.corsica",
+"keys": [],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Vito.svg"
+},
+{
+"id": "vogcoiffure",
+"name": "Vog Coiffure",
+"domain": "vog.fr",
+"keys": [
+"vog coiffure"
+],
+"osm": true
+},
+{
+"id": "voisin",
+"name": "Voisin",
+"domain": "chocolat-voisin.com",
+"keys": [
+"voisin"
+],
+"osm": true
+},
+{
+"id": "volfoni",
+"name": "Volfoni",
+"domain": "volfoni.fr",
+"keys": [
+"volfoni"
+],
+"osm": true
+},
+{
+"id": "vomfass",
+"name": "vomFASS",
+"domain": "de.benetton.com",
+"keys": [
+"vomfass"
+],
+"osm": true
+},
+{
+"id": "votremarche",
+"name": "Votre Marché",
+"domain": "",
+"keys": [
+"votre marche"
+],
+"osm": true
+},
+{
+"id": "vulco",
+"name": "Vulco",
+"domain": "vulco.com",
+"keys": [
+"vulco"
+],
+"osm": true
+},
+{
+"id": "wafflefactory",
+"name": "Waffle Factory",
+"domain": "wafflefactory.com",
+"keys": [
+"waffle factory"
+],
+"osm": true
+},
+{
+"id": "waldorfastoria",
+"name": "Waldorf Astoria",
+"domain": "hilton.com",
+"keys": [
+"waldorf astoria",
+"waldorf astoria hotels & resorts"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Waldorf-Astoria-Logo.svg"
+},
+{
+"id": "wempe",
+"name": "Wempe",
+"domain": "wempe.de",
+"keys": [
+"wempe"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Wempe Chronometerwerke logo.svg"
+},
+{
+"id": "wildthemoon",
+"name": "Wild & The Moon",
+"domain": "wildandthemoon.com",
+"keys": [
+"wild & the moon"
+],
+"osm": true
+},
+{
+"id": "wingstop",
+"name": "Wingstop",
+"domain": "wingstop.com",
+"keys": [
+"wingstop"
+],
+"osm": true
+},
+{
+"id": "woktowalk",
+"name": "Wok to Walk",
+"domain": "woktowalk.com",
+"keys": [
+"wok to walk"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Wok to Walk Logo.svg"
+},
+{
+"id": "wolford",
+"name": "Wolford",
+"domain": "wolford.com",
+"keys": [
+"wolford"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Wolford Logo 2005.svg"
+},
+{
+"id": "xiaolongkan",
+"name": "XiaoLongKan",
+"domain": "xiaolongkan.com",
+"keys": [
+"xiaolongkan"
+],
+"osm": true
+},
+{
+"id": "yogurtfactory",
+"name": "Yogurt Factory",
+"domain": "yogurtfactory.fr",
+"keys": [
+"yogurt factory"
+],
+"osm": true
+},
+{
+"id": "yotel",
+"name": "YOTEL",
+"domain": "yotel.com",
+"keys": [
+"yotel"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Yotel-logo.svg"
+},
+{
+"id": "yvesdelorme",
+"name": "Yves Delorme",
+"domain": "france.yvesdelorme.com",
+"keys": [
+"yves delorme"
+],
+"osm": true
+},
+{
+"id": "yvesthuries",
+"name": "Yves Thuriès",
+"domain": "yvesthuries.com",
+"keys": [
+"les chocolats yves thuries",
+"yves thuries"
+],
+"osm": true
+},
+{
+"id": "zadigvoltaire",
+"name": "Zadig & Voltaire",
+"domain": "zadig-et-voltaire.com",
+"keys": [
+"zadig & voltaire"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo Zadig et Voltaire.svg"
+},
+{
+"id": "zeeman",
+"name": "Zeeman",
+"domain": "zeeman.com",
+"keys": [
+"zeeman"
+],
+"osm": true,
+"logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Zeeman logo.svg"
+}
+]

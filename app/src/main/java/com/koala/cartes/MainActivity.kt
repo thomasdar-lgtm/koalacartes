@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
             statusBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
             navigationBarStyle = SystemBarStyle.dark(android.graphics.Color.TRANSPARENT),
         )
+        Stores.load(this)
         val repo = CardRepo.get(this)
         setContent { KoalaTheme { App(repo) } }
     }

@@ -33,7 +33,11 @@ object Logos {
     var version by mutableIntStateOf(0)
         private set
     private val tried = Collections.synchronizedSet(mutableSetOf<String>())
-    private val cache = Collections.synchronizedMap(HashMap<String, Logo?>())
+    // Mémoire limitée à ~32 Mo : la liste des magasins peut afficher des centaines de logos
+    private val cache = object : android.util.LruCache<String, Logo>(32 * 1024 * 1024) {
+        override fun sizeOf(key: String, value: Logo) = value.image.width * value.image.height * 4
+    }
+    private val missing = Collections.synchronizedSet(mutableSetOf<String>())
     private const val GOOD = 96
     private const val UA =
         "Mozilla/5.0 (Linux; Android 15; SM-S931B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36"
@@ -60,9 +64,10 @@ object Logos {
 
     private fun loadAsset(ctx: Context, storeId: String): Logo? {
         val key = "asset:$storeId"
-        if (cache.containsKey(key)) return cache[key]
+        cache.get(key)?.let { return it }
+        if (key in missing) return null
         val bmp = runCatching { ctx.assets.open("logos/$storeId.png").use { BitmapFactory.decodeStream(it) } }.getOrNull()
-        return bmp?.let { analyze(it) }.also { cache[key] = it }
+        return bmp?.let { analyze(it) }.also { if (it != null) cache.put(key, it) else missing.add(key) }
     }
 
     /** Logo à afficher : image perso de la carte, sinon logo intégré, sinon logo téléchargé. */
@@ -75,9 +80,9 @@ object Logos {
     fun load(f: File?): Logo? {
         if (f == null || !f.exists()) return null
         val key = "${f.path}:${f.lastModified()}"
-        cache[key]?.let { return it }
+        cache.get(key)?.let { return it }
         val bmp = BitmapFactory.decodeFile(f.path) ?: return null
-        return analyze(bmp).also { cache[key] = it }
+        return analyze(bmp).also { cache.put(key, it) }
     }
 
     /** Couleur du bord du logo (hors coins) : sert de fond à la tuile pour que le logo s'y fonde. */

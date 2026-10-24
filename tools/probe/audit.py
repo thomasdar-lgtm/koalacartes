@@ -5,18 +5,26 @@ from concurrent.futures import ThreadPoolExecutor
 from PIL import Image, ImageDraw
 
 UA = "Mozilla/5.0 (Linux; Android 15; SM-S931B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Mobile Safari/537.36"
-SRC = open("app/src/main/java/com/koala/cartes/Stores.kt", encoding="utf-8").read()
-STORES = [(m[0], m[1].replace('\\"', '"'), int(m[2], 16), m[3]) for m in
-          re.findall(r's\("(\w+)", "((?:[^"\\]|\\.)*)", (0x[0-9A-F]+), "([^"]+)"', SRC)]
-PLAY = dict(re.findall(r'"(\w+)" to "([\w.]+)"', SRC[SRC.index("PLAY = mapOf("):SRC.index("IOS = mapOf(")]))
-IOS = dict(re.findall(r'"(\w+)" to (\d+)L', SRC[SRC.index("IOS = mapOf("):SRC.index("val all")]))
+CAT = json.load(open("app/src/main/assets/stores.json", encoding="utf-8"))
+STORES = [(e["id"], e["name"], int(e.get("color", "#16213F")[1:], 16), e.get("domain", "")) for e in CAT]
+PLAY = {e["id"]: e["play"] for e in CAT if e.get("play")}
+IOS = {e["id"]: e["ios"] for e in CAT if e.get("ios")}
+WIKI = {e["id"]: re.sub(r"width=\d+", "width=512", e["logo"]) for e in CAT if e.get("logo")}
 
 def get(u, mx=3_000_000):
-    try:
-        r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"}), timeout=12)
-        return r.read(mx), r.geturl()
-    except Exception:
-        return None, u
+    import time
+    ua = "KoalaCartes/1.0 (logo fetcher; github.com/thomasdar-lgtm/koalacartes)" if "wikimedia.org" in u else UA
+    for attempt in range(3):
+        try:
+            r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": ua, "Accept-Language": "fr-FR,fr;q=0.9"}), timeout=12)
+            return r.read(mx), r.geturl()
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 2:
+                time.sleep(3 + 3 * attempt); continue
+            return None, u
+        except Exception:
+            return None, u
+    return None, u
 
 def attr(tag, name):
     m = re.search(r'\b%s\s*=\s*(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+))' % name, tag, re.I)
@@ -107,6 +115,7 @@ def audit(st):
     first = []
     if sid in PLAY: first.append(play_icon(PLAY[sid])[0])
     if sid in IOS: first.append(ios_icon(IOS[sid]))
+    if sid in WIKI: first.append(WIKI[sid])
     res = choose([u for u in first if u] + site_cands(domain))
     disc = []
     return st, res, disc
@@ -131,7 +140,7 @@ def tile(im, color, TW, TH, R):
     m = Image.new("L", (TW, TH), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, TW - 1, TH - 1), radius=R, fill=255)
     return t, m
 
-with ThreadPoolExecutor(16) as ex:
+with ThreadPoolExecutor(24) as ex:
     results = list(ex.map(audit, STORES))
 
 S = 2; TW, TH, GAP, LAB = 105 * S, int(105 / 1.586) * S, 10 * S, 30 * S
