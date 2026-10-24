@@ -141,7 +141,7 @@ fun Monogram(name: String, fg: Color, size: Int = 38) {
 fun rememberLogo(cardId: String?, storeId: String?): Logo? {
     val ctx = LocalContext.current
     val v = Logos.version
-    return remember(cardId, storeId, v) { Logos.load(Logos.fileFor(ctx, cardId, storeId)) }
+    return remember(cardId, storeId, v) { Logos.get(ctx, cardId, storeId) }
 }
 
 /** Face de la carte : le logo occupe la hauteur, son fond prolonge la tuile sur toute la largeur. */

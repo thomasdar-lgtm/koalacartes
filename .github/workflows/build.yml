@@ -24,6 +24,12 @@ jobs:
         with:
           gradle-version: '8.14.3'
 
+      - name: Logos
+        run: |
+          pip install -q pillow
+          python3 tools/probe/audit.py app/src/main/assets/logos > logos-report.txt 2>&1 || true
+          tail -2 logos-report.txt
+
       - name: Build
         run: gradle assembleRelease --no-daemon 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
 
@@ -56,6 +62,7 @@ jobs:
             grep -E "^e: |error:|FAILURE|What went wrong|BUILD (SUCCESSFUL|FAILED)|\.kt:[0-9]+|\.xml:[0-9]+|AAPT|Could not" build.log | head -200 > /tmp/report/errors.txt || true
             tail -150 build.log > /tmp/report/tail.txt
           fi
+          [ -f logos-report.txt ] && cp logos-report.txt /tmp/report/ || true
           cd /tmp/report
           git init -q -b build-logs
           git config user.name "build-bot"

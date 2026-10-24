@@ -146,6 +146,17 @@ for i, ((sid, name, color, domain), (im, size, src), disc) in enumerate(results)
     d.text((x + TW // 2, y + TH + 9 * S), name[:20], fill=(255, 255, 255), anchor="mm", font_size=10 * S)
     d.text((x + TW // 2, y + TH + 21 * S), f"{size}px" if im else "AUCUN", fill=(120, 220, 120) if ok else (255, 90, 90), anchor="mm", font_size=9 * S)
 sheet.save("tiles.png")
+
+if len(sys.argv) > 1:
+    import os
+    out = sys.argv[1]; os.makedirs(out, exist_ok=True)
+    saved = 0
+    for (sid, name, color, domain), (im, size, src), disc in results:
+        if im is None or size < 32: continue
+        m = max(im.size)
+        if m > 256: im = im.resize((im.size[0] * 256 // m, im.size[1] * 256 // m), Image.LANCZOS)
+        im.save(os.path.join(out, sid + ".png"), optimize=True); saved += 1
+    print("logos intégrés:", saved)
 print("enseignes:", len(results), " nettes:", sum(1 for r in results if r[1][1] >= 96), " sans logo:", sum(1 for r in results if r[1][0] is None))
 
 for (sid, name, color, domain), (im, size, src), disc in sorted(results, key=lambda r: r[1][1]):

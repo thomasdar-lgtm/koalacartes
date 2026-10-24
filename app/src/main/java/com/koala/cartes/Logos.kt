@@ -51,6 +51,27 @@ object Logos {
         else -> null
     }
 
+    /** Logos des enseignes intégrés à l'appli (téléchargés lors de la compilation). */
+    @Volatile private var bundledIds: Set<String>? = null
+
+    fun bundled(ctx: Context): Set<String> = bundledIds ?: runCatching {
+        ctx.assets.list("logos")?.map { it.removeSuffix(".png") }?.toSet()
+    }.getOrNull().orEmpty().also { bundledIds = it }
+
+    private fun loadAsset(ctx: Context, storeId: String): Logo? {
+        val key = "asset:$storeId"
+        if (cache.containsKey(key)) return cache[key]
+        val bmp = runCatching { ctx.assets.open("logos/$storeId.png").use { BitmapFactory.decodeStream(it) } }.getOrNull()
+        return bmp?.let { analyze(it) }.also { cache[key] = it }
+    }
+
+    /** Logo à afficher : image perso de la carte, sinon logo intégré, sinon logo téléchargé. */
+    fun get(ctx: Context, cardId: String?, storeId: String?): Logo? {
+        if (cardId != null && customMark(ctx, cardId).exists()) return load(cardFile(ctx, cardId))
+        if (storeId != null && storeId in bundled(ctx)) loadAsset(ctx, storeId)?.let { return it }
+        return load(fileFor(ctx, cardId, storeId))
+    }
+
     fun load(f: File?): Logo? {
         if (f == null || !f.exists()) return null
         val key = "${f.path}:${f.lastModified()}"
@@ -142,7 +163,8 @@ object Logos {
         // Enseignes sans source fiable (site revendu…) : on retire un éventuel mauvais logo
         Stores.all.filter { it.domain.isBlank() && it.play == null && it.ios == null }.forEach { storeFile(ctx, it.id).delete() }
         val used = cards.mapNotNull { it.storeId }.toSet()
-        val order = Stores.all.sortedBy { if (it.id in used) 0 else 1 }
+        val inApp = bundled(ctx)
+        val order = Stores.all.filter { it.id !in inApp }.sortedBy { if (it.id in used) 0 else 1 }
         val gate = Semaphore(4)
         coroutineScope {
             for (st in order) {
