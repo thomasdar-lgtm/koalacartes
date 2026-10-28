@@ -59,14 +59,14 @@ object Logos {
     @Volatile private var bundledIds: Set<String>? = null
 
     fun bundled(ctx: Context): Set<String> = bundledIds ?: runCatching {
-        ctx.assets.list("logos")?.map { it.removeSuffix(".png") }?.toSet()
+        ctx.assets.list("logos")?.map { it.substringBeforeLast('.') }?.toSet()
     }.getOrNull().orEmpty().also { bundledIds = it }
 
     private fun loadAsset(ctx: Context, storeId: String): Logo? {
         val key = "asset:$storeId"
         cache.get(key)?.let { return it }
         if (key in missing) return null
-        val bmp = runCatching { ctx.assets.open("logos/$storeId.png").use { BitmapFactory.decodeStream(it) } }.getOrNull()
+        val bmp = runCatching { ctx.assets.open("logos/$storeId.webp").use { BitmapFactory.decodeStream(it) } }.getOrNull()
         return bmp?.let { analyze(it) }.also { if (it != null) cache.put(key, it) else missing.add(key) }
     }
 

@@ -164,7 +164,7 @@ if len(sys.argv) > 1:
         if im is None or size < 32: continue
         m = max(im.size)
         if m > 256: im = im.resize((im.size[0] * 256 // m, im.size[1] * 256 // m), Image.LANCZOS)
-        im.save(os.path.join(out, sid + ".png"), optimize=True); saved += 1
+        im.save(os.path.join(out, sid + ".webp"), "WEBP", quality=88, method=6); saved += 1
     print("logos intégrés:", saved)
 print("enseignes:", len(results), " nettes:", sum(1 for r in results if r[1][1] >= 96), " sans logo:", sum(1 for r in results if r[1][0] is None))
 
