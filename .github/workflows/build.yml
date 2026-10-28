@@ -63,6 +63,7 @@ jobs:
             tail -150 build.log > /tmp/report/tail.txt
           fi
           [ -f logos-report.txt ] && cp logos-report.txt /tmp/report/ || true
+          for f in app/build/test-results/testDebugUnitTest/*.xml; do [ -f "$f" ] && grep -o '<testsuite [^>]*>' "$f"; grep -o '<testcase name="[^"]*"' "$f"; grep -A3 '<failure' "$f" | head -20; done > /tmp/report/tests.txt 2>/dev/null || true
           cd /tmp/report
           git init -q -b build-logs
           git config user.name "build-bot"
