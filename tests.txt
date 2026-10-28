@@ -1,0 +1,7 @@
+<testsuite name="com.koala.cartes.ProfilesTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T20:11:55.758Z" hostname="runnervmnwato" time="7.538">
+<testcase name="catalogueCharge"
+<testcase name="sauvegardeRestaureLesProfils"
+<testcase name="ancienneVersionSansProfils"
+<testcase name="vingtCartesTiennentDansUnQr"
+<testcase name="basculeEtDernierProfilMemorise"
+<testcase name="partageEtImportDansLeProfilDuPrenom"
