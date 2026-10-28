@@ -42,7 +42,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App(repo: CardRepo) {
     var screen by remember { mutableStateOf<Screen>(Screen.Home) }
-    val cards by repo.cards.collectAsState()
+    val state by repo.state.collectAsState()
+    val cards = state.cards
     val upd = remember { UpdateState() }
     LaunchedEffect(Unit) { upd.info = runCatching { Updater.check() }.getOrNull() }
     val ctx = LocalContext.current
@@ -59,10 +60,11 @@ fun App(repo: CardRepo) {
         }
     }
     BackHandler(enabled = screen != Screen.Home) { back() }
+    if (state.needsName) NameDialog { name -> state.profiles.firstOrNull { it.name.isBlank() }?.let { repo.editProfile(it.id, name, it.color) } }
 
     when (val s = screen) {
         Screen.Home -> HomeScreen(
-            repo, cards, upd,
+            repo, state, upd,
             onOpen = { repo.markUsed(it); screen = Screen.Show(it) },
             onAdd = { screen = Screen.Scan(null) },
         )
@@ -71,7 +73,10 @@ fun App(repo: CardRepo) {
             val c = cards.firstOrNull { it.id == s.id }
             if (c == null) LaunchedEffect(s) { screen = Screen.Home }
             else CardScreen(
-                c, onBack = { back() },
+                c,
+                shareOf = { state.profiles.firstOrNull { it.id == c.profile }?.let { repo.sharePayload(it, listOf(c)) } },
+                ownerName = state.profiles.firstOrNull { it.id == c.profile }?.name ?: "",
+                onBack = { back() },
                 onEdit = { screen = Screen.Edit(c.toDraft()) },
                 onDelete = { repo.delete(c.id); Logos.delete(ctx, c.id); screen = Screen.Home },
             )
@@ -79,6 +84,17 @@ fun App(repo: CardRepo) {
 
         is Screen.Scan -> ScannerScreen(
             onResult = { r ->
+                // QR de partage d'un autre téléphone KoalaCartes
+                if (r.value.startsWith(CardRepo.SHARE_PREFIX)) {
+                    val res = repo.importShare(r.value)
+                    if (res == null) toast(ctx, "QR de partage illisible")
+                    else toast(ctx, buildString {
+                        append("${res.added} carte${if (res.added > 1) "s" else ""} ajoutée${if (res.added > 1) "s" else ""} pour ${res.profileName}")
+                        if (res.updated > 0) append(", ${res.updated} mise${if (res.updated > 1) "s" else ""} à jour")
+                    })
+                    screen = Screen.Home
+                    return@ScannerScreen
+                }
                 var d = (s.editing ?: Draft()).copy(number = r.value, format = r.format, formatLocked = true)
                 if (s.editing == null || d.storeName.isBlank()) {
                     val st = Stores.byId(r.storeId)

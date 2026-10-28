@@ -45,6 +45,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -213,16 +214,20 @@ private fun spaced(n: String) = if (n.length > 6 && n.all { it.isDigit() }) n.ch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (String) -> Unit, onAdd: () -> Unit) {
+fun HomeScreen(repo: CardRepo, state: WalletState, upd: UpdateState, onOpen: (String) -> Unit, onAdd: () -> Unit) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
     var menu by remember { mutableStateOf(false) }
     var query by remember { mutableStateOf("") }
+    var manage by remember { mutableStateOf(false) }
+    var share by remember { mutableStateOf<String?>(null) }
+    val profile = state.profile
+    val cards = state.currentCards
 
     val exporter = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
         if (uri != null) runCatching {
             ctx.contentResolver.openOutputStream(uri)!!.use { it.write(repo.exportJson().toByteArray()) }
-        }.onSuccess { toast(ctx, "Sauvegarde enregistrée (${cards.size} cartes)") }
+        }.onSuccess { toast(ctx, "Sauvegarde enregistrée (${state.cards.size} cartes, tous profils)") }
             .onFailure { toast(ctx, "Échec de la sauvegarde") }
     }
     val importer = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
@@ -244,9 +249,24 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (Str
                     }
                 },
                 actions = {
+                    // Appui : profil suivant. Appui long (ou seul profil) : gestion des profils.
+                    ProfileBadge(
+                        profile,
+                        onClick = { if (state.profiles.size > 1) { repo.cycleProfile(); query = "" } else manage = true },
+                        onLongClick = { manage = true },
+                    )
                     Box {
                         IconButton(onClick = { menu = true }) { Icon(Icons.Default.MoreVert, "Menu") }
                         DropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+                            DropdownMenuItem(text = { Text("Partager les cartes de ${profile.name}") }, onClick = {
+                                menu = false
+                                when {
+                                    cards.isEmpty() -> toast(ctx, "Aucune carte à partager dans ce profil")
+                                    else -> repo.sharePayload(profile, cards)?.let { share = it }
+                                        ?: toast(ctx, "Trop de cartes pour un seul QR code : partage-les une par une, ou passe par « Sauvegarder mes cartes »")
+                                }
+                            })
+                            DropdownMenuItem(text = { Text("Profils") }, onClick = { menu = false; manage = true })
                             DropdownMenuItem(text = { Text("Sauvegarder mes cartes") }, onClick = {
                                 menu = false
                                 val d = SimpleDateFormat("yyyy-MM-dd", Locale.FRANCE).format(Date())
@@ -278,6 +298,8 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (Str
             )
         },
     ) { pad ->
+      if (manage) ProfilesDialog(repo, state) { manage = false }
+      share?.let { ShareDialog("Cartes de ${profile.name}", it) { share = null } }
       Column(Modifier.padding(pad)) {
         UpdateBanner(upd)
         if (cards.isEmpty()) {
@@ -285,10 +307,10 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (Str
                 Modifier.fillMaxSize().padding(32.dp),
                 horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center,
             ) {
-                Text("Aucune carte pour l'instant", color = Color.White, fontWeight = FontWeight.Black, fontSize = 22.sp, textAlign = TextAlign.Center)
+                Text(if (state.profiles.size > 1) "Aucune carte pour ${profile.name}" else "Aucune carte pour l'instant", color = Color.White, fontWeight = FontWeight.Black, fontSize = 22.sp, textAlign = TextAlign.Center)
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    "Scanne le code-barres d'une carte de fidélité, ou importe une capture d'écran de ton ancienne appli.",
+                    "Scanne le code-barres d'une carte de fidélité, ou le QR code de partage d'un autre téléphone KoalaCartes.",
                     color = Muted, textAlign = TextAlign.Center,
                 )
                 Spacer(Modifier.height(24.dp))
@@ -328,8 +350,10 @@ fun HomeScreen(repo: CardRepo, cards: List<Card>, upd: UpdateState, onOpen: (Str
 // ---------- Affichage en caisse ----------
 
 @Composable
-fun CardScreen(c: Card, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit) {
+fun CardScreen(c: Card, shareOf: () -> String?, ownerName: String, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit) {
     val ctx = LocalContext.current
+    var share by remember { mutableStateOf<String?>(null) }
+    share?.let { ShareDialog("${c.storeName} · $ownerName", it) { share = null } }
     DisposableEffect(Unit) {
         val w = ctx.activity()?.window
         val old = w?.attributes?.screenBrightness ?: -1f
@@ -361,6 +385,7 @@ fun CardScreen(c: Card, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> 
                 c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 22.sp, maxLines = 1,
                 overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
             )
+            IconButton(onClick = { share = shareOf() }) { Icon(Icons.Default.Share, "Partager", tint = fg) }
             IconButton(onClick = onEdit) { Icon(Icons.Default.Edit, "Modifier", tint = fg) }
             IconButton(onClick = { confirm = true }) { Icon(Icons.Default.Delete, "Supprimer", tint = fg) }
         }

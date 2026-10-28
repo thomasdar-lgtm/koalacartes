@@ -12,8 +12,8 @@ android {
         applicationId = "com.koala.cartes"
         minSdk = 26
         targetSdk = 35
-        versionCode = 13
-        versionName = "1.6.0"
+        versionCode = 14
+        versionName = "1.7.0"
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a") }
     }
 
@@ -38,6 +38,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions { jvmTarget = "17" }
+
+    testOptions { unitTests.isIncludeAndroidResources = true }
 
     buildFeatures {
         compose = true
@@ -65,4 +67,8 @@ dependencies {
     implementation("com.google.mlkit:text-recognition:16.0.1")
 
     implementation("com.google.zxing:core:3.5.3")
+
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("androidx.test:core:1.6.1")
 }

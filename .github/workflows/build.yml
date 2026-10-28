@@ -31,7 +31,7 @@ jobs:
           tail -2 logos-report.txt
 
       - name: Build
-        run: gradle assembleRelease --no-daemon 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
+        run: gradle testDebugUnitTest assembleRelease --no-daemon 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
 
       - name: Prepare APK
         run: |
@@ -59,7 +59,7 @@ jobs:
           mkdir -p /tmp/report
           echo "$RESULT ${GITHUB_SHA}" > /tmp/report/status.txt
           if [ -f build.log ]; then
-            grep -E "^e: |error:|FAILURE|What went wrong|BUILD (SUCCESSFUL|FAILED)|\.kt:[0-9]+|\.xml:[0-9]+|AAPT|Could not" build.log | head -200 > /tmp/report/errors.txt || true
+            grep -E "^e: |error:|FAILURE|FAILED|Test.*>|AssertionError|Expected|What went wrong|BUILD (SUCCESSFUL|FAILED)|\.kt:[0-9]+|\.xml:[0-9]+|AAPT|Could not" build.log | head -200 > /tmp/report/errors.txt || true
             tail -150 build.log > /tmp/report/tail.txt
           fi
           [ -f logos-report.txt ] && cp logos-report.txt /tmp/report/ || true
