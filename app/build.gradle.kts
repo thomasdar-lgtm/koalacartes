@@ -12,8 +12,8 @@ android {
         applicationId = "com.koala.cartes"
         minSdk = 26
         targetSdk = 35
-        versionCode = 14
-        versionName = "1.7.0"
+        versionCode = 15
+        versionName = "1.7.1"
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a") }
     }
 
@@ -62,9 +62,10 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:$camerax")
     implementation("androidx.camera:camera-view:$camerax")
 
-    // Modèles embarqués : fonctionnent sans connexion
-    implementation("com.google.mlkit:barcode-scanning:17.3.0")
-    implementation("com.google.mlkit:text-recognition:16.0.1")
+    // Lecture des codes-barres et du texte : modules Google déjà présents sur le téléphone
+    // (téléchargés une fois, puis fonctionnent sans connexion) au lieu de 26 Mo embarqués dans l'appli
+    implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1")
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.1")
 
     implementation("com.google.zxing:core:3.5.3")
 

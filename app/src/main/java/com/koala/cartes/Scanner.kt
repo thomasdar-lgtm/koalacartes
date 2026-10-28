@@ -88,7 +88,10 @@ private suspend fun <T> Task<T>.awaitTask(): T = suspendCancellableCoroutine { c
 }
 
 /** Analyse chaque image de la caméra : code-barres + nom du magasin écrit sur la carte. */
-private class CardAnalyzer(private val onFound: (String, String, String?) -> Unit) : ImageAnalysis.Analyzer {
+private class CardAnalyzer(
+    private val onFound: (String, String, String?) -> Unit,
+    private val onReady: (Boolean) -> Unit,
+) : ImageAnalysis.Analyzer {
     private val barcodes = BarcodeScanning.getClient()
     private val texts = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
     private val votes = mutableMapOf<String, Int>()
@@ -109,6 +112,8 @@ private class CardAnalyzer(private val onFound: (String, String, String?) -> Uni
         frame++
         val readText = frame % 3 == 1
         barcodes.process(img).addOnCompleteListener { t ->
+            // Échec = module de lecture Google pas encore téléchargé sur le téléphone (première utilisation)
+            onReady(t.isSuccessful)
             val code = if (t.isSuccessful) t.result.firstOrNull { !it.rawValue.isNullOrBlank() } else null
             when {
                 code != null && !done -> {
@@ -168,6 +173,7 @@ fun ScannerScreen(onResult: (ScanResult) -> Unit, onManual: () -> Unit, onClose:
     }
 
     var busy by remember { mutableStateOf(false) }
+    var ready by remember { mutableStateOf(true) }
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         if (uri != null) {
             busy = true
@@ -187,7 +193,7 @@ fun ScannerScreen(onResult: (ScanResult) -> Unit, onManual: () -> Unit, onClose:
     DisposableEffect(granted) {
         if (!granted) return@DisposableEffect onDispose { }
         val executor = Executors.newSingleThreadExecutor()
-        val analyzer = CardAnalyzer { v, f, s -> deliver(ScanResult(v, f, s)) }
+        val analyzer = CardAnalyzer({ v, f, s -> deliver(ScanResult(v, f, s)) }, { ok -> if (ready != ok) ready = ok })
         val future = ProcessCameraProvider.getInstance(ctx)
         var provider: ProcessCameraProvider? = null
         var disposed = false
@@ -264,7 +270,11 @@ fun ScannerScreen(onResult: (ScanResult) -> Unit, onManual: () -> Unit, onClose:
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                if (granted) Text("Place le code-barres dans le cadre", color = Color.White, fontSize = 15.sp)
+                if (granted) Text(
+                    if (ready) "Place le code-barres dans le cadre"
+                    else "Préparation du scanner… La première fois, le téléphone a besoin d'Internet quelques secondes.",
+                    color = if (ready) Color.White else Yellow, fontSize = 15.sp, textAlign = TextAlign.Center,
+                )
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     OutlinedButton(onClick = {
                         picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
