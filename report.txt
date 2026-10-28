@@ -1,0 +1,55 @@
+
+===== douglas.de
+page https://douglas.de/ -> 400 final=https://douglas.de/ 0o
+page https://www.douglas.de/ -> 400 final=https://www.douglas.de/ 0o
+  [400] -  https://douglas.de/apple-touch-icon.png
+  [400] -  https://douglas.de/apple-touch-icon-precomposed.png
+  [200] PNG 196x196 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://douglas.de&size=256
+  [400] -  https://www.douglas.de/apple-touch-icon.png
+  [400] -  https://www.douglas.de/apple-touch-icon-precomposed.png
+  [200] PNG 196x196 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.douglas.de&size=256
+  [200] PNG 196x196 image/png https://www.google.com/s2/favicons?domain=douglas.de&sz=256
+  [200] ICO 64x64 image/x-icon https://icons.duckduckgo.com/ip3/douglas.de.ico
+
+===== douglas.com
+page https://douglas.com/ -> 200 final=https://www.douglas.ca/?utm_source=direct&utm_medium=douglas_com 250848o
+  link rel=apple-touch-icon sizes=None href=/wp-content/themes/dawn-child/assets/images/apple-touch-icon.png
+  link rel=apple-touch-icon sizes=152x152 href=/wp-content/themes/dawn-child/assets/images/apple-touch-icon-152x152.png
+  link rel=apple-touch-icon sizes=152x152 href=/wp-content/themes/dawn-child/assets/images/apple-touch-icon-152x152-precomposed.png
+  link rel=apple-touch-icon sizes=120x120 href=/wp-content/themes/dawn-child/assets/images/apple-touch-icon-120x120.png
+  link rel=apple-touch-icon sizes=120x120 href=/wp-content/themes/dawn-child/assets/images/apple-touch-icon-120x120-precomposed.png
+  link rel=icon sizes=32x32 href=https://www.douglas.ca/wp-content/uploads/cropped-douglas_rev-1-1-150x150.png
+  link rel=icon sizes=192x192 href=https://www.douglas.ca/wp-content/uploads/cropped-douglas_rev-1-1-300x300.png
+  link rel=apple-touch-icon sizes=None href=https://www.douglas.ca/wp-content/uploads/cropped-douglas_rev-1-1-300x300.png
+  [200] PNG 300x300 image/png https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon.png
+  [200] PNG 152x152 image/png https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon-152x152.png
+  [200] PNG 152x152 image/png https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon-152x152-precomposed.png
+  [200] PNG 120x120 image/png https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon-120x120.png
+  [200] PNG 120x120 image/png https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon-120x120-precomposed.png
+  [200] PNG 150x150 image/png https://www.douglas.ca/wp-content/uploads/cropped-douglas_rev-1-1-150x150.png
+  [200] PNG 300x300 image/png https://www.douglas.ca/wp-content/uploads/cropped-douglas_rev-1-1-300x300.png
+  [200] pas une image text/html; charset=UTF-8 https://douglas.com/apple-touch-icon.png
+  [200] pas une image text/html; charset=UTF-8 https://douglas.com/apple-touch-icon-precomposed.png
+  [200] PNG 256x256 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://douglas.com&size=256
+  [200] pas une image text/html; charset=UTF-8 https://www.douglas.com/apple-touch-icon.png
+  [200] pas une image text/html; charset=UTF-8 https://www.douglas.com/apple-touch-icon-precomposed.png
+  [200] PNG 256x256 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.douglas.com&size=256
+  [200] PNG 256x256 image/png https://www.google.com/s2/favicons?domain=douglas.com&sz=256
+  [200] PNG 150x150 image/png https://icons.duckduckgo.com/ip3/douglas.com.ico
+
+===== douglas.it
+page https://douglas.it/ -> 400 final=https://douglas.it/ 0o
+page https://www.douglas.it/ -> 400 final=https://www.douglas.it/ 0o
+  [400] -  https://douglas.it/apple-touch-icon.png
+  [400] -  https://douglas.it/apple-touch-icon-precomposed.png
+  [200] PNG 196x196 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://douglas.it&size=256
+  [400] -  https://www.douglas.it/apple-touch-icon.png
+  [400] -  https://www.douglas.it/apple-touch-icon-precomposed.png
+  [200] PNG 196x196 image/png https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.douglas.it&size=256
+  [200] PNG 196x196 image/png https://www.google.com/s2/favicons?domain=douglas.it&sz=256
+  [404] -  https://icons.duckduckgo.com/ip3/douglas.it.ico
+
+===== RÉSUMÉ (meilleure taille trouvée)
+ 196px  douglas.de  https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://douglas.de&size=256
+ 196px  douglas.it  https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://douglas.it&size=256
+ 300px  douglas.com  https://www.douglas.ca/wp-content/themes/dawn-child/assets/images/apple-touch-icon.png
