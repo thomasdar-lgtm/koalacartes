@@ -121,7 +121,7 @@ fun ProfilesDialog(repo: CardRepo, state: WalletState, onClose: () -> Unit) {
 
     editing?.let { p ->
         ProfileEditDialog(p.name, p.color, "Modifier le profil",
-            onDone = { name, color -> repo.editProfile(p.id, name, color); editing = null },
+            onDone = { name, color -> repo.editProfile(p.id, name, color ?: p.color); editing = null },
             onCancel = { editing = null })
     }
     if (adding) {
