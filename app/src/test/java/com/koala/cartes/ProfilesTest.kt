@@ -139,4 +139,22 @@ class ProfilesTest {
         assertEquals(setOf("Thomas", "Cindy"), s.profiles.map { it.name }.toSet())
         assertEquals("sephora", s.cards.first { it.profile == s.profiles.first { p -> p.name == "Cindy" }.id }.storeId)
     }
+
+    @Test
+    fun prefixeDuScannerRetire() {
+        assertEquals("62747630051413625", Codes.clean("]C162747630051413625"))
+        assertEquals("1234567890123", Codes.clean("]E01234567890123"))
+        assertEquals("0102", Codes.clean("]C1\u001D0102"))
+        assertEquals("ABC]C1", Codes.clean("ABC]C1"))
+        assertEquals("4012345678901", Codes.clean(" 4012345678901 "))
+    }
+
+    @Test
+    fun anciennesCartesNettoyeesAuChargement() {
+        File(ctx.filesDir, "gl.json").writeText(
+            """{"app":"KoalaCartes","version":2,"current":"me","profiles":[{"id":"me","name":"Thomas","color":1}],"cards":[{"id":"g","profile":"me","storeName":"Galeries Lafayette","number":"]C162747630051413625","format":"CODE_128"}]}"""
+        )
+        val r = CardRepo(ctx, "gl.json")
+        assertEquals("62747630051413625", r.state.value.cards.single().number)
+    }
 }

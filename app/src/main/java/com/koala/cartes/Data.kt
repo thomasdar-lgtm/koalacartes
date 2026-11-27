@@ -44,7 +44,7 @@ data class Card(
             storeId = o.optString("storeId").ifBlank { null },
             storeName = o.optString("storeName"),
             color = o.optLong("color", 0xFF0058A3),
-            number = o.optString("number"),
+            number = Codes.clean(o.optString("number")),
             format = o.optString("format", "CODE_128"),
             note = o.optString("note"),
             domain = o.optString("domain"),
@@ -187,7 +187,7 @@ class CardRepo internal constructor(ctx: Context, fileName: String = "cards.json
                 id = old?.id ?: UUID.randomUUID().toString(),
                 profile = old?.profile ?: d.profile ?: s.profile.id,
                 storeId = d.storeId, storeName = d.storeName.trim(), color = d.color,
-                number = d.number.trim(), format = d.format, note = d.note.trim(),
+                number = Codes.clean(d.number), format = d.format, note = d.note.trim(),
                 domain = if (d.storeId == null) Stores.cleanDomain(d.domain) else "",
                 created = old?.created ?: System.currentTimeMillis(),
                 uses = old?.uses ?: 0, lastUsed = old?.lastUsed ?: 0,
@@ -302,7 +302,7 @@ class CardRepo internal constructor(ctx: Context, fileName: String = "cards.json
             Card(
                 id = "", profile = "", storeId = st?.id, storeName = c.optString("m").ifBlank { st?.name ?: "?" },
                 color = st?.color ?: c.optLong("o", Stores.colorFor(c.optString("m"))),
-                number = c.getString("u"), format = c.optString("f", "CODE_128"), note = c.optString("t"),
+                number = Codes.clean(c.getString("u")), format = c.optString("f", "CODE_128"), note = c.optString("t"),
                 domain = if (st == null) c.optString("d") else "", created = now, uses = 0, lastUsed = 0,
             )
         }.filter { it.number.isNotBlank() }

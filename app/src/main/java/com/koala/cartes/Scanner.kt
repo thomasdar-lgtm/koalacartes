@@ -121,7 +121,7 @@ private class CardAnalyzer(
                     texts.process(img).addOnCompleteListener { tt ->
                         if (tt.isSuccessful) vote(tt.result.text)
                         proxy.close()
-                        onFound(code.rawValue!!.trim(), Codes.fromMlKit(code.format), best())
+                        onFound(Codes.clean(code.rawValue!!), Codes.fromMlKit(code.format), best())
                     }
                 }
                 readText && !done -> texts.process(img).addOnCompleteListener { tt ->
@@ -145,7 +145,7 @@ suspend fun scanImage(ctx: Context, uri: Uri): ScanResult? {
     try {
         val code = bs.process(img).awaitTask().firstOrNull { !it.rawValue.isNullOrBlank() } ?: return null
         val text = runCatching { ts.process(img).awaitTask().text }.getOrDefault("")
-        return ScanResult(code.rawValue!!.trim(), Codes.fromMlKit(code.format), Stores.detect(text))
+        return ScanResult(Codes.clean(code.rawValue!!), Codes.fromMlKit(code.format), Stores.detect(text))
     } finally {
         bs.close(); ts.close()
     }

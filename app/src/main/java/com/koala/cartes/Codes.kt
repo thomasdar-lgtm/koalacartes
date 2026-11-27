@@ -57,6 +57,14 @@ object Codes {
         return (10 - sum % 10) % 10 == d.last() - '0'
     }
 
+    /**
+     * Nettoie un numéro lu par le scanner : certains codes-barres (GS1-128, souvent sur les cartes
+     * de grands magasins) commencent par un identifiant technique « ]C1 », « ]E0 »… qui ne fait pas
+     * partie du numéro, et contiennent parfois des caractères de contrôle invisibles.
+     */
+    fun clean(raw: String): String =
+        raw.trim().replace(Regex("^\\][A-Za-z][0-9A-Za-z]"), "").filter { it >= ' ' }.trim()
+
     /** Devine le type de code pour une saisie manuelle. */
     fun guess(number: String): String {
         val n = number.trim()
