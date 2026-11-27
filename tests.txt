@@ -1,0 +1,10 @@
+<testsuite name="com.koala.cartes.ProfilesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-27T08:41:12.163Z" hostname="runnervm0hi8g" time="10.719">
+<testcase name="catalogueCharge"
+<testcase name="sauvegardeRestaureLesProfils"
+<testcase name="prefixeDuScannerRetire"
+<testcase name="anciennesCartesNettoyeesAuChargement"
+<testcase name="ancienneVersionSansProfils"
+<testcase name="vingtCartesTiennentDansUnQr"
+<testcase name="basculeEtDernierProfilMemorise"
+<testcase name="partageEtImportDansLeProfilDuPrenom"
+<testcase name="favorisConservesEtPrioritaires"
