@@ -76,6 +76,7 @@ fun App(repo: CardRepo) {
                 c,
                 shareOf = { state.profiles.firstOrNull { it.id == c.profile }?.let { repo.sharePayload(it, listOf(c)) } },
                 ownerName = state.profiles.firstOrNull { it.id == c.profile }?.name ?: "",
+                onFav = { repo.toggleFav(c.id) },
                 onBack = { back() },
                 onEdit = { screen = Screen.Edit(c.toDraft()) },
                 onDelete = { repo.delete(c.id); Logos.delete(ctx, c.id); screen = Screen.Home },

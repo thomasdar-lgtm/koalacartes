@@ -46,6 +46,9 @@ import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -174,10 +177,17 @@ fun logoFraction(logo: Logo): Float {
     return if (logo.transparent) 0.72f * f else f
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun NamedTile(name: String, color: Long, logo: Logo?, onClick: () -> Unit) {
-    Column(Modifier.clickable(onClick = onClick), horizontalAlignment = Alignment.CenterHorizontally) {
-        TileFace(name, color, logo)
+fun NamedTile(name: String, color: Long, logo: Logo?, fav: Boolean = false, onLongClick: (() -> Unit)? = null, onClick: () -> Unit) {
+    Column(Modifier.combinedClickable(onClick = onClick, onLongClick = onLongClick), horizontalAlignment = Alignment.CenterHorizontally) {
+        Box {
+            TileFace(name, color, logo)
+            if (fav) Box(
+                Modifier.align(Alignment.TopEnd).padding(4.dp).size(20.dp).clip(CircleShape).background(Navy.copy(alpha = 0.85f)),
+                contentAlignment = Alignment.Center,
+            ) { Icon(Icons.Default.Star, "Favori", tint = Yellow, modifier = Modifier.size(14.dp)) }
+        }
         Spacer(Modifier.height(4.dp))
         Text(
             name, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 11.sp, maxLines = 1,
@@ -187,7 +197,8 @@ fun NamedTile(name: String, color: Long, logo: Logo?, onClick: () -> Unit) {
 }
 
 @Composable
-fun CardTile(c: Card, onClick: () -> Unit) = NamedTile(c.storeName, c.color, rememberLogo(c.id, c.storeId), onClick)
+fun CardTile(c: Card, onLongClick: () -> Unit, onClick: () -> Unit) =
+    NamedTile(c.storeName, c.color, rememberLogo(c.id, c.storeId), c.fav, onLongClick, onClick)
 
 @Composable
 fun BarcodeImage(number: String, format: String) {
@@ -322,7 +333,7 @@ fun HomeScreen(repo: CardRepo, state: WalletState, upd: UpdateState, onOpen: (St
             val sorted = remember(cards, query) {
                 val n = Stores.norm(query)
                 cards.filter { n.isBlank() || Stores.norm(it.storeName).contains(n) || Stores.norm(it.note).contains(n) }
-                    .sortedWith(compareByDescending<Card> { it.uses }.thenBy { Stores.norm(it.storeName) })
+                    .sortedWith(compareByDescending<Card> { it.fav }.thenByDescending { it.uses }.thenBy { Stores.norm(it.storeName) })
             }
             Column {
                 if (cards.size >= 6) {
@@ -339,7 +350,12 @@ fun HomeScreen(repo: CardRepo, state: WalletState, upd: UpdateState, onOpen: (St
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp),
                 ) {
-                    items(sorted, key = { it.id }) { c -> CardTile(c) { onOpen(c.id) } }
+                    items(sorted, key = { it.id }) { c ->
+                        CardTile(c, onLongClick = {
+                            repo.toggleFav(c.id)
+                            toast(ctx, if (c.fav) "${c.storeName} retiré des favoris" else "${c.storeName} ajouté aux favoris")
+                        }) { onOpen(c.id) }
+                    }
                 }
             }
         }
@@ -350,7 +366,7 @@ fun HomeScreen(repo: CardRepo, state: WalletState, upd: UpdateState, onOpen: (St
 // ---------- Affichage en caisse ----------
 
 @Composable
-fun CardScreen(c: Card, shareOf: () -> String?, ownerName: String, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit) {
+fun CardScreen(c: Card, shareOf: () -> String?, ownerName: String, onFav: () -> Unit, onBack: () -> Unit, onEdit: () -> Unit, onDelete: () -> Unit) {
     val ctx = LocalContext.current
     var share by remember { mutableStateOf<String?>(null) }
     share?.let { ShareDialog("${c.storeName} · $ownerName", it) { share = null } }
@@ -385,6 +401,9 @@ fun CardScreen(c: Card, shareOf: () -> String?, ownerName: String, onBack: () ->
                 c.storeName, color = fg, fontWeight = FontWeight.Black, fontSize = 22.sp, maxLines = 1,
                 overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
             )
+            IconButton(onClick = onFav) {
+                Icon(Icons.Default.Star, if (c.fav) "Retirer des favoris" else "Ajouter aux favoris", tint = if (c.fav) Yellow else fg.copy(alpha = 0.45f))
+            }
             IconButton(onClick = { share = shareOf() }) { Icon(Icons.Default.Share, "Partager", tint = fg) }
             IconButton(onClick = onEdit) { Icon(Icons.Default.Edit, "Modifier", tint = fg) }
             IconButton(onClick = { confirm = true }) { Icon(Icons.Default.Delete, "Supprimer", tint = fg) }

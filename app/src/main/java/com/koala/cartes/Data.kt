@@ -25,11 +25,13 @@ data class Card(
     val created: Long,
     val uses: Int,
     val lastUsed: Long,
+    /** Favori : affiché en tête de liste. */
+    val fav: Boolean = false,
 ) {
     fun toJson() = JSONObject().apply {
         put("id", id); put("profile", profile); put("storeId", storeId ?: ""); put("storeName", storeName)
         put("color", color); put("number", number); put("format", format); put("note", note)
-        put("domain", domain); put("created", created); put("uses", uses); put("lastUsed", lastUsed)
+        put("domain", domain); put("created", created); put("uses", uses); put("lastUsed", lastUsed); put("fav", fav)
     }
 
     fun toDraft() = Draft(id, storeId, storeName, color, number, format, note, domain = domain, profile = profile, formatLocked = true)
@@ -51,6 +53,7 @@ data class Card(
             created = o.optLong("created", System.currentTimeMillis()),
             uses = o.optInt("uses"),
             lastUsed = o.optLong("lastUsed"),
+            fav = o.optBoolean("fav"),
         )
     }
 }
@@ -190,7 +193,7 @@ class CardRepo internal constructor(ctx: Context, fileName: String = "cards.json
                 number = Codes.clean(d.number), format = d.format, note = d.note.trim(),
                 domain = if (d.storeId == null) Stores.cleanDomain(d.domain) else "",
                 created = old?.created ?: System.currentTimeMillis(),
-                uses = old?.uses ?: 0, lastUsed = old?.lastUsed ?: 0,
+                uses = old?.uses ?: 0, lastUsed = old?.lastUsed ?: 0, fav = old?.fav ?: false,
             )
             if (old != null) list[list.indexOf(old)] = c else list.add(c)
             learn(c)
@@ -201,6 +204,8 @@ class CardRepo internal constructor(ctx: Context, fileName: String = "cards.json
     }
 
     fun delete(id: String) = update { s -> s.copy(cards = s.cards.filter { it.id != id }) }
+
+    fun toggleFav(id: String) = update { s -> s.copy(cards = s.cards.map { if (it.id == id) it.copy(fav = !it.fav) else it }) }
 
     fun markUsed(id: String) = update { s ->
         s.copy(cards = s.cards.map { if (it.id == id) it.copy(uses = it.uses + 1, lastUsed = System.currentTimeMillis()) else it })
@@ -217,7 +222,7 @@ class CardRepo internal constructor(ctx: Context, fileName: String = "cards.json
             }
             if (same >= 0) {
                 val o = list[same]
-                list[same] = c.copy(id = o.id, uses = o.uses, lastUsed = o.lastUsed, created = o.created); updated++
+                list[same] = c.copy(id = o.id, uses = o.uses, lastUsed = o.lastUsed, created = o.created, fav = o.fav || c.fav); updated++
             } else {
                 list.add(c.copy(id = UUID.randomUUID().toString(), uses = 0, lastUsed = 0)); added++
             }

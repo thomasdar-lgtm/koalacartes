@@ -157,4 +157,24 @@ class ProfilesTest {
         val r = CardRepo(ctx, "gl.json")
         assertEquals("62747630051413625", r.state.value.cards.single().number)
     }
+
+    @Test
+    fun favorisConservesEtPrioritaires() {
+        val t = phone("fav", "Thomas")
+        val a = t.save(card("leclerc", "111"))
+        t.save(card("auchan", "222"))
+        t.toggleFav(a)
+        assertTrue(t.state.value.cards.first { it.id == a }.fav)
+        // Modifier la carte ne retire pas le favori
+        t.save(t.state.value.cards.first { it.id == a }.toDraft().copy(note = "x"))
+        assertTrue(t.state.value.cards.first { it.id == a }.fav)
+        // Conservé après relance
+        assertTrue(CardRepo(ctx, "fav.json").state.value.cards.first { it.id == a }.fav)
+        // Rescanner un partage de la même carte ne retire pas le favori
+        val st = t.state.value
+        t.importShare(t.sharePayload(st.profile, st.currentCards)!!)
+        assertTrue(t.state.value.cards.first { it.id == a }.fav)
+        t.toggleFav(a)
+        assertTrue(!t.state.value.cards.first { it.id == a }.fav)
+    }
 }
